@@ -1,6 +1,7 @@
 /**
  * Portfolio Configuration & Content File - Akhil S
  * Backend Laravel / PHP Developer (3+ Years Experience)
+ * Languages: English (en) & Malayalam (ml)
  */
 if (typeof window === 'undefined') {
   global.window = {};
@@ -713,102 +714,102 @@ window.PORTFOLIO_CONFIG = {
       "stop": "■ Stop",
       "details": "+ Details",
       "fe": "Frontend & UI",
-      "be": "Backend & Architecture",
+      "be": "Backend & Systems",
       "cloud": "Database & DevOps",
       "role": "Role",
       "company": "Companies",
       "period": "Experience",
       "companyName": "PIXELPO · StackCue · Commerce9",
       "certsLabel": "Education & Specializations",
-      "next": "ES",
-      "langTitle": "Switch to Spanish",
+      "next": "ML",
+      "langTitle": "മലയാളത്തിലേക്ക് മാറ്റുക",
       "close": "✕ Close",
       "viewCode": "View Project",
       "viewCred": "View Details",
       "cyber": "Key Highlights & Badges",
       "aboutHeading": "Professional Summary"
     },
-    "es": {
+    "ml": {
       "nav": [
-        "Sobre mí",
-        "Experiencia",
-        "Habilidades",
-        "Proyectos",
-        "Educación",
-        "Contacto"
+        "ആമുഖം",
+        "പരിചയം",
+        "സ്കിൽസ്",
+        "പ്രൊജക്ടുകൾ",
+        "വിദ്യാഭ്യാസം",
+        "ബന്ധപ്പെടുക"
       ],
-      "listen": "▶ Escuchar",
-      "stop": "■ Detener",
-      "details": "+ Detalles",
-      "fe": "Frontend & UI",
-      "be": "Backend & Arquitectura",
-      "cloud": "Base de Datos & DevOps",
-      "role": "Rol",
-      "company": "Empresas",
-      "period": "Experiencia",
+      "listen": "▶ കേൾക്കുക",
+      "stop": "■ നിർത്തുക",
+      "details": "+ വിവരങ്ങൾ",
+      "fe": "ഫ്രണ്ട്-എൻഡ് & യുഐ",
+      "be": "ബാക്ക്-എൻഡ് & സിസ്റ്റംസ്",
+      "cloud": "ഡാറ്റാബേസ് & ഡെവോപ്സ്",
+      "role": "റോൾ",
+      "company": "കമ്പനികൾ",
+      "period": "പരിചയം",
       "companyName": "PIXELPO · StackCue · Commerce9",
-      "certsLabel": "Educación & Especializaciones",
+      "certsLabel": "വിദ്യാഭ്യാസവും യോഗ്യതകളും",
       "next": "EN",
-      "langTitle": "Cambiar a Inglés",
-      "close": "✕ Cerrar",
-      "viewCode": "Ver proyecto",
-      "viewCred": "Ver detalles",
-      "cyber": "Aspectos Clave & Insignias",
-      "aboutHeading": "Resumen Profesional"
+      "langTitle": "Switch to English",
+      "close": "✕ അടയ്ക്കുക",
+      "viewCode": "പ്രൊജക്റ്റ് കാണുക",
+      "viewCred": "വിശദാംശങ്ങൾ കാണുക",
+      "cyber": "പ്രധാന നേട്ടങ്ങൾ & ബാഡ്ജുകൾ",
+      "aboutHeading": "പ്രൊഫഷണൽ സംഗ്രഹം"
     }
   },
   "p8": {
     "origin": {
-      "title": "About Me",
-      "desc": "Backend Laravel / PHP Developer · 3+ Years Professional Experience",
+      "title": "ആമുഖം",
+      "desc": "ബാക്ക്-എൻഡ് ലാരവെൽ / പിഎച്ച്പി ഡെവലപ്പർ · 3+ വർഷത്തെ പ്രൊഫഷണൽ പരിചയം",
       "details": {
-        "p1": "Backend Laravel / PHP Developer with 3+ years of professional experience building scalable web applications, RESTful APIs, e-commerce platforms, enterprise business systems, and delivery management solutions. Strong hands-on experience with Laravel 11/12, PHP 8.x, MySQL, REST APIs, Laravel Sanctum, Spatie Permissions, RBAC, Redis, queues, background jobs, database optimization, and third-party API integrations.",
-        "p2": "Experienced in frontend integration using Next.js, React.js, JavaScript, Blade, HTML, CSS, and Bootstrap. Proficient with Git, GitHub, Docker, Postman, PHPUnit, CI/CD, and deployment workflows. Strong focus on clean architecture, secure development, performance optimization, maintainable code, and business-driven software solutions. Target Roles: Laravel Developer, PHP Developer, Backend Developer, Software Engineer · Availability: Immediate Joiner.",
+        "p1": "3+ വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുള്ള ബാക്ക്-എൻഡ് ലാരവെൽ / പിഎച്ച്പി ഡെവലപ്പർ. സ്കേലബിൾ വെബ് ആപ്ലിക്കേഷനുകൾ, റെസ്റ്റ്ഫുൾ എപിഐകൾ, ഇ-കൊമേഴ്സ് പ്ലാറ്റ്‌ഫോമുകൾ, എൻ്റർപ്രൈസ് ബിസിനസ് സിസ്റ്റങ്ങൾ, ഡെലിവറി മാനേജ്‌മെൻ്റ് സൊല്യൂഷനുകൾ എന്നിവ വികസിപ്പിക്കുന്നതിൽ വിദഗ്ദ്ധൻ. Laravel 11/12, PHP 8.x, MySQL, REST APIs, Laravel Sanctum, Spatie Permissions, RBAC, Redis, Queues, ബാക്ക്ഗ്രൗണ്ട് ജോലികൾ, ഡാറ്റാബേസ് ഒപ്റ്റിമൈസേഷൻ എന്നിവയിൽ മികച്ച പ്രാവീണ്യം.",
+        "p2": "Next.js, React.js, JavaScript, Blade, HTML, CSS, Bootstrap എന്നിവ ഉപയോഗിച്ചുള്ള ഫ്രണ്ട്-എൻഡ് ഇൻ്റഗ്രേഷൻ. Git, GitHub, Docker, Postman, PHPUnit, CI/CD എന്നിവയിൽ മികച്ച വൈദഗ്ദ്ധ്യം. ക്ലീൻ ആർക്കിടെക്ചർ, സെക്യൂർ ഡെവലപ്‌മെൻ്റ്, പെർഫോമൻസ് ഒപ്റ്റിമൈസേഷൻ എന്നിവയിൽ പ്രത്യേക ശ്രദ്ധ. പാലക്കാട്, കേരളം സ്വദേശി. ഉടനടി ജോലിയിൽ പ്രവേശിക്കാൻ തയ്യാറാണ് (Immediate Joiner).",
         "stats": [
           {
-            "label": "Location",
-            "value": "Palakkad, Kerala, India",
+            "label": "സ്ഥലം",
+            "value": "പാലക്കാട്, കേരളം, ഇന്ത്യ",
             "icon": "fas fa-map-marker-alt"
           },
           {
-            "label": "Experience",
-            "value": "3+ Years Professional",
+            "label": "പരിചയം",
+            "value": "3+ വർഷത്തെ പരിചയം",
             "icon": "fas fa-briefcase"
           },
           {
-            "label": "Core Stack",
+            "label": "പ്രധാന സ്കിൽസ്",
             "value": "Laravel · PHP · MySQL · Redis",
             "icon": "fas fa-server"
           },
           {
-            "label": "Availability",
-            "value": "Immediate Joiner",
+            "label": "ലഭ്യത",
+            "value": "ഉടനടി ജോയിൻ ചെയ്യാം",
             "icon": "fas fa-bolt"
           }
         ]
       }
     },
     "experience": {
-      "title": "Experience",
-      "desc": "3+ Years of Professional Engineering across PIXELPO, StackCue, and Commerce9.",
+      "title": "പ്രവൃത്തിപരിചയം",
+      "desc": "PIXELPO, StackCue, Commerce9 Technologies എന്നിവിടങ്ങളിലെ 3+ വർഷത്തെ എഞ്ചിനീയറിംഗ് പ്രവൃത്തിപരിചയം.",
       "details": {
-        "summary": "3+ years of professional experience delivering scalable web applications, enterprise retail platforms, and delivery systems. Specialized in Laravel 11/12, PHP 8.x, RESTful API design, database query optimization, and secure role-based access control.",
-        "role": "Backend Laravel / PHP Developer",
+        "summary": "സ്കേലബിൾ വെബ് ആപ്ലിക്കേഷനുകൾ, എൻ്റർപ്രൈസ് റീട്ടെയിൽ പ്ലാറ്റ്‌ഫോമുകൾ, ഡെലിവറി സിസ്റ്റങ്ങൾ എന്നിവ വികസിപ്പിച്ച 3+ വർഷത്തെ പ്രൊഫഷണൽ പരിചയം. ലാരവെൽ 11/12, PHP 8.x, RESTful API ഡിസൈൻ, ഡാറ്റാബേസ് ഒപ്റ്റിമൈസേഷൻ, സുരക്ഷിതമായ റോൾ-ബേസ്ഡ് ആക്സസ് കൺട്രോൾ എന്നിവയിൽ സ്പെഷ്യലൈസ് ചെയ്തിരിക്കുന്നു.",
+        "role": "ബാക്ക്-എൻഡ് ലാരവെൽ / പിഎച്ച്പി ഡെവലപ്പർ",
         "company": "PIXELPO · StackCue · Commerce9 Technologies",
-        "date": "Dec 2023 — Present (3+ Years)",
-        "bulletsTitle": "Career Highlights & Responsibilities (3+ Years)",
+        "date": "ഡിസംബർ 2023 — നിലവിൽ (3+ വർഷം)",
+        "bulletsTitle": "പ്രധാന ഉത്തരവാദിത്തങ്ങളും കരിയർ നേട്ടങ്ങളും",
         "bullets": [
-          "PIXELPO (Feb 2026 – Present | Remote / Palakkad): Backend Laravel & PHP Developer. Design RBAC modules, API integrations, database workflows, queues, scheduled tasks, and contribute to AK-MART enterprise multi-branch retail platform.",
-          "StackCue (Jun 2025 – Jan 2026 | Remote / Palakkad): Laravel Developer. Developed MVC backend modules, documented RESTful APIs, implemented Laravel Sanctum & Spatie Permissions, and built order/invoice workflows via Laravel Queues.",
-          "Commerce9 Technologies (Dec 2023 – Apr 2025 | Infopark, Kochi): Software Engineer. Delivered features across Laravel, PHP, WordPress, and Next.js. Engineered order management, delivery tracking, payment APIs, and MySQL optimization.",
-          "Commerce9 Technologies (Dec 2023 – Jun 2024 | Infopark, Kochi): Software Engineer Intern. Assisted in developing Laravel and React applications using MVC, REST APIs, and agile engineering practices.",
-          "Web & CMS Deliveries: Built and customized 10+ business websites and WooCommerce solutions with custom themes, high performance, and SEO optimization."
+          "PIXELPO (ഫെബ്രുവരി 2026 – നിലവിൽ | റിമോട്ട് / പാലക്കാട്): ബാക്ക്-എൻഡ് ലാരവെൽ & പിഎച്ച്പി ഡെവലപ്പർ. RBAC മൊഡ്യൂളുകൾ, എപിഐ ഇൻ്റഗ്രേഷനുകൾ, ഡാറ്റാബേസ് വർക്ക്ഫ്ലോകൾ, ക്യൂകൾ, ഷെഡ്യൂൾഡ് ടാസ്ക്കുകൾ എന്നിവ നിർമ്മിക്കുകയും AK-MART എൻ്റർപ്രൈസ് മൾട്ടി-ബ്രാഞ്ച് റീട്ടെയിൽ പ്ലാറ്റ്‌ഫോമിൽ പ്രധാന പങ്ക് വഹിക്കുകയും ചെയ്യുന്നു.",
+          "StackCue (ജൂൺ 2025 – ജനുവരി 2026 | റിമോട്ട് / പാലക്കാട്): ലാരവെൽ ഡെവലപ്പർ. MVC ആർക്കിടെക്ചറിൽ ബാക്ക്-എൻഡ് മൊഡ്യൂളുകൾ നിർമ്മിച്ചു, RESTful APIs വികസിപ്പിച്ചു, ലാരവെൽ സാങ്ക്ടം & സ്പാറ്റി പെർമിഷൻസ് ഉപയോഗിച്ച് സെക്യൂർ ഓതൻ്റിക്കേഷൻ നടപ്പിലാക്കി, Next.js/React ആപ്ലിക്കേഷനുകളുമായി സംയോജിപ്പിച്ചു.",
+          "Commerce9 Technologies (ഡിസംബർ 2023 – ഏപ്രിൽ 2025 | ഇൻഫോപാർക്ക്, കൊച്ചി): സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയർ. ഓർഡർ മാനേജ്‌മെൻ്റ്, ഡെലിവറി ട്രാക്കിംഗ്, പേയ്‌മെൻ്റ് ഗേറ്റ്‌വേ ഇൻ്റഗ്രേഷനുകൾ, സുരക്ഷിതമായ RESTful APIs, MySQL ഡാറ്റാബേസ് ഒപ്റ്റിമൈസേഷൻ എന്നിവ നിർവ്വഹിച്ചു.",
+          "Commerce9 Technologies (ഡിസംബർ 2023 – ജൂൺ 2024 | ഇൻഫോപാർക്ക്, കൊച്ചി): സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയർ ഇൻ്റേൺ. ലാരവെൽ & റിയാക്റ്റ് ആപ്ലിക്കേഷനുകൾ വികസിപ്പിക്കാനും ബഗുകൾ പരിഹരിക്കാനും അജൈൽ ടീമിൽ പ്രവർത്തിച്ചു.",
+          "വെബ് & സിഎംഎസ് പ്രൊജക്ടുകൾ: വേർഡ്പ്രസ്സും എലമെൻ്ററും ഉപയോഗിച്ച് 10-ലധികം ബിസിനസ്സ് വെബ്‌സൈറ്റുകളും വൂകൊമേഴ്‌സ് ഇ-കൊമേഴ്സ് പ്ലാറ്റ്‌ഫോമുകളും വിജയകരമായി പൂർത്തിയാക്കി."
         ]
       }
     },
     "skills": {
-      "title": "Technical Skills",
-      "desc": "Robust technical stack across backend, database design, frontend, and DevOps.",
+      "title": "സാങ്കേതിക വൈദഗ്ദ്ധ്യം",
+      "desc": "ബാക്ക്-എൻഡ്, ഡാറ്റാബേസ്, ഫ്രണ്ട്-എൻഡ്, ഡെവോപ്സ് എന്നിവയിലുള്ള സമഗ്രമായ സാങ്കേതിക വൈദഗ്ദ്ധ്യം.",
       "details": {
         "backend": [
           "Laravel 11/12",
@@ -823,13 +824,13 @@ window.PORTFOLIO_CONFIG = {
       }
     },
     "projects": {
-      "title": "Projects & Works",
-      "desc": "Production enterprise platforms, multi-vendor marketplaces, and delivery tracking engines.",
+      "title": "പ്രൊജക്ടുകൾ & വർക്കുകൾ",
+      "desc": "എൻ്റർപ്രൈസ് റീട്ടെയിൽ പ്ലാറ്റ്‌ഫോമുകൾ, മൾട്ടി-വെണ്ടർ മാർക്കറ്റ്പ്ലേസുകൾ, ഡെലിവറി എൻജിനുകൾ.",
       "details": {
         "projectsList": [
           {
-            "title": "AK-MART – Multi-Branch Retail Platform",
-            "desc": "Enterprise retail & e-commerce platform supporting multi-branch inventory, multi-warehouse management, POS checkout, B2B wholesale workflows, OTP authentication, and automated RESTful APIs.",
+            "title": "AK-MART – മൾട്ടി-ബ്രാഞ്ച് റീട്ടെയിൽ പ്ലാറ്റ്‌ഫോം",
+            "desc": "മൾട്ടി-ബ്രാഞ്ച് ഇൻവെന്ററി, മൾട്ടി-വെയർഹൗസ് മാനേജ്‌മെന്റ്, പിഒഎസ് ചെക്ക്ഔട്ട്, ബി2ബി ഹോൾസെയിൽ വർക്ക്ഫ്ലോകൾ, ഒടിപി ഓതന്റിക്കേഷൻ എന്നിവ പിന്തുണയ്ക്കുന്ന എൻ്റർപ്രൈസ് റീട്ടെയിൽ സിസ്റ്റം.",
             "tags": [
               "Laravel 12",
               "PHP 8.2+",
@@ -841,8 +842,8 @@ window.PORTFOLIO_CONFIG = {
             ]
           },
           {
-            "title": "Mini Mart – Multi-Vendor Marketplace",
-            "desc": "Multi-vendor e-commerce platform where multiple sellers offer products through a shared customer storefront with centralized administrative oversight.",
+            "title": "Mini Mart – മൾട്ടി-വെണ്ടർ മാർക്കറ്റ്പ്ലേസ്",
+            "desc": "നിരവധി വ്യാപാരികൾക്ക് ഉൽപ്പന്നങ്ങൾ വിൽക്കാനും കേന്ദ്രീകൃത അഡ്മിൻ പാനൽ വഴി നിയന്ത്രിക്കാനും കഴിയുന്ന മൾട്ടി-വെണ്ടർ ഇ-കൊമേഴ്‌സ് പ്ലാറ്റ്‌ഫോം.",
             "tags": [
               "Laravel",
               "PHP",
@@ -852,8 +853,8 @@ window.PORTFOLIO_CONFIG = {
             ]
           },
           {
-            "title": "HC Admin System & Workflow Engine",
-            "desc": "Enterprise internal management platform with granular role-based access control, permission matrices, user management, and operational dashboards integrated with Next.js frontend.",
+            "title": "HC Admin System & വർക്ക്ഫ്ലോ എൻജിൻ",
+            "desc": "കൃത്യമായ റോൾ-ബേസ്ഡ് ആക്സസ് കൺട്രോളും Next.js ഫ്രണ്ട്-എൻഡ് ഇന്റഗ്രേഷനുമുള്ള എൻ്റർപ്രൈസ് ഇന്റേണൽ മാനേജ്‌മെന്റ് പ്ലാറ്റ്‌ഫോം.",
             "tags": [
               "Laravel",
               "MySQL",
@@ -863,8 +864,8 @@ window.PORTFOLIO_CONFIG = {
             ]
           },
           {
-            "title": "Dodelivery – Logistics & Dispatch Engine",
-            "desc": "Real-time delivery management platform featuring order tracking, automated driver assignment, dispatch operations, and order lifecycle states.",
+            "title": "Dodelivery – ലോജിസ്റ്റിക്സ് & ഡിസ്പാച്ച് എൻജിൻ",
+            "desc": "ഓർഡർ ട്രാക്കിംഗ്, ഓട്ടോമേറ്റഡ് ഡ്രൈവർ അസൈൻമെന്റ്, തത്സമയ ഓർഡർ സ്റ്റാറ്റസ് അപ്‌ഡേറ്റുകൾ എന്നിവ നൽകുന്ന റിയൽ-ടൈം ഡെലിവറി സിസ്റ്റം.",
             "tags": [
               "Laravel",
               "MySQL",
@@ -873,8 +874,8 @@ window.PORTFOLIO_CONFIG = {
             ]
           },
           {
-            "title": "Store9 E-Commerce & Payment Gateway",
-            "desc": "Scalable e-commerce backend supporting product catalogues, users, orders, inventory, administrative workflows, and third-party payment integrations.",
+            "title": "Store9 – ഇ-കൊമേഴ്സ് & പേയ്‌മെന്റ് ഗേറ്റ്‌വേ",
+            "desc": "ഉൽപ്പന്ന കാറ്റലോഗ്, ഓർഡർ പ്രോസസ്സിംഗ്, തേർഡ്-പാർട്ടി പേയ്‌മെന്റ് ഇന്റഗ്രേഷൻ എന്നിവ പിന്തുണയ്ക്കുന്ന ഇ-കൊമേഴ്‌സ് ബാക്ക്-എൻഡ്.",
             "tags": [
               "Laravel",
               "Next.js",
@@ -883,8 +884,8 @@ window.PORTFOLIO_CONFIG = {
             ]
           },
           {
-            "title": "Tekneka Secure File & Vault System",
-            "desc": "Secure document and file management platform featuring role-based access control, file categorization, encrypted storage workflows, and metadata tracking.",
+            "title": "Tekneka – സുരക്ഷിത ഫയൽ & വോൾട്ട് സിസ്റ്റം",
+            "desc": "റോൾ-ബേസ്ഡ് ആക്സസ് കൺട്രോൾ, ഫയൽ എൻക്രിപ്ഷൻ, മെറ്റാഡാറ്റ ഇൻഡെക്സിംഗ് എന്നിവയുള്ള സുരക്ഷിത ഡോക്യുമെന്റ് മാനേജ്‌മെന്റ് പ്ലാറ്റ്‌ഫോം.",
             "tags": [
               "Laravel",
               "MySQL",
@@ -896,12 +897,12 @@ window.PORTFOLIO_CONFIG = {
       }
     },
     "certs": {
-      "title": "Education & Credentials",
-      "desc": "Academic degree in Physics & 3+ years of professional engineering standards."
+      "title": "വിദ്യാഭ്യാസവും യോഗ്യതകളും",
+      "desc": "ഫിസിക്സിലുള്ള ശാസ്ത്ര ബിരുദവും 3+ വർഷത്തെ സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയറിംഗ് വൈദഗ്ദ്ധ്യവും."
     },
     "contact": {
-      "title": "Contact",
-      "desc": "Immediate Joiner · Palakkad, Kerala, India · Open for Roles"
+      "title": "ബന്ധപ്പെടുക",
+      "desc": "ഉടനടി ജോലിയിൽ പ്രവേശിക്കാൻ തയ്യാറാണ് · പാലക്കാട്, കേരളം · ജോലി അവസരങ്ങൾക്കായി ബന്ധപ്പെടാം."
     }
   }
 };
