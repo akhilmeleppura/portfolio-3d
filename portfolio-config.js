@@ -1,31 +1,29 @@
 /**
- * Portfolio Configuration & Content File
- * 
- * You can easily customize any text, links, projects, skills, and details
- * in this file without modifying the core 3D application code!
+ * Portfolio Configuration & Content File - Akhil S
+ * Backend Laravel / PHP Developer (3+ Years Experience)
  */
 if (typeof window === 'undefined') {
   global.window = {};
 }
 window.PORTFOLIO_CONFIG = {
   "name": "Akhil S",
-  "title": "Akhil S — Interactive 3D Portfolio",
-  "role": "Software Developer & Computer Science Engineer",
+  "title": "Akhil S — Backend Laravel / PHP Developer (3+ Years Exp)",
+  "role": "Backend Laravel / PHP Developer (3+ Years)",
   "defaultLang": "en",
   "hn": [
     {
       "id": "origin",
       "label": "01",
       "title": "About Me",
-      "verb": "awakens",
+      "verb": "engineers",
       "accent": "#00f0ff",
       "clips": [
         "Waving",
         "Pointing Forward"
       ],
       "contentSide": "left",
-      "line": "Welcome! I am your virtual assistant. Welcome to Akhil S's interactive 3D portfolio. Akhil is a passionate Software Developer specializing in full-stack engineering, cloud architecture, and modern scalable solutions.",
-      "desc": "Software Developer & Computer Science Engineer",
+      "line": "Welcome to Akhil S's interactive portfolio. Akhil is a Backend Laravel and PHP Developer with over 3 years of professional experience building scalable web applications, RESTful APIs, multi-branch e-commerce platforms, and delivery systems.",
+      "desc": "Backend Laravel / PHP Developer · 3+ Years Professional Experience",
       "sparkles": {
         "count": 35,
         "speed": 0.08,
@@ -90,23 +88,28 @@ window.PORTFOLIO_CONFIG = {
         }
       ],
       "details": {
-        "p1": "I am a Software Developer and Computer Science Engineer with a strong focus on building high-performance web applications, distributed systems, and intelligent digital experiences. I thrive on architecting clean, maintainable, and scalable software that solves meaningful problems.",
-        "p2": "My expertise spans the modern stack: from responsive web interfaces and cross-platform applications to robust backend microservices, cloud deployments, and automated pipelines. In my free time, I enjoy exploring emerging technologies, competitive programming, and continuous learning.",
+        "p1": "Backend Laravel / PHP Developer with 3+ years of professional experience building scalable web applications, RESTful APIs, e-commerce platforms, enterprise business systems, and delivery management solutions. Strong hands-on experience with Laravel 11/12, PHP 8.x, MySQL, REST APIs, Laravel Sanctum, Spatie Permissions, RBAC, Redis, queues, background jobs, database optimization, and third-party API integrations.",
+        "p2": "Experienced in frontend integration using Next.js, React.js, JavaScript, Blade, HTML, CSS, and Bootstrap. Proficient with Git, GitHub, Docker, Postman, PHPUnit, CI/CD, and deployment workflows. Strong focus on clean architecture, secure development, performance optimization, maintainable code, and business-driven software solutions. Target Roles: Laravel Developer, PHP Developer, Backend Developer, Software Engineer · Availability: Immediate Joiner.",
         "stats": [
           {
             "label": "Location",
-            "value": "Global / Remote",
+            "value": "Palakkad, Kerala, India",
             "icon": "fas fa-map-marker-alt"
           },
           {
-            "label": "Focus",
-            "value": "Full-Stack & Cloud",
-            "icon": "fas fa-code"
+            "label": "Experience",
+            "value": "3+ Years Professional",
+            "icon": "fas fa-briefcase"
           },
           {
-            "label": "Studies",
-            "value": "B.S. Computer Science",
-            "icon": "fas fa-university"
+            "label": "Core Stack",
+            "value": "Laravel · PHP · MySQL · Redis",
+            "icon": "fas fa-server"
+          },
+          {
+            "label": "Availability",
+            "value": "Immediate Joiner",
+            "icon": "fas fa-bolt"
           }
         ]
       }
@@ -115,15 +118,15 @@ window.PORTFOLIO_CONFIG = {
       "id": "experience",
       "label": "02",
       "title": "Experience",
-      "verb": "engineers",
+      "verb": "architects",
       "accent": "#ff007f",
       "clips": [
         "Pointing Forward",
         "Salute"
       ],
       "contentSide": "right",
-      "line": "Explore Akhil's professional journey delivering scalable software architectures, robust APIs, and intuitive user experiences.",
-      "desc": "Engineering scalable web applications, microservices, and distributed cloud systems.",
+      "line": "Explore Akhil's 3-plus years of backend engineering: developing enterprise multi-branch retail architectures, RESTful APIs, secure RBAC systems, and high-performance databases across PIXELPO, StackCue, and Commerce9 Technologies.",
+      "desc": "3+ Years of Professional Engineering across PIXELPO, StackCue, and Commerce9.",
       "sparkles": {
         "count": 40,
         "speed": 0.08,
@@ -179,24 +182,29 @@ window.PORTFOLIO_CONFIG = {
         }
       ],
       "details": {
-        "summary": "Full-stack development of enterprise web and cloud applications, focusing on scalable architecture, clean code, security best practices, and continuous delivery.",
-        "role": "Software Developer",
-        "company": "Software Engineering & Cloud Solutions",
-        "date": "2024 — Present",
-        "bulletsTitle": "Key Contributions & Responsibilities",
+        "summary": "3+ years of professional experience delivering scalable web applications, enterprise retail platforms, and delivery systems. Specialized in Laravel 11/12, PHP 8.x, RESTful API design, database query optimization, and secure role-based access control.",
+        "role": "Backend Laravel / PHP Developer",
+        "company": "PIXELPO · StackCue · Commerce9 Technologies",
+        "date": "Dec 2023 — Present (3+ Years)",
+        "bulletsTitle": "Career Highlights & Responsibilities (3+ Years)",
         "bullets": [
-          "Architected and deployed scalable full-stack web applications and microservices with modern frameworks.",
-          "Implemented robust authentication, token-based session security, role-based access control, and rate limiting.",
-          "Designed high-performance REST and GraphQL APIs backed by relational and NoSQL databases.",
-          "Streamlined continuous integration and automated deployment pipelines (CI/CD) on cloud infrastructure."
+          "PIXELPO (Feb 2026 – Present | Remote / Palakkad): Backend Laravel & PHP Developer. Design RBAC modules, API integrations, database workflows, queues, scheduled tasks, and contribute to AK-MART enterprise multi-branch retail platform.",
+          "StackCue (Jun 2025 – Jan 2026 | Remote / Palakkad): Laravel Developer. Developed MVC backend modules, documented RESTful APIs, implemented Laravel Sanctum & Spatie Permissions, and built order/invoice workflows via Laravel Queues.",
+          "Commerce9 Technologies (Dec 2023 – Apr 2025 | Infopark, Kochi): Software Engineer. Delivered features across Laravel, PHP, WordPress, and Next.js. Engineered order management, delivery tracking, payment APIs, and MySQL optimization.",
+          "Commerce9 Technologies (Dec 2023 – Jun 2024 | Infopark, Kochi): Software Engineer Intern. Assisted in developing Laravel and React applications using MVC, REST APIs, and agile engineering practices.",
+          "Web & CMS Deliveries: Built and customized 10+ business websites and WooCommerce solutions with custom themes, high performance, and SEO optimization."
         ],
         "stack": [
-          "React / TypeScript",
-          "Node.js",
-          "Python",
+          "Laravel 11/12",
+          "PHP 8.x",
+          "MySQL",
+          "Redis",
+          "RESTful APIs",
+          "Laravel Sanctum",
+          "Spatie Permissions",
+          "RBAC",
+          "Next.js",
           "Docker",
-          "PostgreSQL",
-          "AWS / Cloud",
           "CI/CD"
         ]
       }
@@ -204,16 +212,16 @@ window.PORTFOLIO_CONFIG = {
     {
       "id": "skills",
       "label": "03",
-      "title": "Skills",
-      "verb": "architects",
+      "title": "Technical Skills",
+      "verb": "commands",
       "accent": "#7000ff",
       "clips": [
         "Arm Stretching",
         "Salute"
       ],
       "contentSide": "left",
-      "line": "Akhil commands modern engineering tools. From dynamic UI frameworks and reactive state to microservices, containerization, and cloud deployment.",
-      "desc": "Modern technology stack spanning frontend, backend, cloud, and databases.",
+      "line": "Akhil commands modern backend and full-stack technologies: Laravel 11 and 12, PHP 8, MySQL query optimization, Redis caching, Docker, and Next.js integrations.",
+      "desc": "Robust technical stack across backend, database design, frontend, and DevOps.",
       "sparkles": {
         "count": 45,
         "speed": 0.08,
@@ -269,39 +277,44 @@ window.PORTFOLIO_CONFIG = {
         }
       ],
       "details": {
-        "frontend": [
-          "React",
-          "TypeScript",
-          "Next.js",
-          "JavaScript (ES6+)",
-          "Tailwind CSS",
-          "HTML5 / CSS3",
-          "Three.js / WebGL"
-        ],
         "backend": [
-          "Node.js / Express",
-          "Python / FastAPI",
-          "Java / Spring",
-          "Go",
+          "Laravel 11/12",
+          "PHP 8.x",
           "RESTful APIs",
-          "GraphQL",
-          "Microservices"
+          "Laravel Sanctum",
+          "Spatie Permissions",
+          "RBAC",
+          "Laravel Queues",
+          "Jobs & Background Tasks"
+        ],
+        "frontend": [
+          "Next.js",
+          "React.js",
+          "JavaScript (ES6+)",
+          "Blade",
+          "HTML5",
+          "CSS3",
+          "Bootstrap",
+          "Tailwind CSS",
+          "WordPress / Elementor"
         ],
         "cloudDbSec": [
-          "PostgreSQL",
-          "MongoDB",
+          "MySQL",
           "Redis",
+          "Database Optimization",
           "Docker",
-          "AWS",
-          "Git & GitHub",
-          "CI/CD Actions"
+          "GitHub Actions",
+          "CI/CD",
+          "PHPUnit",
+          "OWASP Security",
+          "Postman"
         ]
       }
     },
     {
       "id": "projects",
       "label": "04",
-      "title": "Projects",
+      "title": "Projects & Works",
       "verb": "deploys",
       "accent": "#00f5a0",
       "clips": [
@@ -309,8 +322,8 @@ window.PORTFOLIO_CONFIG = {
         "Pointing Forward"
       ],
       "contentSide": "right",
-      "line": "Here is a selection of technical projects, spanning cloud microservices, AI intelligence pipelines, mobile experiences, and high-performance engines.",
-      "desc": "Curated portfolio of distributed systems, AI integrations, and responsive applications.",
+      "line": "Showcasing live enterprise projects: AK-MART multi-branch retail platform, Mini Mart multi-vendor marketplace, and real-time delivery management systems.",
+      "desc": "Production enterprise platforms, multi-vendor marketplaces, and delivery tracking engines.",
       "sparkles": {
         "count": 50,
         "speed": 0.08,
@@ -377,56 +390,87 @@ window.PORTFOLIO_CONFIG = {
       "details": {
         "projectsList": [
           {
-            "title": "Cloud Distributed Microservices Platform",
-            "desc": "High-throughput distributed backend with API gateway, event-driven message queuing, auto-scaling, and telemetry monitoring.",
+            "title": "AK-MART – Multi-Branch Retail Platform",
+            "desc": "Enterprise retail & e-commerce platform supporting multi-branch inventory, multi-warehouse management, POS checkout, B2B wholesale workflows, OTP authentication, and automated RESTful APIs.",
             "tags": [
-              "Distributed Systems",
-              "Docker",
-              "Node.js",
-              "Redis"
+              "Laravel 12",
+              "PHP 8.2+",
+              "Livewire 3",
+              "MySQL",
+              "Redis",
+              "Sanctum",
+              "Spatie"
             ],
-            "img": "./img/project-cloud.svg",
-            "link": "https://github.com/",
-            "color": "#78ddff"
+            "img": "./img/project-akmart.svg",
+            "link": "https://ak-mart.onrender.com",
+            "color": "#00f0ff"
           },
           {
-            "title": "Autonomous AI Agent & Neural Engine",
-            "desc": "Intelligent orchestration pipeline featuring retrieval-augmented generation (RAG), vector similarity search, and automated task execution.",
+            "title": "Mini Mart – Multi-Vendor Marketplace",
+            "desc": "Multi-vendor e-commerce platform where multiple sellers offer products through a shared customer storefront with centralized administrative oversight.",
             "tags": [
-              "AI / ML",
-              "Python",
-              "LLMs",
-              "Vector DB"
+              "Laravel",
+              "PHP",
+              "MySQL",
+              "REST APIs",
+              "Multi-Vendor"
             ],
-            "img": "./img/project-ai.svg",
-            "link": "https://github.com/",
-            "color": "#ff7eac"
-          },
-          {
-            "title": "Cross-Platform Mobile & Web Ecosystem",
-            "desc": "Responsive, offline-first application with real-time data synchronization, biometric authentication, and sleek interactive UI.",
-            "tags": [
-              "React Native",
-              "TypeScript",
-              "Tailwind",
-              "Firebase"
-            ],
-            "img": "./img/project-app.svg",
-            "link": "https://github.com/",
+            "img": "./img/project-minimart.svg",
+            "link": "https://minimart-hqui.onrender.com",
             "color": "#00f5a0"
           },
           {
-            "title": "High-Performance Real-Time Engine",
-            "desc": "Low-latency processing core with concurrent worker threads, memory optimization, and dynamic metrics visualization.",
+            "title": "HC Admin System & Workflow Engine",
+            "desc": "Enterprise internal management platform with granular role-based access control, permission matrices, user management, and operational dashboards integrated with Next.js frontend.",
             "tags": [
-              "C++ / Systems",
-              "Low Latency",
-              "Algorithms",
-              "Concurrency"
+              "Laravel",
+              "MySQL",
+              "Spatie RBAC",
+              "Next.js",
+              "REST APIs"
             ],
-            "img": "./img/project-systems.svg",
-            "link": "https://github.com/",
+            "img": "./img/project-admin.svg",
+            "link": "https://akhil-meleppura.42web.io",
+            "color": "#ff007f"
+          },
+          {
+            "title": "Dodelivery – Logistics & Dispatch Engine",
+            "desc": "Real-time delivery management platform featuring order tracking, automated driver assignment, dispatch operations, and order lifecycle states.",
+            "tags": [
+              "Laravel",
+              "MySQL",
+              "REST APIs",
+              "Real-Time Tracking"
+            ],
+            "img": "./img/project-delivery.svg",
+            "link": "https://akhil-meleppura.42web.io",
             "color": "#ffb703"
+          },
+          {
+            "title": "Store9 E-Commerce & Payment Gateway",
+            "desc": "Scalable e-commerce backend supporting product catalogues, users, orders, inventory, administrative workflows, and third-party payment integrations.",
+            "tags": [
+              "Laravel",
+              "Next.js",
+              "MySQL",
+              "Payment Gateway"
+            ],
+            "img": "./img/project-store9.svg",
+            "link": "https://akhil-meleppura.42web.io",
+            "color": "#a855f7"
+          },
+          {
+            "title": "Tekneka Secure File & Vault System",
+            "desc": "Secure document and file management platform featuring role-based access control, file categorization, encrypted storage workflows, and metadata tracking.",
+            "tags": [
+              "Laravel",
+              "MySQL",
+              "RBAC",
+              "Secure Storage"
+            ],
+            "img": "./img/project-tekneka.svg",
+            "link": "https://akhil-meleppura.42web.io",
+            "color": "#38bdf8"
           }
         ]
       }
@@ -434,16 +478,16 @@ window.PORTFOLIO_CONFIG = {
     {
       "id": "certs",
       "label": "05",
-      "title": "Certifications",
-      "verb": "certifies",
+      "title": "Education & Credentials",
+      "verb": "qualifies",
       "accent": "#ffb703",
       "clips": [
         "Salute",
         "Pointing Forward"
       ],
       "contentSide": "left",
-      "line": "Dedicated to technical excellence, continuous growth, and industry best practices across cloud platforms and modern software design.",
-      "desc": "Continuous technical education in cloud infrastructure, cybersecurity, and software architecture.",
+      "line": "Backed by a Bachelor of Science in Physics from Government Victoria College, Palakkad, and over 3 years of enterprise software engineering experience.",
+      "desc": "Academic degree in Physics & 3+ years of professional engineering standards.",
       "sparkles": {
         "count": 40,
         "speed": 0.08,
@@ -501,41 +545,46 @@ window.PORTFOLIO_CONFIG = {
       "details": {
         "certsList": [
           {
-            "title": "Cloud Architecture & Solutions",
-            "icon": "fab fa-aws",
-            "link": "https://github.com/"
+            "title": "B.Sc. in Physics (2019 – 2022)",
+            "icon": "fas fa-graduation-cap",
+            "link": "https://akhil-meleppura.42web.io"
           },
           {
-            "title": "Full-Stack Software Engineering",
-            "icon": "fas fa-code",
-            "link": "https://github.com/"
+            "title": "Backend Architecture & System Design",
+            "icon": "fas fa-server",
+            "link": "https://github.com/akhilmeleppura"
           },
           {
-            "title": "DevOps & Containerized Microservices",
-            "icon": "fab fa-docker",
-            "link": "https://github.com/"
-          },
-          {
-            "title": "Cybersecurity & Secure Software Lifecycle",
+            "title": "OWASP Security Practices & RBAC",
             "icon": "fas fa-shield-alt",
-            "link": "https://github.com/"
+            "link": "https://github.com/akhilmeleppura"
+          },
+          {
+            "title": "Database Optimization & MySQL Performance",
+            "icon": "fas fa-database",
+            "link": "https://github.com/akhilmeleppura"
           }
         ],
         "badgesList": [
           {
-            "title": "Advanced Problem Solving",
-            "icon": "fas fa-trophy",
-            "link": "https://github.com/"
+            "title": "3+ Years Professional Experience",
+            "icon": "fas fa-award",
+            "link": "https://github.com/akhilmeleppura"
           },
           {
-            "title": "Web Application Security",
-            "icon": "fas fa-shield-alt",
-            "link": "https://github.com/"
+            "title": "Immediate Joiner",
+            "icon": "fas fa-bolt",
+            "link": "mailto:akhilmeleppura@gmail.com"
           },
           {
-            "title": "Cloud Infrastructure Practitioner",
-            "icon": "fas fa-cloud",
-            "link": "https://github.com/"
+            "title": "Enterprise Multi-Branch Retail & POS",
+            "icon": "fas fa-store",
+            "link": "https://github.com/akhilmeleppura/Ak-Mart"
+          },
+          {
+            "title": "10+ Live Business & CMS Deployments",
+            "icon": "fas fa-globe",
+            "link": "https://akhil-meleppura.42web.io"
           }
         ]
       }
@@ -551,8 +600,8 @@ window.PORTFOLIO_CONFIG = {
         "Salute"
       ],
       "contentSide": "right",
-      "line": "If you would like to collaborate on an innovative project, discuss software engineering roles, or get in touch, reach out anytime!",
-      "desc": "Open for full-time engineering opportunities, collaborations, and technical consulting.",
+      "line": "Akhil is located in Palakkad, Kerala, India, and is available as an immediate joiner for Laravel, PHP, and Backend Software Engineering roles. Feel free to connect via phone, email, or LinkedIn.",
+      "desc": "Immediate Joiner · Palakkad, Kerala, India · Open for Roles",
       "sparkles": {
         "count": 35,
         "speed": 0.08,
@@ -617,27 +666,34 @@ window.PORTFOLIO_CONFIG = {
         }
       ],
       "details": {
-        "email": "contact@akhils.dev",
+        "email": "akhilmeleppura@gmail.com",
+        "phone": "+91 79022 07027",
+        "location": "Palakkad, Kerala, India",
         "socials": [
           {
-            "name": "Email",
+            "name": "Email: akhilmeleppura@gmail.com",
             "icon": "fas fa-envelope",
-            "link": "mailto:contact@akhils.dev"
+            "link": "mailto:akhilmeleppura@gmail.com"
           },
           {
-            "name": "GitHub",
-            "icon": "fab fa-github",
-            "link": "https://github.com/"
+            "name": "Phone: +91 79022 07027",
+            "icon": "fas fa-phone",
+            "link": "tel:+917902207027"
           },
           {
-            "name": "LinkedIn",
+            "name": "LinkedIn: akhil-meleppura",
             "icon": "fab fa-linkedin",
-            "link": "https://linkedin.com/"
+            "link": "https://linkedin.com/in/akhil-meleppura"
           },
           {
-            "name": "Portfolio",
+            "name": "GitHub: akhilmeleppura",
+            "icon": "fab fa-github",
+            "link": "https://github.com/akhilmeleppura"
+          },
+          {
+            "name": "Live Portfolio: 42web.io",
             "icon": "fas fa-globe",
-            "link": "#"
+            "link": "https://akhil-meleppura.42web.io"
           }
         ]
       }
@@ -650,27 +706,27 @@ window.PORTFOLIO_CONFIG = {
         "Experience",
         "Skills",
         "Projects",
-        "Certifications",
+        "Education",
         "Contact"
       ],
       "listen": "▶ Listen",
       "stop": "■ Stop",
       "details": "+ Details",
-      "fe": "Frontend & Mobile",
-      "be": "Backend & Systems",
-      "cloud": "Cloud, DB & DevOps",
+      "fe": "Frontend & UI",
+      "be": "Backend & Architecture",
+      "cloud": "Database & DevOps",
       "role": "Role",
-      "company": "Company",
-      "period": "Period",
-      "companyName": "Software Engineering",
-      "certsLabel": "Certifications",
+      "company": "Companies",
+      "period": "Experience",
+      "companyName": "PIXELPO · StackCue · Commerce9",
+      "certsLabel": "Education & Specializations",
       "next": "ES",
-      "langTitle": "Cambiar a Español",
+      "langTitle": "Switch to Spanish",
       "close": "✕ Close",
-      "viewCode": "View Code",
-      "viewCred": "View Credential",
-      "cyber": "Credentials & Badges",
-      "aboutHeading": "About Me"
+      "viewCode": "View Project",
+      "viewCred": "View Details",
+      "cyber": "Key Highlights & Badges",
+      "aboutHeading": "Professional Summary"
     },
     "es": {
       "nav": [
@@ -678,142 +734,174 @@ window.PORTFOLIO_CONFIG = {
         "Experiencia",
         "Habilidades",
         "Proyectos",
-        "Certificaciones",
+        "Educación",
         "Contacto"
       ],
       "listen": "▶ Escuchar",
       "stop": "■ Detener",
       "details": "+ Detalles",
-      "fe": "Frontend & Mobile",
-      "be": "Backend & Sistemas",
-      "cloud": "Cloud, BD & DevOps",
+      "fe": "Frontend & UI",
+      "be": "Backend & Arquitectura",
+      "cloud": "Base de Datos & DevOps",
       "role": "Rol",
-      "company": "Empresa",
-      "period": "Periodo",
-      "companyName": "Ingeniería de Software",
-      "certsLabel": "Certificaciones",
+      "company": "Empresas",
+      "period": "Experiencia",
+      "companyName": "PIXELPO · StackCue · Commerce9",
+      "certsLabel": "Educación & Especializaciones",
       "next": "EN",
-      "langTitle": "Switch to English",
+      "langTitle": "Cambiar a Inglés",
       "close": "✕ Cerrar",
-      "viewCode": "Ver código",
-      "viewCred": "Ver credencial",
-      "cyber": "Credenciales & Insignias",
-      "aboutHeading": "Sobre mí"
+      "viewCode": "Ver proyecto",
+      "viewCred": "Ver detalles",
+      "cyber": "Aspectos Clave & Insignias",
+      "aboutHeading": "Resumen Profesional"
     }
   },
   "p8": {
     "origin": {
-      "title": "About",
-      "desc": "Software Developer & Computer Science Engineer",
+      "title": "About Me",
+      "desc": "Backend Laravel / PHP Developer · 3+ Years Professional Experience",
       "details": {
-        "p1": "I am a Software Developer and Computer Science Engineer with a strong focus on building high-performance web applications, distributed systems, and intelligent digital experiences. I thrive on architecting clean, maintainable, and scalable software that solves meaningful problems.",
-        "p2": "My expertise spans the modern stack: from responsive web interfaces and cross-platform applications to robust backend microservices, cloud deployments, and automated pipelines. In my free time, I enjoy exploring emerging technologies, competitive programming, and continuous learning.",
+        "p1": "Backend Laravel / PHP Developer with 3+ years of professional experience building scalable web applications, RESTful APIs, e-commerce platforms, enterprise business systems, and delivery management solutions. Strong hands-on experience with Laravel 11/12, PHP 8.x, MySQL, REST APIs, Laravel Sanctum, Spatie Permissions, RBAC, Redis, queues, background jobs, database optimization, and third-party API integrations.",
+        "p2": "Experienced in frontend integration using Next.js, React.js, JavaScript, Blade, HTML, CSS, and Bootstrap. Proficient with Git, GitHub, Docker, Postman, PHPUnit, CI/CD, and deployment workflows. Strong focus on clean architecture, secure development, performance optimization, maintainable code, and business-driven software solutions. Target Roles: Laravel Developer, PHP Developer, Backend Developer, Software Engineer · Availability: Immediate Joiner.",
         "stats": [
           {
             "label": "Location",
-            "value": "Global / Remote",
+            "value": "Palakkad, Kerala, India",
             "icon": "fas fa-map-marker-alt"
           },
           {
-            "label": "Focus",
-            "value": "Full-Stack & Cloud",
-            "icon": "fas fa-code"
+            "label": "Experience",
+            "value": "3+ Years Professional",
+            "icon": "fas fa-briefcase"
           },
           {
-            "label": "Studies",
-            "value": "B.S. Computer Science",
-            "icon": "fas fa-university"
+            "label": "Core Stack",
+            "value": "Laravel · PHP · MySQL · Redis",
+            "icon": "fas fa-server"
+          },
+          {
+            "label": "Availability",
+            "value": "Immediate Joiner",
+            "icon": "fas fa-bolt"
           }
         ]
       }
     },
     "experience": {
       "title": "Experience",
-      "desc": "Engineering scalable web applications, microservices, and distributed cloud systems.",
+      "desc": "3+ Years of Professional Engineering across PIXELPO, StackCue, and Commerce9.",
       "details": {
-        "summary": "Full-stack development of enterprise web and cloud applications, focusing on scalable architecture, clean code, security best practices, and continuous delivery.",
-        "role": "Software Developer",
-        "company": "Software Engineering & Cloud Solutions",
-        "date": "2024 — Present",
-        "bulletsTitle": "Key Contributions & Responsibilities",
+        "summary": "3+ years of professional experience delivering scalable web applications, enterprise retail platforms, and delivery systems. Specialized in Laravel 11/12, PHP 8.x, RESTful API design, database query optimization, and secure role-based access control.",
+        "role": "Backend Laravel / PHP Developer",
+        "company": "PIXELPO · StackCue · Commerce9 Technologies",
+        "date": "Dec 2023 — Present (3+ Years)",
+        "bulletsTitle": "Career Highlights & Responsibilities (3+ Years)",
         "bullets": [
-          "Architected and deployed scalable full-stack web applications and microservices with modern frameworks.",
-          "Implemented robust authentication, token-based session security, role-based access control, and rate limiting.",
-          "Designed high-performance REST and GraphQL APIs backed by relational and NoSQL databases.",
-          "Streamlined continuous integration and automated deployment pipelines (CI/CD) on cloud infrastructure."
+          "PIXELPO (Feb 2026 – Present | Remote / Palakkad): Backend Laravel & PHP Developer. Design RBAC modules, API integrations, database workflows, queues, scheduled tasks, and contribute to AK-MART enterprise multi-branch retail platform.",
+          "StackCue (Jun 2025 – Jan 2026 | Remote / Palakkad): Laravel Developer. Developed MVC backend modules, documented RESTful APIs, implemented Laravel Sanctum & Spatie Permissions, and built order/invoice workflows via Laravel Queues.",
+          "Commerce9 Technologies (Dec 2023 – Apr 2025 | Infopark, Kochi): Software Engineer. Delivered features across Laravel, PHP, WordPress, and Next.js. Engineered order management, delivery tracking, payment APIs, and MySQL optimization.",
+          "Commerce9 Technologies (Dec 2023 – Jun 2024 | Infopark, Kochi): Software Engineer Intern. Assisted in developing Laravel and React applications using MVC, REST APIs, and agile engineering practices.",
+          "Web & CMS Deliveries: Built and customized 10+ business websites and WooCommerce solutions with custom themes, high performance, and SEO optimization."
         ]
       }
     },
     "skills": {
-      "title": "Skills",
-      "desc": "Modern technology stack spanning frontend, backend, cloud, and databases.",
+      "title": "Technical Skills",
+      "desc": "Robust technical stack across backend, database design, frontend, and DevOps.",
       "details": {
         "backend": [
-          "Node.js / Express",
-          "Python / FastAPI",
-          "Java / Spring",
-          "Go",
+          "Laravel 11/12",
+          "PHP 8.x",
           "RESTful APIs",
-          "GraphQL",
-          "Microservices"
+          "Laravel Sanctum",
+          "Spatie Permissions",
+          "RBAC",
+          "Laravel Queues",
+          "Jobs & Background Tasks"
         ]
       }
     },
     "projects": {
-      "title": "Projects",
-      "desc": "Curated portfolio of distributed systems, AI integrations, and responsive applications.",
+      "title": "Projects & Works",
+      "desc": "Production enterprise platforms, multi-vendor marketplaces, and delivery tracking engines.",
       "details": {
         "projectsList": [
           {
-            "title": "Cloud Distributed Microservices Platform",
-            "desc": "High-throughput distributed backend with API gateway, event-driven message queuing, auto-scaling, and telemetry monitoring.",
+            "title": "AK-MART – Multi-Branch Retail Platform",
+            "desc": "Enterprise retail & e-commerce platform supporting multi-branch inventory, multi-warehouse management, POS checkout, B2B wholesale workflows, OTP authentication, and automated RESTful APIs.",
             "tags": [
-              "Distributed Systems",
-              "Docker",
-              "Node.js",
-              "Redis"
+              "Laravel 12",
+              "PHP 8.2+",
+              "Livewire 3",
+              "MySQL",
+              "Redis",
+              "Sanctum",
+              "Spatie"
             ]
           },
           {
-            "title": "Autonomous AI Agent & Neural Engine",
-            "desc": "Intelligent orchestration pipeline featuring retrieval-augmented generation (RAG), vector similarity search, and automated task execution.",
+            "title": "Mini Mart – Multi-Vendor Marketplace",
+            "desc": "Multi-vendor e-commerce platform where multiple sellers offer products through a shared customer storefront with centralized administrative oversight.",
             "tags": [
-              "AI / ML",
-              "Python",
-              "LLMs",
-              "Vector DB"
+              "Laravel",
+              "PHP",
+              "MySQL",
+              "REST APIs",
+              "Multi-Vendor"
             ]
           },
           {
-            "title": "Cross-Platform Mobile & Web Ecosystem",
-            "desc": "Responsive, offline-first application with real-time data synchronization, biometric authentication, and sleek interactive UI.",
+            "title": "HC Admin System & Workflow Engine",
+            "desc": "Enterprise internal management platform with granular role-based access control, permission matrices, user management, and operational dashboards integrated with Next.js frontend.",
             "tags": [
-              "React Native",
-              "TypeScript",
-              "Tailwind",
-              "Firebase"
+              "Laravel",
+              "MySQL",
+              "Spatie RBAC",
+              "Next.js",
+              "REST APIs"
             ]
           },
           {
-            "title": "High-Performance Real-Time Engine",
-            "desc": "Low-latency processing core with concurrent worker threads, memory optimization, and dynamic metrics visualization.",
+            "title": "Dodelivery – Logistics & Dispatch Engine",
+            "desc": "Real-time delivery management platform featuring order tracking, automated driver assignment, dispatch operations, and order lifecycle states.",
             "tags": [
-              "C++ / Systems",
-              "Low Latency",
-              "Algorithms",
-              "Concurrency"
+              "Laravel",
+              "MySQL",
+              "REST APIs",
+              "Real-Time Tracking"
+            ]
+          },
+          {
+            "title": "Store9 E-Commerce & Payment Gateway",
+            "desc": "Scalable e-commerce backend supporting product catalogues, users, orders, inventory, administrative workflows, and third-party payment integrations.",
+            "tags": [
+              "Laravel",
+              "Next.js",
+              "MySQL",
+              "Payment Gateway"
+            ]
+          },
+          {
+            "title": "Tekneka Secure File & Vault System",
+            "desc": "Secure document and file management platform featuring role-based access control, file categorization, encrypted storage workflows, and metadata tracking.",
+            "tags": [
+              "Laravel",
+              "MySQL",
+              "RBAC",
+              "Secure Storage"
             ]
           }
         ]
       }
     },
     "certs": {
-      "title": "Certifications",
-      "desc": "Continuous technical education in cloud infrastructure, cybersecurity, and software architecture."
+      "title": "Education & Credentials",
+      "desc": "Academic degree in Physics & 3+ years of professional engineering standards."
     },
     "contact": {
       "title": "Contact",
-      "desc": "Open for full-time engineering opportunities, collaborations, and technical consulting."
+      "desc": "Immediate Joiner · Palakkad, Kerala, India · Open for Roles"
     }
   }
 };

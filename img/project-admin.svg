@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg-ad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180a1c"/>
+      <stop offset="100%" stop-color="#08020a"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-ad)"/>
+  <!-- Admin / RBAC Matrix Mock -->
+  <rect x="140" y="70" width="520" height="230" rx="12" fill="#240f2a" stroke="#481e54" stroke-width="2"/>
+  <text x="170" y="110" fill="#ff007f" font-family="'Space Grotesk', monospace" font-size="15" font-weight="bold">HC ADMIN // ROLE-BASED ACCESS CONTROL (RBAC)</text>
+  <!-- Permissions table -->
+  <rect x="165" y="130" width="470" height="35" rx="6" fill="#3b1545"/>
+  <text x="185" y="153" fill="#f472b6" font-family="monospace" font-size="13">SUPER_ADMIN · PERMISSIONS: ALL [GRANTED]</text>
+  <rect x="165" y="175" width="470" height="35" rx="6" fill="#3b1545"/>
+  <text x="185" y="198" fill="#e879f9" font-family="monospace" font-size="13">MANAGER · PERMISSIONS: READ/WRITE/AUDIT</text>
+  <rect x="165" y="220" width="470" height="35" rx="6" fill="#3b1545"/>
+  <text x="185" y="243" fill="#c084fc" font-family="monospace" font-size="13">API_CLIENT · TOKEN_SANCTUM: SECURE_SYNC</text>
+  <!-- UI Card Header -->
+  <rect x="140" y="325" width="520" height="95" rx="10" fill="#1b0a20" stroke="#ff007f" stroke-width="1.5"/>
+  <text x="170" y="360" fill="#ff007f" font-family="'Space Grotesk', monospace" font-size="19" font-weight="bold">HC ADMIN &amp; ENTERPRISE WORKFLOW</text>
+  <text x="170" y="390" fill="#f472b6" font-family="'Space Grotesk', sans-serif" font-size="13">Laravel · Spatie RBAC · Next.js · High-Security REST APIs</text>
+</svg>

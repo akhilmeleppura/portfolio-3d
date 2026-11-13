@@ -1,73 +1,56 @@
-# Interactive 3D Developer Portfolio
+# Akhil S — Interactive 3D Developer Portfolio
 
-An immersive, futuristic 3D developer portfolio featuring an interactive 3D robot model, cinematic camera movements, real-time lighting and post-processing effects, sound controls, and a slide-out details drawer.
+An immersive, futuristic 3D developer portfolio for **Akhil S** (Backend Laravel / PHP Developer, 3+ Years of Professional Experience). Featuring an interactive 3D robot model, cinematic camera movements, real-time lighting and post-processing effects, audio controls, and an editorial details drawer.
 
-## 🚀 Quick Start
+## 👤 Profile Summary
 
-Because this portfolio uses 3D models (`.glb`) and WebGL modules, it needs to be served through a local HTTP server:
+- **Name**: Akhil S
+- **Role**: Backend Laravel / PHP Developer
+- **Experience**: 3+ Years of Professional Experience
+- **Location**: Palakkad, Kerala, India
+- **Availability**: Immediate Joiner
+- **Target Roles**: Laravel Developer, PHP Developer, Backend Developer, Software Engineer
+- **Phone**: [+91 79022 07027](tel:+917902207027)
+- **Email**: [akhilmeleppura@gmail.com](mailto:akhilmeleppura@gmail.com)
+- **LinkedIn**: [linkedin.com/in/akhil-meleppura](https://linkedin.com/in/akhil-meleppura)
+- **GitHub**: [github.com/akhilmeleppura](https://github.com/akhilmeleppura)
+- **Live Portfolio**: [akhil-meleppura.42web.io](https://akhil-meleppura.42web.io)
 
-### Option 1: Using Node.js (npx)
+---
+
+## 🛠️ Tech Stack & Key Works
+
+- **Backend**: Laravel 11/12, PHP 8.x, OOP, RESTful APIs, MVC, Laravel Sanctum, Spatie Permissions, RBAC, Queues & Jobs
+- **Databases**: MySQL (Schema Design, Query Optimization, Relationships), Redis Caching
+- **Frontend Integration**: Next.js, React.js, JavaScript (ES6+), Blade, HTML5, CSS3, Bootstrap, Tailwind CSS
+- **CMS & E-Commerce**: WordPress, Elementor, WooCommerce, Shopify
+- **DevOps & Tools**: Docker, Git, GitHub Actions, CI/CD, Postman, PHPUnit, VS Code, Railway, Vercel
+
+### Featured Projects Highlighted in 3D:
+1. **AK-MART**: Enterprise Multi-Branch Retail Platform & POS ([Live Demo](https://ak-mart.onrender.com) · [GitHub](https://github.com/akhilmeleppura/Ak-Mart))
+2. **Mini Mart**: Multi-Vendor Marketplace Platform ([Live Demo](https://minimart-hqui.onrender.com))
+3. **HC Admin System**: Enterprise RBAC & Workflow Management Engine
+4. **Dodelivery**: Real-Time Logistics & Dispatch Tracking Platform
+5. **Store9**: Scalable E-Commerce Backend & Payment Engine
+6. **Tekneka**: High-Security File & Document Vault System
+
+---
+
+## 🚀 Quick Start (Local Preview)
+
+Because this portfolio uses 3D models (`.glb`) and WebGL ES modules, run it through any local HTTP server:
+
 ```bash
+# Using Node.js
 npx serve .
-```
 
-### Option 2: Using Python
-```bash
+# Or using Python
 python -m http.server 8000
 ```
-Then open `http://localhost:8000` in your browser.
-
-### Option 3: VS Code Live Server
-Right-click `index.html` and click **"Open with Live Server"**.
+Then open `http://localhost:8000` in your web browser.
 
 ---
 
 ## ⚙️ Customization
 
-All your portfolio content is cleanly centralized in **`portfolio-config.js`**. You do not need to touch any compiled code or bundle files to personalize your site.
-
-Open [portfolio-config.js](file:///c:/Users/HP/Downloads/akhil%20s/portfolio-config.js) to edit:
-
-- **Name & Title**: `name`, `title`, `role`
-- **Default Language**: `defaultLang` (`"en"` or `"es"`)
-- **Sections**:
-  - **About Me**: Bio paragraphs, key stats (Location, Degree, Focus)
-  - **Experience**: Role, company, dates, bullets, tech stack
-  - **Skills**: Categorized frontend, backend, and cloud/database skills
-  - **Projects**: Project title, description, tags, preview images, GitHub/live links
-  - **Certifications**: Professional credentials and badges
-  - **Contact**: Email address and social links (GitHub, LinkedIn, Portfolio)
-
----
-
-## 🌐 Deploying to GitHub Pages
-
-1. Initialize a new Git repository:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit - Interactive 3D Portfolio"
-   ```
-2. Create a repository on GitHub (e.g., `username.github.io` or `my-portfolio`).
-3. Push your code:
-   ```bash
-   git remote add origin https://github.com/<your-username>/<repo-name>.git
-   git branch -M main
-   git push -u origin main
-   ```
-4. In GitHub repository settings, go to **Settings > Pages**, set Branch to `main`, and save. Your site is live!
-
----
-
-## 📁 Project Structure
-
-```
-├── index.html              # Main HTML entry point
-├── portfolio-config.js     # User configuration (bio, skills, projects, links)
-├── assets/
-│   ├── index-DcagGn9F.js   # 3D Scene & Application engine
-│   └── index-DQPpKdS8.css  # Futuristic styling & animations
-├── img/                    # Project thumbnails & preview graphics
-├── audio/                  # Background music & sound effects
-└── models/                 # 3D assets & animations (GLB)
-```
+All your portfolio content is cleanly centralized in **`portfolio-config.js`**. You can update any text, project links, or credentials directly in that file without touching minified bundle code.
