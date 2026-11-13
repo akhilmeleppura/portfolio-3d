@@ -11,7 +11,6 @@
       subtitle: "Online · Ask anything about Akhil S",
       greeting: "Hello! 👋 I am Akhil S's virtual assistant. Akhil is a Backend Laravel / PHP Developer with 3+ years of professional experience building scalable web apps, enterprise retail platforms, and delivery systems. How can I assist you today?",
       placeholder: "Ask in English, മലയാളം, or हिन्दी...",
-      langLabel: "മലയാളം",
       chips: [
         { label: "💼 3+ Yrs Experience", query: "Tell me about Akhil's work experience" },
         { label: "🚀 Top Projects", query: "What projects has Akhil built?" },
@@ -74,7 +73,6 @@
       subtitle: "ഓൺലൈൻ · അഖിലിനെക്കുറിച്ച് എന്തും ചോദിക്കാം",
       greeting: "നമസ്കാരം! 👋 ഞാൻ അഖിൽ എസ്-ന്റെ AI അസിസ്റ്റന്റാണ്. ലാരവെൽ, പിഎച്ച്പി, മൈഎസ്ക്യുഎൽ, റെസ്റ്റ് എപിഐകൾ എന്നിവയിൽ 3+ വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുള്ള ബാക്ക്-എൻഡ് ഡെവലപ്പറാണ് അഖിൽ. നിങ്ങൾക്ക് എന്ത് വിവരമാണ് അറിയേണ്ടത്?",
       placeholder: "മലയാളത്തിലോ ഇംഗ്ലീഷിലോ ചോദിക്കൂ...",
-      langLabel: "हिन्दी",
       chips: [
         { label: "💼 3+ വർഷത്തെ പരിചയം", query: "അഖിലിന്റെ പ്രവൃത്തിപരിചയം പറയൂ" },
         { label: "🚀 പ്രധാന പ്രൊജക്ടുകൾ", query: "അഖിൽ ചെയ്ത പ്രൊജക്ടുകൾ ഏതൊക്കെയാണ്?" },
@@ -137,7 +135,6 @@
       subtitle: "ऑनलाइन · अखिल के बारे में कुछ भी पूछें",
       greeting: "नमस्ते! 👋 मैं अखिल एस का AI असिस्टेंट हूँ। अखिल लारवेल, पीएचपी, मायएसक्यूएल और रेस्ट एपीआई में 3+ वर्षों के पेशेवर अनुभव वाले बैक-एंड डेवलपर हैं। मैं आपकी क्या सहायता कर सकता हूँ?",
       placeholder: "हिन्दी या अंग्रेज़ी में पूछें...",
-      langLabel: "English",
       chips: [
         { label: "💼 3+ वर्ष का अनुभव", query: "अखिल का कार्य अनुभव बताएं" },
         { label: "🚀 प्रमुख प्रोजेक्ट्स", query: "अखिल ने कौन-कौन से प्रोजेक्ट बनाए हैं?" },
@@ -202,7 +199,7 @@
   let currentSpeakingUtterance = null;
 
   // DOM Elements
-  let triggerBtn, chatWindow, msgContainer, inputEl, sendBtn, langBtn, closeBtn, chipsContainer, geminiToggleBtn;
+  let triggerBtn, chatWindow, msgContainer, inputEl, sendBtn, closeBtn, chipsContainer, geminiToggleBtn;
 
   function initChatbot() {
     try {
@@ -252,9 +249,11 @@
             <span class="toggle-dot"></span>
             <span class="toggle-text">${geminiMode ? 'AI ON' : 'AI OFF'}</span>
           </button>
-          <button class="chatbot-lang-btn" id="cb-lang-toggle" title="Change Language">
-            ${KB[currentLang].langLabel}
-          </button>
+          <div class="cb-lang-chips">
+            <button class="cb-lang-chip ${currentLang === 'en' ? 'active' : ''}" data-lang="en">EN</button>
+            <button class="cb-lang-chip ${currentLang === 'ml' ? 'active' : ''}" data-lang="ml">ML</button>
+            <button class="cb-lang-chip ${currentLang === 'hi' ? 'active' : ''}" data-lang="hi">HI</button>
+          </div>
           <button class="chatbot-close-btn" id="cb-close-btn" title="Close Chat">
             <i class="fas fa-times"></i>
           </button>
@@ -284,7 +283,6 @@
     msgContainer = document.getElementById('cb-messages');
     inputEl = document.getElementById('cb-input');
     sendBtn = document.getElementById('cb-send-btn');
-    langBtn = document.getElementById('cb-lang-toggle');
     closeBtn = document.getElementById('cb-close-btn');
     chipsContainer = document.getElementById('cb-chips-bar');
     geminiToggleBtn = document.getElementById('cb-gemini-toggle');
@@ -293,7 +291,19 @@
   function bindEvents() {
     triggerBtn.addEventListener('click', toggleChat);
     closeBtn.addEventListener('click', toggleChat);
-    langBtn.addEventListener('click', cycleLanguage);
+
+    // Direct language switcher chips
+    chatWindow.querySelectorAll('.cb-lang-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        if (lang) {
+          stopSpeaking();
+          setLanguage(lang);
+          // Sync with main 3D portfolio language
+          window.dispatchEvent(new CustomEvent('setPortfolioLang', { detail: { lang } }));
+        }
+      });
+    });
 
     geminiToggleBtn.addEventListener('click', () => {
       geminiMode = !geminiMode;
@@ -311,7 +321,7 @@
     });
 
     // Listen for language changes from main portfolio toggle
-    document.addEventListener('languageChanged', (e) => {
+    window.addEventListener('languageChanged', (e) => {
       if (e.detail && e.detail.lang && e.detail.lang !== currentLang) {
         setLanguage(e.detail.lang);
       }
@@ -342,21 +352,19 @@
     }
   }
 
-  function cycleLanguage() {
-    stopSpeaking();
-    if (currentLang === 'en') setLanguage('ml');
-    else if (currentLang === 'ml') setLanguage('hi');
-    else setLanguage('en');
-  }
-
   function setLanguage(lang) {
     if (!KB[lang]) return;
     currentLang = lang;
     try { localStorage.setItem('lang', lang); } catch(e) {}
 
     document.getElementById('cb-header-title').innerText = KB[lang].botName;
-    langBtn.innerText = KB[lang].langLabel;
     inputEl.placeholder = KB[lang].placeholder;
+
+    // Update active chip style
+    chatWindow.querySelectorAll('.cb-lang-chip').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
     renderChips();
     addBotMessage(KB[lang].greeting, KB[lang].greeting, 'system');
   }
@@ -449,6 +457,18 @@
     processQuery(query);
   }
 
+  function cleanAiResponse(text) {
+    if (!text) return '';
+    return text
+      // Strip artificial terminal/sci-fi filler prefixes
+      .replace(/^[\s\r\n]*(\*+)?(system initialized|connection established|initializing|access granted|protocol online|status: online)[^\n]*\n*/gim, '')
+      // Strip meta remarks about typos or cutoffs
+      .replace(/^hello! [^\n]*looks like your message got cut off[^\n]*\n*/gim, '')
+      // Strip leading blank lines
+      .replace(/^\s*[\r\n]+/g, '')
+      .trim();
+  }
+
   async function processQuery(query) {
     showTyping();
 
@@ -465,8 +485,9 @@
           const data = await res.json();
           if (data.success && data.reply) {
             hideTyping();
-            const formattedHtml = parseMarkdown(data.reply);
-            addBotMessage(formattedHtml, data.reply, 'gemini');
+            const cleanReply = cleanAiResponse(data.reply);
+            const formattedHtml = parseMarkdown(cleanReply);
+            addBotMessage(formattedHtml, cleanReply, 'gemini');
             return;
           }
         }

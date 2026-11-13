@@ -224,7 +224,40 @@
   color: #fff;
 }
 
-.chatbot-lang-btn,
+/* 3-State Language Switcher Chips */
+.cb-lang-chips {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.cb-lang-chip {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cb-lang-chip:hover {
+  color: #fff;
+}
+
+.cb-lang-chip.active {
+  background: rgba(0, 240, 255, 0.25);
+  color: #00f0ff;
+  box-shadow: 0 0 6px rgba(0, 240, 255, 0.4);
+}
+
 .chatbot-close-btn {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -238,13 +271,6 @@
   cursor: pointer;
   font-size: 11px;
   transition: all 0.2s ease;
-}
-
-.chatbot-lang-btn {
-  width: auto;
-  padding: 0 7px;
-  font-weight: 600;
-  font-size: 11px;
 }
 
 .chatbot-lang-btn:hover,
