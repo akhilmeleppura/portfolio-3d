@@ -1,5 +1,6 @@
 /**
  * Cyberpunk AI Assistant Chatbot - Akhil S Portfolio
+ * With Free Google Gemini AI Live Integration & Instant Offline Engine
  * Supports English (en), Malayalam (ml), and Hindi (hi)
  */
 (function() {
@@ -7,7 +8,7 @@
   const KB = {
     en: {
       botName: "Akhil's AI Assistant",
-      subtitle: "Online · Ask me anything about Akhil S",
+      subtitle: "Online · Ask anything about Akhil S",
       greeting: "Hello! 👋 I am Akhil S's virtual assistant. Akhil is a Backend Laravel / PHP Developer with 3+ years of professional experience building scalable web apps, enterprise retail platforms, and delivery systems. How can I assist you today?",
       placeholder: "Ask in English, മലയാളം, or हिन्दी...",
       langLabel: "മലയാളം",
@@ -16,8 +17,7 @@
         { label: "🚀 Top Projects", query: "What projects has Akhil built?" },
         { label: "🛠️ Tech Stack", query: "What are Akhil's core technical skills?" },
         { label: "📞 Contact / Hire", query: "How can I contact or hire Akhil?" },
-        { label: "⚡ Availability", query: "Is Akhil available immediately?" },
-        { label: "🌐 മലയാളം / हिन्दी", query: "Can you speak in Malayalam or Hindi?" }
+        { label: "⚡ Availability", query: "Is Akhil available immediately?" }
       ],
       responses: {
         experience: `<strong>💼 3+ Years Professional Experience:</strong><br><br>
@@ -49,11 +49,11 @@
 • <strong>Phone:</strong> <a href="tel:+917902207027">+91 79022 07027</a><br>
 • <strong>Email:</strong> <a href="mailto:akhilmeleppura@gmail.com">akhilmeleppura@gmail.com</a><br>
 • <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/akhil-meleppura" target="_blank">linkedin.com/in/akhil-meleppura</a><br>
-• <strong>GitHub:</strong> <a href="https://github.com/akhilmeleppura" target="_blank">github.com/akhilmeleppura</a><br>
-• <strong>Live Portfolio:</strong> <a href="https://akhil-meleppura.42web.io" target="_blank">akhil-meleppura.42web.io</a><br><br>
+• <strong>GitHub:</strong> <a href="https://github.com/akhilmeleppura" target="_blank">github.com/akhilmeleppura</a><br><br>
 <div class="chatbot-action-links">
-  <a href="tel:+917902207027" class="chatbot-action-link"><i class="fas fa-phone"></i> Call Akhil</a>
-  <a href="mailto:akhilmeleppura@gmail.com" class="chatbot-action-link"><i class="fas fa-envelope"></i> Email Akhil</a>
+  <a href="https://wa.me/917902207027?text=Hi%20Akhil,%20I%20saw%20your%20portfolio" target="_blank" class="chatbot-action-link whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  <a href="tel:+917902207027" class="chatbot-action-link"><i class="fas fa-phone"></i> Call</a>
+  <a href="mailto:akhilmeleppura@gmail.com" class="chatbot-action-link"><i class="fas fa-envelope"></i> Email</a>
 </div>`,
 
         availability: `<strong>⚡ Availability & Target Roles:</strong><br><br>
@@ -80,8 +80,7 @@
         { label: "🚀 പ്രധാന പ്രൊജക്ടുകൾ", query: "അഖിൽ ചെയ്ത പ്രൊജക്ടുകൾ ഏതൊക്കെയാണ്?" },
         { label: "🛠️ സാങ്കേതിക സ്കിൽസ്", query: "അഖിലിന്റെ പ്രധാന സ്കിൽസ് എന്തൊക്കെയാണ്?" },
         { label: "📞 ബന്ധപ്പെടാൻ", query: "അഖിലിനെ എങ്ങനെ ബന്ധപ്പെടാം?" },
-        { label: "⚡ ലഭ്യത (Availability)", query: "അഖിൽ എപ്പോൾ ജോയിൻ ചെയ്യാൻ ലഭ്യമാണ്?" },
-        { label: "🌐 English / हिन्दी", query: "Switch to English or Hindi" }
+        { label: "⚡ ലഭ്യത (Availability)", query: "അഖിൽ എപ്പോൾ ജോയിൻ ചെയ്യാൻ ലഭ്യമാണ്?" }
       ],
       responses: {
         experience: `<strong>💼 3+ വർഷത്തെ പ്രൊഫഷണൽ പരിചയം:</strong><br><br>
@@ -98,13 +97,13 @@
    <a href="https://minimart-hqui.onrender.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> ലൈവ് ഡെമോ</a><br><br>
 3. <strong>HC Admin System</strong>: എൻ്റർപ്രൈസ് ആർബിഎസി & അഡ്മിൻ മാനേജ്‌മെൻ്റ് സിസ്റ്റം.<br>
 4. <strong>Dodelivery</strong>: തത്സമയ ഡെലിവറി & ഡിസ്പാച്ച് ട്രാക്കിംഗ് പ്ലാറ്റ്‌ഫോം.<br>
-5. <strong>Store9</strong>: ഇ-കൊമേഴ്‌സ് ബാക്ക്-എൻഡ് & പേയ്‌മെൻ്റ് ഗേറ്റ്‌വേ.<br>
-6. <strong>Tekneka</strong>: സുരക്ഷിത ഫയൽ & ഡോക്യുമെൻ്റ് വോൾട്ട് സിസ്റ്റം.<br>
-7. <strong>10+ വെബ് & സിഎംഎസ് പ്രൊജക്ടുകൾ</strong>: വേർഡ്പ്രസ്സ്, വൂകൊമേഴ്‌സ് ബിസിനസ്സ് സൈറ്റുകൾ.`,
+5. <strong>Store9</strong>: ഇ-കൊമേഴ്‌സ് ബാക്ക്-എൻഡ് & പേയ്‌മെൻ്റ് ഇൻ്റഗ്രേഷൻ.<br>
+6. <strong>Tekneka</strong>: സുരക്ഷിതമായ ഡോക്യുമെൻ്റ് വോൾട്ട് സിസ്റ്റം.<br>
+7. <strong>10+ വെബ് & CMS പ്രൊജക്ടുകൾ</strong>: വേർഡ്പ്രസ്സ് & വൂകൊമേഴ്‌സ് ബിസിനസ് സൊല്യൂഷനുകൾ.`,
 
-        skills: `<strong>🛠️ സാങ്കേതിക വൈദഗ്ദ്ധ്യം (Skills):</strong><br><br>
-• <strong>ബാക്ക്-എൻഡ്:</strong> Laravel 11/12, PHP 8.x, RESTful APIs, OOP, MVC, Laravel Sanctum, Spatie Permissions, RBAC, Queues & Background Jobs.<br>
-• <strong>ഡാറ്റാബേസ്:</strong> MySQL (Schema Design, Query Optimization), Redis Caching.<br>
+        skills: `<strong>🛠️ സാങ്കേതിക സ്കിൽസ്:</strong><br><br>
+• <strong>ബാക്ക്-എൻഡ്:</strong> Laravel 11/12, PHP 8.x, RESTful APIs, OOP, MVC, Laravel Sanctum, Spatie Permissions, RBAC, Queues & ബാക്ക്ഗ്രൗണ്ട് ജോലികൾ.<br>
+• <strong>ഡാറ്റാബേസ്:</strong> MySQL (സ്കീമ ഡിസൈൻ, ഒപ്റ്റിമൈസേഷൻ, ഇൻഡക്സിങ്), Redis കാഷിങ്.<br>
 • <strong>ഫ്രണ്ട്-എൻഡ്:</strong> Next.js, React.js, JavaScript (ES6+), Blade, HTML5, CSS3, Bootstrap, Tailwind CSS, WordPress.<br>
 • <strong>ഡെവോപ്സ് & ടൂളുകൾ:</strong> Docker, Git, GitHub Actions, CI/CD, Postman, PHPUnit, OWASP Security.`,
 
@@ -112,247 +111,314 @@
 • <strong>സ്ഥലം:</strong> പാലക്കാട്, കേരളം, ഇന്ത്യ<br>
 • <strong>ഫോൺ:</strong> <a href="tel:+917902207027">+91 79022 07027</a><br>
 • <strong>ഇമെയിൽ:</strong> <a href="mailto:akhilmeleppura@gmail.com">akhilmeleppura@gmail.com</a><br>
-• <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/akhil-meleppura" target="_blank">linkedin.com/in/akhil-meleppura</a><br>
-• <strong>GitHub:</strong> <a href="https://github.com/akhilmeleppura" target="_blank">github.com/akhilmeleppura</a><br>
-• <strong>പോർട്ട്ഫോളിയോ:</strong> <a href="https://akhil-meleppura.42web.io" target="_blank">akhil-meleppura.42web.io</a><br><br>
+• <strong>ലിങ്ക്ഡ്ഇൻ:</strong> <a href="https://linkedin.com/in/akhil-meleppura" target="_blank">linkedin.com/in/akhil-meleppura</a><br>
+• <strong>ഗിറ്റ്ഹബ്ബ്:</strong> <a href="https://github.com/akhilmeleppura" target="_blank">github.com/akhilmeleppura</a><br><br>
 <div class="chatbot-action-links">
+  <a href="https://wa.me/917902207027?text=Hi%20Akhil,%20I%20saw%20your%20portfolio" target="_blank" class="chatbot-action-link whatsapp"><i class="fab fa-whatsapp"></i> വാട്ട്സ്ആപ്പ്</a>
   <a href="tel:+917902207027" class="chatbot-action-link"><i class="fas fa-phone"></i> വിളിക്കുക</a>
-  <a href="mailto:akhilmeleppura@gmail.com" class="chatbot-action-link"><i class="fas fa-envelope"></i> ഇമെയിൽ അയക്കുക</a>
+  <a href="mailto:akhilmeleppura@gmail.com" class="chatbot-action-link"><i class="fas fa-envelope"></i> ഇമെയിൽ</a>
 </div>`,
 
-        availability: `<strong>⚡ ലഭ്യതയും ജോബ് റോളുകളും:</strong><br><br>
-• <strong>ലഭ്യത:</strong> ഉടനടി ജോലിയിൽ പ്രവേശിക്കാം (Immediate Joiner) ⚡<br>
-• <strong>സ്ഥലം:</strong> പാലക്കാട്, കേരളം (റിമോട്ട്, ഹൈബ്രിഡ്, ഓൺ-സൈറ്റ് അവസരങ്ങൾ സ്വീകരിക്കുന്നു)<br>
-• <strong>റോളുകൾ:</strong> Laravel Developer, PHP Developer, Backend Developer, Software Engineer.`,
+        availability: `<strong>⚡ ലഭ്യത & റോളുകൾ:</strong><br><br>
+• <strong>സ്റ്റാറ്റസ്:</strong> ഉടനടി ജോലിയിൽ പ്രവേശിക്കാൻ തയ്യാറാണ് (Immediate Joiner) ⚡<br>
+• <strong>സ്ഥലം:</strong> പാലക്കാട്, കേരളം (റിമോട്ട്, ഹൈബ്രിഡ്, ഓൺ-സൈറ്റ് അവസരങ്ങൾ സ്വീകരിക്കും)<br>
+• <strong>റോളുകൾ:</strong> Laravel Developer, PHP Developer, Backend Developer, Full-Stack / Software Engineer.`,
 
         education: `<strong>🎓 വിദ്യാഭ്യാസം:</strong><br><br>
-• <strong>ബാച്ചിലർ ഓഫ് സയൻസ് (B.Sc.) ഇൻ ഫിസിക്സ്</strong> (2019 – 2022)<br>
+• <strong>ഫിസിക്സിൽ ബിരുദം (B.Sc. Physics)</strong> (2019 – 2022)<br>
   ഗവൺമെന്റ് വിക്ടോറിയ കോളേജ്, പാലക്കാട്, കേരളം.<br>
-• കൂടാതെ 3+ വർഷത്തെ പ്രൊഫഷണൽ സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയറിംഗ് പ്രവൃത്തിപരിചയം.`,
+• 3 വർഷത്തിലധികം പ്രൊഫഷണൽ സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയറിംഗ് പ്രവൃത്തിപരിചയം.`,
 
-        default: `അഖിലിന്റെ <strong>3+ വർഷത്തെ പ്രവൃത്തിപരിചയം</strong>, <strong>പ്രൊജക്ടുകൾ (AK-MART, Mini Mart)</strong>, <strong>സാങ്കേതിക സ്കിൽസ്</strong>, അല്ലെങ്കിൽ <strong>ഫോൺ/ഇമെയിൽ വിവരങ്ങൾ</strong> എന്നിവയെക്കുറിച്ച് എന്നോട് ചോദിക്കാം. താഴെയുള്ള ബട്ടണുകൾ ഉപയോഗിക്കാവുന്നതാണ്!`
+        default: `അഖിൽ എസ്-നെക്കുറിച്ചുള്ള ഏത് ചോദ്യത്തിനും ഞാൻ സഹായിക്കാം! <strong>3+ വർഷത്തെ പ്രവൃത്തിപരിചയം</strong>, <strong>പ്രൊജക്ടുകൾ (AK-MART, Mini Mart)</strong>, <strong>സ്കിൽസ്</strong>, അല്ലെങ്കിൽ <strong>ബന്ധപ്പെടാനുള്ള നമ്പർ</strong> ചോദിക്കാം. താഴെയുള്ള ബട്ടണുകൾ ഉപയോഗിക്കൂ!`
       }
     },
     hi: {
-      botName: "अखिल AI सहायक",
-      subtitle: "ऑनलाइन · अखिल एस के बारे में कुछ भी पूछें",
-      greeting: "नमस्ते! 👋 मैं अखिल एस का AI सहायक हूँ। अखिल 3+ वर्षों के पेशेवर अनुभव के साथ बैक-एंड लारवेल / पीएचपी डेवलपर हैं। उन्होंने स्केलेबल वेब ऐप्स, एंटरप्राइज रिटेल प्लेटफॉर्म और डिलीवरी सिस्टम बनाए हैं। मैं आपकी क्या सहायता कर सकता हूँ?",
-      placeholder: "हिन्दी, English या മലയാളം में पूछें...",
-      langLabel: "EN",
+      botName: "अखिल AI असिस्टेंट",
+      subtitle: "ऑनलाइन · अखिल के बारे में कुछ भी पूछें",
+      greeting: "नमस्ते! 👋 मैं अखिल एस का AI असिस्टेंट हूँ। अखिल लारवेल, पीएचपी, मायएसक्यूएल और रेस्ट एपीआई में 3+ वर्षों के पेशेवर अनुभव वाले बैक-एंड डेवलपर हैं। मैं आपकी क्या सहायता कर सकता हूँ?",
+      placeholder: "हिन्दी या अंग्रेज़ी में पूछें...",
+      langLabel: "English",
       chips: [
-        { label: "💼 3+ वर्ष का अनुभव", query: "अखिल के कार्य अनुभव के बारे में बताएं" },
-        { label: "🚀 मुख्य प्रोजेक्ट्स", query: "अखिल ने कौन-कौन से प्रोजेक्ट्स बनाए हैं?" },
-        { label: "🛠️ तकनीकी कौशल", query: "अखिल के तकनीकी कौशल क्या हैं?" },
-        { label: "📞 संपर्क विवरण", query: "अखिल से कैसे संपर्क करें?" },
-        { label: "⚡ उपलब्धता (Availability)", query: "अखिल कब जॉइन कर सकते हैं?" },
-        { label: "🌐 English / മലയാളം", query: "Switch to English or Malayalam" }
+        { label: "💼 3+ वर्ष का अनुभव", query: "अखिल का कार्य अनुभव बताएं" },
+        { label: "🚀 प्रमुख प्रोजेक्ट्स", query: "अखिल ने कौन-कौन से प्रोजेक्ट बनाए हैं?" },
+        { label: "🛠️ तकनीकी कौशल", query: "अखिल के मुख्य स्किल्स क्या हैं?" },
+        { label: "📞 संपर्क / हायर", query: "अखिल से कैसे संपर्क करें?" },
+        { label: "⚡ उपलब्धता (Availability)", query: "अखिल कब जॉइन कर सकते हैं?" }
       ],
       responses: {
         experience: `<strong>💼 3+ वर्ष का पेशेवर अनुभव:</strong><br><br>
-• <strong>PIXELPO</strong> (फरवरी 2026 – वर्तमान | रिमोट / पलक्कड़): बैक-एंड लारवेल/पीएचपी डेवलपर। RBAC, एपीआई इंटीग्रेशन, डेटाबेस वर्कफ़्लो और <strong>AK-MART</strong> मल्टी-ब्रांच रिटेल प्लेटफॉर्म का विकास।<br>
-• <strong>StackCue</strong> (जून 2025 – जनवरी 2026 | रिमोट / पलक्कड़): लारवेल डेवलपर। MVC बैक-एंड, RESTful APIs, सैंक्टम और स्पैटी परमिशन्स, और Next.js इंटीग्रेशन।<br>
-• <strong>Commerce9 Technologies</strong> (दिसंबर 2023 – अप्रैल 2025 | इन्फोपार्क, कोच्चि): सॉफ्टवेयर इंजीनियर। ऑर्डर प्रबंधन, डिलीवरी ट्रैकिंग, पेमेंट गेटवे एपीआई और MySQL क्वेरी ऑप्टिमाइजेशन।<br>
-• <strong>Commerce9 Technologies</strong> (दिसंबर 2023 – जून 2024): सॉफ्टवेयर इंजीनियर इंटर्न। लारवेल और रिएक्ट अनुप्रयोग विकास।`,
+• <strong>PIXELPO</strong> (फरवरी 2026 – वर्तमान | रिमोट / पलक्कड़): बैक-एंड लारवेल/पीएचपी डेवलपर। RBAC, API इंटीग्रेशन, डेटाबेस वर्कफ़्लोज़ और <strong>AK-MART</strong> मल्टी-ब्रांच रिटेल प्लेटफ़ॉर्म निर्माण।<br>
+• <strong>StackCue</strong> (जून 2025 – जनवरी 2026 | रिमोट / पलक्कड़): लारवेल डेवलपर। MVC बैक-एंड, RESTful APIs, सैंक्टम और स्पैटी सुरक्षा, Next.js इंटीग्रेशन।<br>
+• <strong>Commerce9 Technologies</strong> (दिसंबर 2023 – अप्रैल 2025 | इन्फोपार्क, कोच्चि): सॉफ्टवेयर इंजीनियर। ऑर्डर मैनेजमेंट, डिलीवरी ट्रैकिंग, पेमेंट एपीआई और MySQL ऑप्टिमाइजेशन।<br>
+• <strong>Commerce9 Technologies</strong> (दिसंबर 2023 – जून 2024): सॉफ्टवेयर इंजीनियर इंटर्न। लारवेल और रिएक्ट डेवलपमेंट।`,
 
         projects: `<strong>🚀 प्रमुख प्रोजेक्ट्स और कार्य:</strong><br><br>
-1. <strong>AK-MART</strong>: मल्टी-ब्रांच रिटेल और पीओएस प्लेटफॉर्म (Laravel 12, Livewire 3, MySQL, Redis, Sanctum, Spatie)।<br>
+1. <strong>AK-MART</strong>: मल्टी-ब्रांच रिटेल प्लेटफ़ॉर्म और POS (Laravel 12, Livewire 3, MySQL, Redis, Sanctum, Spatie)।<br>
    <a href="https://ak-mart.onrender.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> लाइव डेमो</a> 
    <a href="https://github.com/akhilmeleppura/Ak-Mart" target="_blank" class="chatbot-action-link"><i class="fab fa-github"></i> गिटहब</a><br><br>
 2. <strong>Mini Mart</strong>: मल्टी-वेंडर ई-कॉमर्स मार्केटप्लेस।<br>
    <a href="https://minimart-hqui.onrender.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> लाइव डेमो</a><br><br>
-3. <strong>HC Admin System</strong>: एंटरप्राइज RBAC और एडमिन वर्कफ़्लो इंजन।<br>
-4. <strong>Dodelivery</strong>: रीयल-टाइम लॉजिस्टिक्स और डिलीवरी ट्रैकिंग प्लेटफॉर्म।<br>
-5. <strong>Store9</strong>: स्केलेबल ई-कॉमर्स बैक-एंड और पेमेंट गेटवे।<br>
-6. <strong>Tekneka</strong>: सुरक्षित फ़ाइल और डॉक्यूमेंट वॉल्ट सिस्टम।<br>
-7. <strong>10+ वेब और सीएमएस प्रोजेक्ट्स</strong>: वर्डप्रेस और वूकॉमर्स बिजनेस सॉल्यूशंस।`,
+3. <strong>HC Admin System</strong>: एंटरप्राइज RBAC और वर्कफ़्लो एडमिन इंजन।<br>
+4. <strong>Dodelivery</strong>: रीयल-टाइम लॉजिस्टिक्स और डिलीवरी ट्रैकिंग प्लेटफ़ॉर्म।<br>
+5. <strong>Store9</strong>: स्केलेबल ई-कॉमर्स बैक-एंड और पेमेंट इंटीग्रेशन।<br>
+6. <strong>Tekneka</strong>: सुरक्षित दस्तावेज़ वॉल्ट सिस्टम।<br>
+7. <strong>10+ वेब और CMS प्रोजेक्ट्स</strong>: वर्डप्रेस और वूकॉमर्स सॉल्यूशंस।`,
 
         skills: `<strong>🛠️ तकनीकी कौशल और स्टैक:</strong><br><br>
-• <strong>बैक-एंड:</strong> Laravel 11/12, PHP 8.x, RESTful APIs, OOP, MVC, Laravel Sanctum, Spatie Permissions, RBAC, Queues & Background Jobs.<br>
-• <strong>डेटाबेस:</strong> MySQL (Schema Design, Query Optimization), Redis Caching.<br>
+• <strong>बैक-एंड:</strong> Laravel 11/12, PHP 8.x, RESTful APIs, OOP, MVC, Laravel Sanctum, Spatie Permissions, RBAC, Queues & बैकग्राउंड जॉब्स।<br>
+• <strong>डेटाबेस:</strong> MySQL (स्कीमा डिज़ाइन, क्वेरी ऑप्टिमाइजेशन, इंडेक्सिंग), Redis कैशिंग।<br>
 • <strong>फ्रंट-एंड:</strong> Next.js, React.js, JavaScript (ES6+), Blade, HTML5, CSS3, Bootstrap, Tailwind CSS, WordPress.<br>
 • <strong>डेवऑप्स और टूल्स:</strong> Docker, Git, GitHub Actions, CI/CD, Postman, PHPUnit, OWASP Security.`,
 
         contact: `<strong>📞 संपर्क और हायरिंग विवरण:</strong><br><br>
 • <strong>स्थान:</strong> पलक्कड़, केरल, भारत<br>
-• <strong>फोन:</strong> <a href="tel:+917902207027">+91 79022 07027</a><br>
+• <strong>फ़ोन:</strong> <a href="tel:+917902207027">+91 79022 07027</a><br>
 • <strong>ईमेल:</strong> <a href="mailto:akhilmeleppura@gmail.com">akhilmeleppura@gmail.com</a><br>
-• <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/akhil-meleppura" target="_blank">linkedin.com/in/akhil-meleppura</a><br>
-• <strong>GitHub:</strong> <a href="https://github.com/akhilmeleppura" target="_blank">github.com/akhilmeleppura</a><br>
-• <strong>लाइव पोर्टफोलियो:</strong> <a href="https://akhil-meleppura.42web.io" target="_blank">akhil-meleppura.42web.io</a><br><br>
+• <strong>लिंक्डइन:</strong> <a href="https://linkedin.com/in/akhil-meleppura" target="_blank">linkedin.com/in/akhil-meleppura</a><br>
+• <strong>गिटहब:</strong> <a href="https://github.com/akhilmeleppura" target="_blank">github.com/akhilmeleppura</a><br><br>
 <div class="chatbot-action-links">
+  <a href="https://wa.me/917902207027?text=Hi%20Akhil,%20I%20saw%20your%20portfolio" target="_blank" class="chatbot-action-link whatsapp"><i class="fab fa-whatsapp"></i> व्हाट्सएप</a>
   <a href="tel:+917902207027" class="chatbot-action-link"><i class="fas fa-phone"></i> कॉल करें</a>
-  <a href="mailto:akhilmeleppura@gmail.com" class="chatbot-action-link"><i class="fas fa-envelope"></i> ईमेल भेजें</a>
+  <a href="mailto:akhilmeleppura@gmail.com" class="chatbot-action-link"><i class="fas fa-envelope"></i> ईमेल करें</a>
 </div>`,
 
-        availability: `<strong>⚡ उपलब्धता और भूमिकाएं:</strong><br><br>
-• <strong>स्थिति:</strong> तुरंत उपलब्ध (Immediate Joiner) ⚡<br>
+        availability: `<strong>⚡ उपलब्धता और पद:</strong><br><br>
+• <strong>स्थिति:</strong> तुरंत जॉइन करने के लिए उपलब्ध (Immediate Joiner) ⚡<br>
 • <strong>स्थान:</strong> पलक्कड़, केरल (रिमोट, हाइब्रिड और ऑन-साइट अवसरों के लिए खुले हैं)<br>
-• <strong>भूमिकाएं:</strong> Laravel Developer, PHP Developer, Backend Developer, Software Engineer.`,
+• <strong>लक्ष्य पद:</strong> Laravel Developer, PHP Developer, Backend Developer, Full-Stack / Software Engineer.`,
 
         education: `<strong>🎓 शिक्षा:</strong><br><br>
-• <strong>बैचलर ऑफ साइंस (B.Sc.) भौतिकी (Physics) में</strong> (2019 – 2022)<br>
+• <strong>भौतिकी में विज्ञान स्नातक (B.Sc. Physics)</strong> (2019 – 2022)<br>
   गवर्नमेंट विक्टोरिया कॉलेज, पलक्कड़, केरल।<br>
-• इसके साथ 3+ वर्षों का एंटरप्राइज सॉफ्टवेयर इंजीनियरिंग अनुभव।`,
+• 3+ वर्षों का व्यावहारिक सॉफ्टवेयर इंजीनियरिंग अनुभव।`,
 
-        default: `मैं अखिल एस के बारे में आपकी पूरी सहायता कर सकता हूँ! आप उनके <strong>3+ वर्ष के अनुभव</strong>, <strong>प्रोजेक्ट्स (AK-MART, Mini Mart)</strong>, <strong>तकनीकी स्टैक</strong>, या <strong>फोन/ईमेल संपर्क</strong> के बारे में पूछ सकते हैं।`
+        default: `मैं अखिल एस के संबंध में आपकी किसी भी तरह से सहायता कर सकता हूँ! आप उनके <strong>3+ वर्ष के अनुभव</strong>, <strong>प्रोजेक्ट्स (AK-MART, Mini Mart)</strong>, <strong>स्किल्स</strong> या <strong>संपर्क जानकारी</strong> के बारे में पूछ सकते हैं।`
       }
     }
   };
 
-  // State
-  let currentLang = (function() {
-    try {
-      const stored = localStorage.getItem('lang');
-      if (stored === 'ml' || stored === 'en' || stored === 'hi') return stored;
-      return (window.PORTFOLIO_CONFIG && window.PORTFOLIO_CONFIG.defaultLang) || 'en';
-    } catch (e) {
-      return 'en';
-    }
-  })();
-
-  let isOpen = false;
+  let currentLang = 'en';
+  let geminiMode = true; // Enabled by default with live API proxy
+  let currentSpeakingUtterance = null;
 
   // DOM Elements
-  let triggerBtn, chatWindow, msgContainer, inputEl, sendBtn, langBtn, chipsContainer;
+  let triggerBtn, chatWindow, msgContainer, inputEl, sendBtn, langBtn, closeBtn, chipsContainer, geminiToggleBtn;
 
   function initChatbot() {
+    try {
+      const savedLang = localStorage.getItem('lang');
+      if (savedLang && KB[savedLang]) currentLang = savedLang;
+      const savedMode = localStorage.getItem('cb_gemini_mode');
+      if (savedMode !== null) geminiMode = savedMode === 'true';
+    } catch(e) {}
+
+    renderDOM();
+    bindEvents();
+    renderChips();
+    addBotMessage(KB[currentLang].greeting, KB[currentLang].greeting, 'system');
+  }
+
+  function renderDOM() {
+    // 1. Floating Trigger Button
     triggerBtn = document.createElement('button');
     triggerBtn.className = 'chatbot-trigger';
-    triggerBtn.setAttribute('aria-label', 'Open AI Assistant Chat');
+    triggerBtn.id = 'chatbot-trigger';
+    triggerBtn.setAttribute('aria-label', 'Open Akhil AI Chatbot');
     triggerBtn.innerHTML = `
-      <div class="online-pulse"></div>
       <i class="fas fa-robot trigger-icon"></i>
+      <span class="online-pulse"></span>
     `;
+    document.body.appendChild(triggerBtn);
 
+    // 2. Chatbot Window
     chatWindow = document.createElement('div');
     chatWindow.className = 'chatbot-window';
+    chatWindow.id = 'chatbot-window';
     chatWindow.innerHTML = `
       <div class="chatbot-header">
         <div class="chatbot-header-left">
           <div class="chatbot-avatar">
-            <i class="fas fa-robot"></i>
-            <div class="avatar-status"></div>
+            <i class="fas fa-brain"></i>
           </div>
-          <div class="chatbot-title-box">
-            <h3 id="cb-header-title">${KB[currentLang].botName}</h3>
-            <p id="cb-header-subtitle">${KB[currentLang].subtitle}</p>
+          <div class="chatbot-title-group">
+            <div class="chatbot-title" id="cb-header-title">${KB[currentLang].botName}</div>
+            <div class="chatbot-subtitle" id="cb-header-subtitle">
+              ${geminiMode ? '⚡ Gemini Live AI' : '⚡ Instant Mode'}
+            </div>
           </div>
         </div>
         <div class="chatbot-header-actions">
-          <button class="chatbot-lang-btn" id="cb-lang-toggle" title="Switch Language">${KB[currentLang].langLabel}</button>
-          <button class="chatbot-close-btn" id="cb-close-btn" aria-label="Close Chat">&times;</button>
+          <button class="cb-gemini-toggle ${geminiMode ? 'active' : ''}" id="cb-gemini-toggle" title="Toggle Gemini Live AI / Instant Engine">
+            <span class="toggle-dot"></span>
+            <span class="toggle-text">${geminiMode ? 'AI ON' : 'AI OFF'}</span>
+          </button>
+          <button class="chatbot-lang-btn" id="cb-lang-toggle" title="Change Language">
+            ${KB[currentLang].langLabel}
+          </button>
+          <button class="chatbot-close-btn" id="cb-close-btn" title="Close Chat">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
       </div>
+
       <div class="chatbot-messages" id="cb-messages"></div>
-      <div class="chatbot-suggestions" id="cb-suggestions"></div>
-      <div class="chatbot-input-bar">
-        <input type="text" class="chatbot-input" id="cb-input" placeholder="${KB[currentLang].placeholder}" autocomplete="off" />
-        <button class="chatbot-send-btn" id="cb-send-btn" aria-label="Send Message">
+
+      <!-- Quick Action Chips -->
+      <div class="cb-chips-bar" id="cb-chips-bar"></div>
+
+      <div class="chatbot-footer">
+        <input 
+          type="text" 
+          class="chatbot-input" 
+          id="cb-input" 
+          placeholder="${KB[currentLang].placeholder}"
+          autocomplete="off"
+        />
+        <button class="chatbot-send-btn" id="cb-send-btn" title="Send Message">
           <i class="fas fa-paper-plane"></i>
         </button>
       </div>
     `;
-
-    document.body.appendChild(triggerBtn);
     document.body.appendChild(chatWindow);
 
-    // References
     msgContainer = document.getElementById('cb-messages');
     inputEl = document.getElementById('cb-input');
     sendBtn = document.getElementById('cb-send-btn');
     langBtn = document.getElementById('cb-lang-toggle');
-    chipsContainer = document.getElementById('cb-suggestions');
+    closeBtn = document.getElementById('cb-close-btn');
+    chipsContainer = document.getElementById('cb-chips-bar');
+    geminiToggleBtn = document.getElementById('cb-gemini-toggle');
+  }
 
-    // Events
+  function bindEvents() {
     triggerBtn.addEventListener('click', toggleChat);
-    document.getElementById('cb-close-btn').addEventListener('click', toggleChat);
+    closeBtn.addEventListener('click', toggleChat);
+    langBtn.addEventListener('click', cycleLanguage);
+
+    geminiToggleBtn.addEventListener('click', () => {
+      geminiMode = !geminiMode;
+      try { localStorage.setItem('cb_gemini_mode', geminiMode); } catch(e) {}
+      updateHeaderStatus();
+      const statusMsg = geminiMode 
+        ? "⚡ <strong>Gemini Live AI Mode enabled!</strong> The bot now thinks with live Google Gemini AI."
+        : "⚡ <strong>Instant Knowledge Mode enabled!</strong> Ultra-fast local replies.";
+      addBotMessage(statusMsg, statusMsg, 'system');
+    });
+
     sendBtn.addEventListener('click', handleSend);
     inputEl.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') handleSend();
     });
 
-    langBtn.addEventListener('click', () => {
-      // Cycle: en -> ml -> hi -> en
-      const next = currentLang === 'en' ? 'ml' : (currentLang === 'ml' ? 'hi' : 'en');
-      setLanguage(next);
-    });
-
-    // Render Initial Greeting and Chips
-    renderChips();
-    addBotMessage(KB[currentLang].greeting);
-
-    // Observe documentElement lang
-    const observer = new MutationObserver(() => {
-      const docLang = document.documentElement.lang;
-      if (docLang && (docLang === 'en' || docLang === 'ml' || docLang === 'hi') && docLang !== currentLang) {
-        setLanguage(docLang);
+    // Listen for language changes from main portfolio toggle
+    document.addEventListener('languageChanged', (e) => {
+      if (e.detail && e.detail.lang && e.detail.lang !== currentLang) {
+        setLanguage(e.detail.lang);
       }
     });
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   }
 
   function toggleChat() {
-    isOpen = !isOpen;
-    if (isOpen) {
-      chatWindow.classList.add('open');
-      triggerBtn.classList.add('active');
-      triggerBtn.innerHTML = `<i class="fas fa-times trigger-icon"></i>`;
+    chatWindow.classList.toggle('open');
+    triggerBtn.classList.toggle('active');
+    if (chatWindow.classList.contains('open')) {
       inputEl.focus();
     } else {
-      chatWindow.classList.remove('open');
-      triggerBtn.classList.remove('active');
-      triggerBtn.innerHTML = `
-        <div class="online-pulse"></div>
-        <i class="fas fa-robot trigger-icon"></i>
-      `;
+      stopSpeaking();
     }
+  }
+
+  function updateHeaderStatus() {
+    const subtitleEl = document.getElementById('cb-header-subtitle');
+    const toggleText = geminiToggleBtn.querySelector('.toggle-text');
+    if (geminiMode) {
+      geminiToggleBtn.classList.add('active');
+      toggleText.innerText = 'AI ON';
+      subtitleEl.innerText = '⚡ Gemini Live AI';
+    } else {
+      geminiToggleBtn.classList.remove('active');
+      toggleText.innerText = 'AI OFF';
+      subtitleEl.innerText = '⚡ Instant Mode';
+    }
+  }
+
+  function cycleLanguage() {
+    stopSpeaking();
+    if (currentLang === 'en') setLanguage('ml');
+    else if (currentLang === 'ml') setLanguage('hi');
+    else setLanguage('en');
   }
 
   function setLanguage(lang) {
     if (!KB[lang]) return;
     currentLang = lang;
-    langBtn.textContent = KB[currentLang].langLabel;
-    document.getElementById('cb-header-title').textContent = KB[currentLang].botName;
-    document.getElementById('cb-header-subtitle').textContent = KB[currentLang].subtitle;
-    inputEl.placeholder = KB[currentLang].placeholder;
-    renderChips();
+    try { localStorage.setItem('lang', lang); } catch(e) {}
 
-    const switchMsg = lang === 'en' 
-      ? "Language changed to English! How can I help you?"
-      : (lang === 'ml' 
-          ? "ഭാഷ മലയാളത്തിലേക്ക് മാറ്റി! അഖിലിനെക്കുറിച്ച് എന്താണ് അറിയേണ്ടത്?"
-          : "भाषा हिन्दी में बदल दी गई है! आप अखिल एस के बारे में क्या जानना चाहते हैं?");
-    addBotMessage(switchMsg);
+    document.getElementById('cb-header-title').innerText = KB[lang].botName;
+    langBtn.innerText = KB[lang].langLabel;
+    inputEl.placeholder = KB[lang].placeholder;
+    renderChips();
+    addBotMessage(KB[lang].greeting, KB[lang].greeting, 'system');
   }
 
   function renderChips() {
     chipsContainer.innerHTML = '';
-    const chips = KB[currentLang].chips;
+    const chips = KB[currentLang].chips || [];
     chips.forEach(chip => {
       const btn = document.createElement('button');
-      btn.className = 'chatbot-chip';
-      btn.textContent = chip.label;
+      btn.className = 'cb-chip-btn';
+      btn.innerText = chip.label;
       btn.addEventListener('click', () => {
-        inputEl.value = chip.query;
-        handleSend();
+        addUserMessage(chip.query);
+        processQuery(chip.query);
       });
       chipsContainer.appendChild(btn);
     });
   }
 
   function addUserMessage(text) {
+    const wrap = document.createElement('div');
+    wrap.className = 'chatbot-msg-wrap user';
     const div = document.createElement('div');
     div.className = 'chatbot-msg user';
     div.textContent = text;
-    msgContainer.appendChild(div);
+    wrap.appendChild(div);
+    msgContainer.appendChild(wrap);
     msgContainer.scrollTop = msgContainer.scrollHeight;
   }
 
-  function addBotMessage(html) {
+  function addBotMessage(html, textToSpeak = '', modelType = '') {
+    const wrap = document.createElement('div');
+    wrap.className = 'chatbot-msg-wrap bot';
+
     const div = document.createElement('div');
     div.className = 'chatbot-msg bot';
     div.innerHTML = html;
-    msgContainer.appendChild(div);
+    wrap.appendChild(div);
+
+    // Footer with speak button & model badge
+    const footer = document.createElement('div');
+    footer.className = 'chatbot-msg-footer';
+
+    const plainText = textToSpeak || div.innerText;
+    const speakBtn = document.createElement('button');
+    speakBtn.className = 'cb-speak-btn';
+    speakBtn.title = 'Read message aloud';
+    speakBtn.innerHTML = `<i class="fas fa-volume-high"></i>`;
+    speakBtn.addEventListener('click', () => toggleSpeak(plainText, speakBtn));
+    footer.appendChild(speakBtn);
+
+    const modelTag = document.createElement('span');
+    modelTag.className = 'cb-model-tag';
+    if (modelType === 'gemini') {
+      modelTag.innerText = '⚡ Gemini 3.5 Flash';
+    } else if (modelType === 'offline') {
+      modelTag.innerText = '⚡ Instant Knowledge';
+    }
+    footer.appendChild(modelTag);
+
+    wrap.appendChild(footer);
+    msgContainer.appendChild(wrap);
     msgContainer.scrollTop = msgContainer.scrollHeight;
   }
 
@@ -380,14 +446,69 @@
 
     addUserMessage(query);
     inputEl.value = '';
+    processQuery(query);
+  }
 
+  async function processQuery(query) {
     showTyping();
 
+    // 1. If Gemini mode is ON, attempt server call
+    if (geminiMode) {
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: query, lang: currentLang })
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          if (data.success && data.reply) {
+            hideTyping();
+            const formattedHtml = parseMarkdown(data.reply);
+            addBotMessage(formattedHtml, data.reply, 'gemini');
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn('Gemini live request failed, using instant offline engine:', err);
+      }
+    }
+
+    // 2. Fallback to offline Knowledge Base engine
     setTimeout(() => {
       hideTyping();
       const reply = findAnswer(query);
-      addBotMessage(reply);
-    }, 450);
+      addBotMessage(reply, '', 'offline');
+    }, 350);
+  }
+
+  function parseMarkdown(md) {
+    let html = md
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
+      .replace(/`([^`]+)`/g, '<code>$1</code>')
+      .replace(/^\s*[-*]\s+(.*)$/gim, '• $1<br>')
+      .replace(/\n\n/g, '<br><br>')
+      .replace(/\n/g, '<br>');
+
+    // Make URLs clickable
+    html = html.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> $1</a>');
+
+    // Add WhatsApp & Call buttons if contact or hire query
+    if (/phone|call|email|contact|hire|വാട്ട്സ്ആപ്പ്|ഫോൺ|ഇമെയിൽ|संपर्क|फोन/i.test(html)) {
+      html += `<div class="chatbot-action-links" style="margin-top:10px;">
+        <a href="https://wa.me/917902207027?text=Hi%20Akhil,%20I%20saw%20your%20portfolio" target="_blank" class="chatbot-action-link whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="tel:+917902207027" class="chatbot-action-link"><i class="fas fa-phone"></i> +91 79022 07027</a>
+        <a href="mailto:akhilmeleppura@gmail.com" class="chatbot-action-link"><i class="fas fa-envelope"></i> Email</a>
+      </div>`;
+    }
+
+    return html;
   }
 
   function findAnswer(q) {
@@ -442,7 +563,7 @@
       return dict.education;
     }
 
-    // Greetings (strict word boundaries for short words)
+    // Greetings
     if (/\b(hi|hello|hey)\b/i.test(text) || text.includes('നമസ്കാരം') || text.includes('ഹലോ') || text.includes('സുഖമാണോ') || text.includes('नमस्ते') || text.includes('प्रणाम')) {
       return lang === 'en' 
         ? "Hello! How can I assist you with Akhil S's portfolio today?" 
@@ -454,7 +575,58 @@
     return dict.default;
   }
 
-  // Initialize once DOM is ready
+  function stopSpeaking() {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    document.querySelectorAll('.cb-speak-btn.speaking').forEach(b => b.classList.remove('speaking'));
+    currentSpeakingUtterance = null;
+  }
+
+  function toggleSpeak(text, btn) {
+    if (!('speechSynthesis' in window)) return;
+
+    if (btn.classList.contains('speaking')) {
+      stopSpeaking();
+      return;
+    }
+
+    stopSpeaking();
+
+    // Clean html tags for clean speech
+    const cleanText = text.replace(/<[^>]*>/g, '').replace(/https?:\/\/[^\s]+/g, '').trim();
+    if (!cleanText) return;
+
+    const utter = new SpeechSynthesisUtterance(cleanText);
+    utter.rate = 1.0;
+    utter.pitch = 1.0;
+
+    const voices = window.speechSynthesis.getVoices();
+    if (currentLang === 'ml') {
+      utter.lang = 'ml-IN';
+      const v = voices.find(vo => vo.lang.includes('ml'));
+      if (v) utter.voice = v;
+    } else if (currentLang === 'hi') {
+      utter.lang = 'hi-IN';
+      const v = voices.find(vo => vo.lang.includes('hi'));
+      if (v) utter.voice = v;
+    } else {
+      utter.lang = 'en-US';
+      const v = voices.find(vo => vo.lang.startsWith('en'));
+      if (v) utter.voice = v;
+    }
+
+    btn.classList.add('speaking');
+    utter.onend = utter.onerror = () => {
+      btn.classList.remove('speaking');
+      currentSpeakingUtterance = null;
+    };
+
+    currentSpeakingUtterance = utter;
+    window.speechSynthesis.speak(utter);
+  }
+
+  // Initialize
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initChatbot);
   } else {
