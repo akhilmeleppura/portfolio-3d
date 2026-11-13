@@ -428,22 +428,22 @@
     }
 
     // Contact / Phone / Email / Hire
-    if (text.includes('contact') || text.includes('phone') || text.includes('call') || text.includes('email') || text.includes('hire') || text.includes('reach') || text.includes('number') || text.includes('ഫോൺ') || text.includes('ഇമെയിൽ') || text.includes('ബന്ധപ്പെടാൻ') || text.includes('വിളിക്ക') || text.includes('संपर्क') || text.includes('फोन') || text.includes('ईमेल') || text.includes('हायर')) {
+    if (text.includes('contact') || text.includes('phone') || text.includes('call') || text.includes('email') || text.includes('hire') || text.includes('reach') || text.includes('number') || text.includes('ഫോൺ') || text.includes('ഇമെയിൽ') || text.includes('ബന്ധപ്പെട') || text.includes('വിളിക്ക') || text.includes('മെസ്സേജ്') || text.includes('संपर्क') || text.includes('फोन') || text.includes('ईमेल') || text.includes('हायर') || text.includes('बात')) {
       return dict.contact;
     }
 
     // Availability / Location
-    if (text.includes('availab') || text.includes('join') || text.includes('immediate') || text.includes('location') || text.includes('kerala') || text.includes('palakkad') || text.includes('സ്ഥലം') || text.includes('എപ്പോൾ') || text.includes('ലഭ്യത') || text.includes('उपलब्ध') || text.includes('स्थान') || text.includes('जॉइन')) {
+    if (text.includes('availab') || text.includes('join') || text.includes('immediate') || text.includes('location') || text.includes('kerala') || text.includes('palakkad') || text.includes('സ്ഥലം') || text.includes('എപ്പോൾ') || text.includes('ലഭ്യത') || text.includes('ഉടനടി') || text.includes('उपलब्ध') || text.includes('स्थान') || text.includes('जॉइन')) {
       return dict.availability;
     }
 
-    // Education
-    if (text.includes('education') || text.includes('degree') || text.includes('college') || text.includes('physics') || text.includes('victoria') || text.includes('പഠനം') || text.includes('വിദ്യാഭ്യാസം') || text.includes('शिक्षा') || text.includes('डिग्री') || text.includes('कॉलेज')) {
+    // Education / Study
+    if (text.includes('education') || text.includes('study') || text.includes('studied') || text.includes('degree') || text.includes('college') || text.includes('physics') || text.includes('victoria') || text.includes('പഠ') || text.includes('വിദ്യാഭ്യാസ') || text.includes('शिक्षा') || text.includes('डिग्री') || text.includes('कॉलेज') || text.includes('पढ़ाई')) {
       return dict.education;
     }
 
-    // Greetings
-    if (text.includes('hi') || text.includes('hello') || text.includes('hey') || text.includes('നമസ്കാരം') || text.includes('ഹലോ') || text.includes('സുഖമാണോ') || text.includes('नमस्ते') || text.includes('प्रणाम')) {
+    // Greetings (strict word boundaries for short words)
+    if (/\b(hi|hello|hey)\b/i.test(text) || text.includes('നമസ്കാരം') || text.includes('ഹലോ') || text.includes('സുഖമാണോ') || text.includes('नमस्ते') || text.includes('प्रणाम')) {
       return lang === 'en' 
         ? "Hello! How can I assist you with Akhil S's portfolio today?" 
         : (lang === 'ml' 
