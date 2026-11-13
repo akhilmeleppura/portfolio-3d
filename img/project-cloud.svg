@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#05070d"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#7000ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <circle cx="400" cy="220" r="160" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.3"/>
+  <circle cx="400" cy="220" r="110" fill="none" stroke="#7000ff" stroke-width="2" opacity="0.4"/>
+  <circle cx="400" cy="220" r="60" fill="#00f0ff" opacity="0.1"/>
+  <!-- Cloud / Server Nodes -->
+  <path d="M340 220 Q340 180 380 180 Q400 150 440 170 Q470 170 470 200 Q500 210 490 240 Q490 260 460 260 L340 260 Q320 260 320 240 Q320 220 340 220 Z" fill="none" stroke="url(#neon)" stroke-width="4"/>
+  <circle cx="340" cy="220" r="5" fill="#00f0ff"/>
+  <circle cx="470" cy="200" r="5" fill="#7000ff"/>
+  <circle cx="440" cy="260" r="5" fill="#00f0ff"/>
+  <!-- UI Card Header -->
+  <rect x="180" y="320" width="440" height="90" rx="8" fill="#101728" stroke="#1f2d47" stroke-width="1"/>
+  <text x="210" y="355" fill="#00f0ff" font-family="'Space Grotesk', monospace" font-size="18" font-weight="bold">CLOUD ARCHITECTURE &amp; MICROSERVICES</text>
+  <text x="210" y="385" fill="#8892b0" font-family="'Space Grotesk', sans-serif" font-size="13">High-throughput distributed API gateway with real-time streaming</text>
+</svg>
