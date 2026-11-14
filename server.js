@@ -24,7 +24,14 @@ try {
 
 const PORT = process.env.PORT || 5000;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
-const MODELS = ['models/gemini-3.5-flash-lite', 'models/gemini-3.5-flash', 'models/gemini-3.8-flash'];
+const MODELS = [
+  'models/gemini-2.5-flash',
+  'models/gemini-2.0-flash',
+  'models/gemini-1.5-flash',
+  'models/gemini-2.5-flash-lite',
+  'models/gemini-3.5-flash-lite',
+  'models/gemini-3.5-flash'
+];
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=UTF-8',

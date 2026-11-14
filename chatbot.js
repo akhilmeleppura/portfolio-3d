@@ -747,27 +747,34 @@
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
+      // Normalize bullets missing space e.g. "*Title" -> "* Title"
+      .replace(/^(\s*)\*([a-zA-Z0-9\u0D00-\u0D7F\u0900-\u097F])/gm, '$1* $2')
       // Headers
       .replace(/^### (.*$)/gim, '<div class="cb-heading h3">$1</div>')
       .replace(/^## (.*$)/gim, '<div class="cb-heading h2">$1</div>')
       .replace(/^# (.*$)/gim, '<div class="cb-heading h1">$1</div>')
-      // Bold & Italic
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*(.*?)\*/g, '<em>$1</em>')
       // Code blocks
       .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
       .replace(/`([^`]+)`/g, '<code>$1</code>')
-      // Bullet items with bold prefixes
+      // Bullet items with bold prefixes (runs before italic to avoid eating bullets)
       .replace(/^\s*[-*]\s+\*\*(.*?)\*\*:?\s*(.*)$/gim, '<div class="cb-list-item"><strong>$1:</strong> $2</div>')
       .replace(/^\s*[-*]\s+(.*)$/gim, '<div class="cb-list-item">• $1</div>')
+      // Numbered list items
+      .replace(/^\s*(\d+)\.\s+\*\*(.*?)\*\*:?\s*(.*)$/gim, '<div class="cb-list-item"><strong>$1. $2:</strong> $3</div>')
+      .replace(/^\s*(\d+)\.\s+(.*)$/gim, '<div class="cb-list-item">$1. $2</div>')
+      // Bold & Italic
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/(^|[^\*])\*([^\*\n\r]+)\*([^\*]|$)/g, '$1<em>$2</em>$3')
+      // Markdown links: [text](url)
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)/g, '<a href="$2" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> $1</a>')
       .replace(/\n\n/g, '<br>')
       .replace(/\n/g, '<br>');
 
     // Clean multiple <br> inside list items
     html = html.replace(/(<\/div>)<br>/g, '$1');
 
-    // Make URLs clickable with buttons
-    html = html.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> $1</a>');
+    // Make standalone URLs clickable with buttons if not already linked
+    html = html.replace(/(^|[^"'>])(https?:\/\/[^\s<)]+)/g, '$1<a href="$2" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> $2</a>');
 
     // Add WhatsApp & Call buttons if contact or hire query
     if (/phone|call|email|contact|hire|വാട്ട്സ്ആപ്പ്|ഫോൺ|ഇമെയിൽ|संपर्क|फोन/i.test(html) && !html.includes('whatsapp')) {

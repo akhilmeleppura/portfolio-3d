@@ -1,7 +1,14 @@
 const https = require('https');
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
-const MODELS = ['models/gemini-3.5-flash-lite', 'models/gemini-3.5-flash', 'models/gemini-3.8-flash'];
+const MODELS = [
+  'models/gemini-2.5-flash',
+  'models/gemini-2.0-flash',
+  'models/gemini-1.5-flash',
+  'models/gemini-2.5-flash-lite',
+  'models/gemini-3.5-flash-lite',
+  'models/gemini-3.5-flash'
+];
 
 const SYSTEM_INSTRUCTION = `You are the professional, friendly virtual portfolio assistant representing Akhil S (Akhil Meleppura), an expert Backend Laravel & PHP Developer with 3+ years of professional experience.
 
