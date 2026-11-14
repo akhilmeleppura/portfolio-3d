@@ -1,6 +1,7 @@
 /**
  * Cyberpunk AI Assistant Chatbot - Akhil S Portfolio
- * With Free Google Gemini AI Live Integration & Instant Offline Engine
+ * With Real-Time Voice Chat (Speech-to-Text & Text-to-Speech)
+ * Free Google Gemini Live AI Integration with Multi-Turn Memory & Instant Fallback
  * Supports English (en), Malayalam (ml), and Hindi (hi)
  */
 (function() {
@@ -8,21 +9,22 @@
   const KB = {
     en: {
       botName: "Akhil's AI Assistant",
-      subtitle: "Online · Ask anything about Akhil S",
-      greeting: "Hello! 👋 I am Akhil S's virtual assistant. Akhil is a Backend Laravel / PHP Developer with 3+ years of professional experience building scalable web apps, enterprise retail platforms, and delivery systems. How can I assist you today?",
-      placeholder: "Ask in English, മലയാളം, or हिन्दी...",
+      subtitle: "Online · Voice & AI Ready",
+      greeting: "Hello! 👋 I am Akhil S's virtual assistant. Akhil is a Backend Laravel / PHP Developer with 3+ years of professional experience building scalable web apps, enterprise retail platforms, and delivery systems. You can type or tap the 🎙️ mic to speak with me!",
+      placeholder: "Ask or tap 🎙️ mic to speak...",
+      listeningText: "🎙️ Listening... speak now",
       chips: [
         { label: "💼 3+ Yrs Experience", query: "Tell me about Akhil's work experience" },
-        { label: "🚀 Top Projects", query: "What projects has Akhil built?" },
+        { label: "🚀 Top Projects", query: "What are the most challenging projects Akhil has built?" },
         { label: "🛠️ Tech Stack", query: "What are Akhil's core technical skills?" },
         { label: "📞 Contact / Hire", query: "How can I contact or hire Akhil?" },
         { label: "⚡ Availability", query: "Is Akhil available immediately?" }
       ],
       responses: {
         experience: `<strong>💼 3+ Years Professional Experience:</strong><br><br>
-• <strong>PIXELPO</strong> (Feb 2026 – Present | Remote / Palakkad): Backend Laravel/PHP Developer building RBAC, API integrations, database workflows, and contributing to the <strong>AK-MART</strong> multi-branch retail platform.<br>
-• <strong>StackCue</strong> (Jun 2025 – Jan 2026 | Remote / Palakkad): Laravel Developer building MVC backends, RESTful APIs, Sanctum & Spatie permissions, and Next.js integrations.<br>
-• <strong>Commerce9 Technologies</strong> (Dec 2023 – Apr 2025 | Infopark, Kochi): Software Engineer delivering order management, delivery tracking, payment APIs, and MySQL optimization.<br>
+• <strong>PIXELPO</strong> (Feb 2026 – Present | Palakkad): Senior Backend Laravel/PHP Developer leading multi-branch retail architecture, order fulfillment queues, and the <strong>AK-MART</strong> retail platform.<br>
+• <strong>StackCue</strong> (Jun 2025 – Jan 2026 | Palakkad): Laravel Developer building RESTful APIs, Sanctum authentication, Spatie permissions, and Next.js integrations.<br>
+• <strong>Commerce9 Technologies</strong> (Dec 2023 – Apr 2025 | Infopark, Kochi): Software Engineer delivering order management, delivery tracking, and MySQL optimization.<br>
 • <strong>Commerce9 Technologies</strong> (Dec 2023 – Jun 2024): Software Engineer Intern building Laravel & React applications.`,
 
         projects: `<strong>🚀 Featured Works & Projects:</strong><br><br>
@@ -65,14 +67,15 @@
   Government Victoria College, Palakkad, Kerala.<br>
 • Over 3 years of enterprise software engineering and production development practice.`,
 
-        default: `I can help you with anything regarding Akhil S! You can ask about his <strong>3+ years experience</strong>, <strong>enterprise projects (AK-MART, Mini Mart)</strong>, <strong>technical stack</strong>, or <strong>contact info</strong>. Feel free to use the quick buttons below!`
+        default: `I can help you with anything regarding Akhil S! You can ask about his <strong>3+ years experience</strong>, <strong>enterprise projects (AK-MART, Mini Mart)</strong>, <strong>technical stack</strong>, or <strong>contact info</strong>. Tap the 🎙️ mic to speak or use the quick buttons below!`
       }
     },
     ml: {
       botName: "അഖിൽ AI അസിസ്റ്റന്റ്",
-      subtitle: "ഓൺലൈൻ · അഖിലിനെക്കുറിച്ച് എന്തും ചോദിക്കാം",
-      greeting: "നമസ്കാരം! 👋 ഞാൻ അഖിൽ എസ്-ന്റെ AI അസിസ്റ്റന്റാണ്. ലാരവെൽ, പിഎച്ച്പി, മൈഎസ്ക്യുഎൽ, റെസ്റ്റ് എപിഐകൾ എന്നിവയിൽ 3+ വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുള്ള ബാക്ക്-എൻഡ് ഡെവലപ്പറാണ് അഖിൽ. നിങ്ങൾക്ക് എന്ത് വിവരമാണ് അറിയേണ്ടത്?",
-      placeholder: "മലയാളത്തിലോ ഇംഗ്ലീഷിലോ ചോദിക്കൂ...",
+      subtitle: "ഓൺലൈൻ · വോയ്‌സ് & AI സപ്പോർട്ട്",
+      greeting: "നമസ്കാരം! 👋 ഞാൻ അഖിൽ എസ്-ന്റെ AI അസിസ്റ്റന്റാണ്. ലാരവെൽ, പിഎച്ച്പി, മൈഎസ്ക്യുഎൽ എന്നിവയിൽ 3+ വർഷത്തെ പ്രവൃത്തിപരിചയമുള്ള ബാക്ക്-എൻഡ് ഡെവലപ്പറാണ് അഖിൽ. ടൈപ്പ് ചെയ്യുകയോ 🎙️ മൈക്കിൽ ക്ലിക്ക് ചെയ്ത് എന്നോട് സംസാരിക്കുകയോ ചെയ്യാം!",
+      placeholder: "ചോദിക്കൂ അല്ലെങ്കിൽ 🎙️ മൈക്കിൽ സംസാരിക്കൂ...",
+      listeningText: "🎙️ കേൾക്കുന്നു... സംസാരിക്കൂ",
       chips: [
         { label: "💼 3+ വർഷത്തെ പരിചയം", query: "അഖിലിന്റെ പ്രവൃത്തിപരിചയം പറയൂ" },
         { label: "🚀 പ്രധാന പ്രൊജക്ടുകൾ", query: "അഖിൽ ചെയ്ത പ്രൊജക്ടുകൾ ഏതൊക്കെയാണ്?" },
@@ -82,8 +85,8 @@
       ],
       responses: {
         experience: `<strong>💼 3+ വർഷത്തെ പ്രൊഫഷണൽ പരിചയം:</strong><br><br>
-• <strong>PIXELPO</strong> (ഫെബ്രുവരി 2026 – നിലവിൽ | റിമോട്ട് / പാലക്കാട്): ബാക്ക്-എൻഡ് ലാരവെൽ/പിഎച്ച്പി ഡെവലപ്പർ. ആർബിഎസി, എപിഐ ഇൻ്റഗ്രേഷൻ, ക്യൂകൾ, <strong>AK-MART</strong> മൾട്ടി-ബ്രാഞ്ച് റീട്ടെയിൽ പ്ലാറ്റ്‌ഫോം ഡെവലപ്‌മെൻ്റ്.<br>
-• <strong>StackCue</strong> (ജൂൺ 2025 – ജനുവരി 2026 | റിമോട്ട് / പാലക്കാട്): ലാരവെൽ ഡെവലപ്പർ. MVC ബാക്ക്-എൻഡ്, RESTful APIs, സാങ്ക്ടം & സ്പാറ്റി സെക്യൂരിറ്റി, Next.js ഇൻ്റഗ്രേഷൻ.<br>
+• <strong>PIXELPO</strong> (ഫെബ്രുവരി 2026 – നിലവിൽ | പാലക്കാട്): ബാക്ക്-എൻഡ് ലാരവെൽ/പിഎച്ച്പി ഡെവലപ്പർ. ആർബിഎസി, എപിഐ ഇൻ്റഗ്രേഷൻ, ക്യൂകൾ, <strong>AK-MART</strong> മൾട്ടി-ബ്രാഞ്ച് റീട്ടെയിൽ പ്ലാറ്റ്‌ഫോം ഡെവലപ്‌മെൻ്റ്.<br>
+• <strong>StackCue</strong> (ജൂൺ 2025 – ജനുവരി 2026 | പാലക്കാട്): ലാരവെൽ ഡെവലപ്പർ. MVC ബാക്ക്-എൻഡ്, RESTful APIs, സാങ്ക്ടം & സ്പാറ്റി സെക്യൂരിറ്റി, Next.js ഇൻ്റഗ്രേഷൻ.<br>
 • <strong>Commerce9 Technologies</strong> (ഡിസംബർ 2023 – ഏപ്രിൽ 2025 | ഇൻഫോപാർക്ക്, കൊച്ചി): സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയർ. ഓർഡർ മാനേജ്‌മെൻ്റ്, ഡെലിവറി ട്രാക്കിംഗ്, പേയ്‌മെൻ്റ് എപിഐകൾ, MySQL ഒപ്റ്റിമൈസേഷൻ.<br>
 • <strong>Commerce9 Technologies</strong> (ഡിസംബർ 2023 – ജൂൺ 2024): സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയർ ഇൻ്റേൺ. ലാരവെൽ & റിയാക്റ്റ് ഡെവലപ്‌മെൻ്റ്.`,
 
@@ -127,14 +130,15 @@
   ഗവൺമെന്റ് വിക്ടോറിയ കോളേജ്, പാലക്കാട്, കേരളം.<br>
 • 3 വർഷത്തിലധികം പ്രൊഫഷണൽ സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയറിംഗ് പ്രവൃത്തിപരിചയം.`,
 
-        default: `അഖിൽ എസ്-നെക്കുറിച്ചുള്ള ഏത് ചോദ്യത്തിനും ഞാൻ സഹായിക്കാം! <strong>3+ വർഷത്തെ പ്രവൃത്തിപരിചയം</strong>, <strong>പ്രൊജക്ടുകൾ (AK-MART, Mini Mart)</strong>, <strong>സ്കിൽസ്</strong>, അല്ലെങ്കിൽ <strong>ബന്ധപ്പെടാനുള്ള നമ്പർ</strong> ചോദിക്കാം. താഴെയുള്ള ബട്ടണുകൾ ഉപയോഗിക്കൂ!`
+        default: `അഖിൽ എസ്-നെക്കുറിച്ചുള്ള ഏത് ചോദ്യത്തിനും ഞാൻ സഹായിക്കാം! <strong>3+ വർഷത്തെ പ്രവൃത്തിപരിചയം</strong>, <strong>പ്രൊജക്ടുകൾ (AK-MART, Mini Mart)</strong>, <strong>സ്കിൽസ്</strong> ചോദിക്കാം. 🎙️ മൈക്കിൽ സംസാരിക്കുകയോ താഴെയുള്ള ബട്ടണുകൾ ഉപയോഗിക്കുകയോ ചെയ്യൂ!`
       }
     },
     hi: {
       botName: "अखिल AI असिस्टेंट",
-      subtitle: "ऑनलाइन · अखिल के बारे में कुछ भी पूछें",
-      greeting: "नमस्ते! 👋 मैं अखिल एस का AI असिस्टेंट हूँ। अखिल लारवेल, पीएचपी, मायएसक्यूएल और रेस्ट एपीआई में 3+ वर्षों के पेशेवर अनुभव वाले बैक-एंड डेवलपर हैं। मैं आपकी क्या सहायता कर सकता हूँ?",
-      placeholder: "हिन्दी या अंग्रेज़ी में पूछें...",
+      subtitle: "ऑनलाइन · वॉइस और AI सपोर्ट",
+      greeting: "नमस्ते! 👋 मैं अखिल एस का AI असिस्टेंट हूँ। अखिल लारवेल, पीएचपी, मायएसक्यूएल और रेस्ट एपीआई में 3+ वर्षों के पेशेवर अनुभव वाले बैक-एंड डेवलपर हैं। आप टाइप कर सकते हैं या 🎙️ माइक पर टैप करके मुझसे बात कर सकते हैं!",
+      placeholder: "पूछें या 🎙️ माइक दबाकर बोलें...",
+      listeningText: "🎙️ सुन रहा हूँ... बोलिए",
       chips: [
         { label: "💼 3+ वर्ष का अनुभव", query: "अखिल का कार्य अनुभव बताएं" },
         { label: "🚀 प्रमुख प्रोजेक्ट्स", query: "अखिल ने कौन-कौन से प्रोजेक्ट बनाए हैं?" },
@@ -144,8 +148,8 @@
       ],
       responses: {
         experience: `<strong>💼 3+ वर्ष का पेशेवर अनुभव:</strong><br><br>
-• <strong>PIXELPO</strong> (फरवरी 2026 – वर्तमान | रिमोट / पलक्कड़): बैक-एंड लारवेल/पीएचपी डेवलपर। RBAC, API इंटीग्रेशन, डेटाबेस वर्कफ़्लोज़ और <strong>AK-MART</strong> मल्टी-ब्रांच रिटेल प्लेटफ़ॉर्म निर्माण।<br>
-• <strong>StackCue</strong> (जून 2025 – जनवरी 2026 | रिमोट / पलक्कड़): लारवेल डेवलपर। MVC बैक-एंड, RESTful APIs, सैंक्टम और स्पैटी सुरक्षा, Next.js इंटीग्रेशन।<br>
+• <strong>PIXELPO</strong> (फरवरी 2026 – वर्तमान | पलक्कड़): सीनियर बैक-एंड लारवेल/पीएचपी डेवलपर। RBAC, API इंटीग्रेशन, डेटाबेस वर्कफ़्लोज़ और <strong>AK-MART</strong> मल्टी-ब्रांच रिटेल प्लेटफ़ॉर्म निर्माण।<br>
+• <strong>StackCue</strong> (जून 2025 – जनवरी 2026 | पलक्कड़): लारवेल डेवलपर। MVC बैक-एंड, RESTful APIs, सैंक्टम और स्पैटी सुरक्षा, Next.js इंटीग्रेशन।<br>
 • <strong>Commerce9 Technologies</strong> (दिसंबर 2023 – अप्रैल 2025 | इन्फोपार्क, कोच्चि): सॉफ्टवेयर इंजीनियर। ऑर्डर मैनेजमेंट, डिलीवरी ट्रैकिंग, पेमेंट एपीआई और MySQL ऑप्टिमाइजेशन।<br>
 • <strong>Commerce9 Technologies</strong> (दिसंबर 2023 – जून 2024): सॉफ्टवेयर इंजीनियर इंटर्न। लारवेल और रिएक्ट डेवलपमेंट।`,
 
@@ -189,17 +193,24 @@
   गवर्नमेंट विक्टोरिया कॉलेज, पलक्कड़, केरल।<br>
 • 3+ वर्षों का व्यावहारिक सॉफ्टवेयर इंजीनियरिंग अनुभव।`,
 
-        default: `मैं अखिल एस के संबंध में आपकी किसी भी तरह से सहायता कर सकता हूँ! आप उनके <strong>3+ वर्ष के अनुभव</strong>, <strong>प्रोजेक्ट्स (AK-MART, Mini Mart)</strong>, <strong>स्किल्स</strong> या <strong>संपर्क जानकारी</strong> के बारे में पूछ सकते हैं।`
+        default: `मैं अखिल एस के संबंध में आपकी किसी भी तरह से सहायता कर सकता हूँ! आप उनके <strong>3+ वर्ष के अनुभव</strong>, <strong>प्रोजेक्ट्स (AK-MART, Mini Mart)</strong>, <strong>स्किल्स</strong> या <strong>संपर्क जानकारी</strong> के बारे में पूछ सकते हैं। 🎙️ माइक दबाकर बोलें या नीचे दिए बटनों का प्रयोग करें!`
       }
     }
   };
 
   let currentLang = 'en';
   let geminiMode = true; // Enabled by default with live API proxy
+  let autoVoice = true;  // Auto read responses aloud
   let currentSpeakingUtterance = null;
+  const conversationHistory = []; // Multi-turn memory
+
+  // Speech Recognition
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  let recognition = null;
+  let isListening = false;
 
   // DOM Elements
-  let triggerBtn, chatWindow, msgContainer, inputEl, sendBtn, closeBtn, chipsContainer, geminiToggleBtn;
+  let triggerBtn, chatWindow, msgContainer, inputEl, sendBtn, micBtn, closeBtn, chipsContainer, geminiToggleBtn, voiceAutoBtn;
 
   function initChatbot() {
     try {
@@ -207,12 +218,90 @@
       if (savedLang && KB[savedLang]) currentLang = savedLang;
       const savedMode = localStorage.getItem('cb_gemini_mode');
       if (savedMode !== null) geminiMode = savedMode === 'true';
+      const savedVoice = localStorage.getItem('cb_auto_voice');
+      if (savedVoice !== null) autoVoice = savedVoice === 'true';
     } catch(e) {}
 
+    initSpeechRecognition();
     renderDOM();
     bindEvents();
     renderChips();
-    addBotMessage(KB[currentLang].greeting, KB[currentLang].greeting, 'system');
+    addBotMessage(KB[currentLang].greeting, KB[currentLang].greeting, 'system', false);
+  }
+
+  function initSpeechRecognition() {
+    if (!SpeechRecognition) return;
+    try {
+      recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = true;
+
+      recognition.onstart = () => {
+        isListening = true;
+        stopSpeaking();
+        if (micBtn) micBtn.classList.add('listening');
+        if (inputEl) inputEl.placeholder = KB[currentLang].listeningText || '🎙️ Listening...';
+      };
+
+      recognition.onresult = (event) => {
+        let transcript = '';
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          transcript += event.results[i][0].transcript;
+        }
+        if (inputEl) inputEl.value = transcript;
+
+        // Auto send when finalized
+        if (event.results[0] && event.results[0].isFinal) {
+          stopListening();
+          setTimeout(() => {
+            if (inputEl && inputEl.value.trim()) {
+              handleSend();
+            }
+          }, 400);
+        }
+      };
+
+      recognition.onerror = (e) => {
+        console.warn('Speech recognition error:', e.error);
+        stopListening();
+      };
+
+      recognition.onend = () => {
+        stopListening();
+      };
+    } catch(e) {
+      console.warn('Could not initialize SpeechRecognition:', e);
+    }
+  }
+
+  function startListening() {
+    if (!recognition) {
+      alert("Voice input is not supported in this browser. Please use Google Chrome, Edge, or Safari!");
+      return;
+    }
+    stopSpeaking();
+    try {
+      // Set speech recognition language
+      if (currentLang === 'ml') {
+        recognition.lang = 'ml-IN';
+      } else if (currentLang === 'hi') {
+        recognition.lang = 'hi-IN';
+      } else {
+        recognition.lang = 'en-IN';
+      }
+      recognition.start();
+    } catch(err) {
+      console.warn('Recognition start error:', err);
+    }
+  }
+
+  function stopListening() {
+    isListening = false;
+    if (micBtn) micBtn.classList.remove('listening');
+    if (inputEl) inputEl.placeholder = KB[currentLang].placeholder;
+    if (recognition) {
+      try { recognition.stop(); } catch(e) {}
+    }
   }
 
   function renderDOM() {
@@ -245,6 +334,9 @@
           </div>
         </div>
         <div class="chatbot-header-actions">
+          <button class="cb-voice-auto-btn ${autoVoice ? 'active' : ''}" id="cb-voice-auto-btn" title="Toggle Auto Voice (Reads answers aloud)">
+            <i class="fas ${autoVoice ? 'fa-volume-high' : 'fa-volume-xmark'}"></i>
+          </button>
           <button class="cb-gemini-toggle ${geminiMode ? 'active' : ''}" id="cb-gemini-toggle" title="Toggle Gemini Live AI / Instant Engine">
             <span class="toggle-dot"></span>
             <span class="toggle-text">${geminiMode ? 'AI ON' : 'AI OFF'}</span>
@@ -266,6 +358,9 @@
       <div class="cb-chips-bar" id="cb-chips-bar"></div>
 
       <div class="chatbot-footer">
+        <button class="chatbot-mic-btn" id="cb-mic-btn" title="Voice Input (Click to speak)">
+          <i class="fas fa-microphone"></i>
+        </button>
         <input 
           type="text" 
           class="chatbot-input" 
@@ -283,14 +378,38 @@
     msgContainer = document.getElementById('cb-messages');
     inputEl = document.getElementById('cb-input');
     sendBtn = document.getElementById('cb-send-btn');
+    micBtn = document.getElementById('cb-mic-btn');
     closeBtn = document.getElementById('cb-close-btn');
     chipsContainer = document.getElementById('cb-chips-bar');
     geminiToggleBtn = document.getElementById('cb-gemini-toggle');
+    voiceAutoBtn = document.getElementById('cb-voice-auto-btn');
   }
 
   function bindEvents() {
     triggerBtn.addEventListener('click', toggleChat);
     closeBtn.addEventListener('click', toggleChat);
+
+    // Microphone Voice Input
+    if (micBtn) {
+      micBtn.addEventListener('click', () => {
+        if (isListening) {
+          stopListening();
+        } else {
+          startListening();
+        }
+      });
+    }
+
+    // Auto-Voice Read Aloud Toggle
+    if (voiceAutoBtn) {
+      voiceAutoBtn.addEventListener('click', () => {
+        autoVoice = !autoVoice;
+        try { localStorage.setItem('cb_auto_voice', autoVoice); } catch(e) {}
+        voiceAutoBtn.classList.toggle('active', autoVoice);
+        voiceAutoBtn.querySelector('i').className = `fas ${autoVoice ? 'fa-volume-high' : 'fa-volume-xmark'}`;
+        if (!autoVoice) stopSpeaking();
+      });
+    }
 
     // Direct language switcher chips
     chatWindow.querySelectorAll('.cb-lang-chip').forEach(btn => {
@@ -298,8 +417,8 @@
         const lang = btn.getAttribute('data-lang');
         if (lang) {
           stopSpeaking();
+          stopListening();
           setLanguage(lang);
-          // Sync with main 3D portfolio language
           window.dispatchEvent(new CustomEvent('setPortfolioLang', { detail: { lang } }));
         }
       });
@@ -310,9 +429,9 @@
       try { localStorage.setItem('cb_gemini_mode', geminiMode); } catch(e) {}
       updateHeaderStatus();
       const statusMsg = geminiMode 
-        ? "⚡ <strong>Gemini Live AI Mode enabled!</strong> The bot now thinks with live Google Gemini AI."
+        ? "⚡ <strong>Gemini Live AI Mode enabled!</strong> The assistant now uses Google Gemini with conversation memory."
         : "⚡ <strong>Instant Knowledge Mode enabled!</strong> Ultra-fast local replies.";
-      addBotMessage(statusMsg, statusMsg, 'system');
+      addBotMessage(statusMsg, statusMsg, 'system', false);
     });
 
     sendBtn.addEventListener('click', handleSend);
@@ -335,6 +454,7 @@
       inputEl.focus();
     } else {
       stopSpeaking();
+      stopListening();
     }
   }
 
@@ -366,7 +486,7 @@
     });
 
     renderChips();
-    addBotMessage(KB[lang].greeting, KB[lang].greeting, 'system');
+    addBotMessage(KB[lang].greeting, KB[lang].greeting, 'system', false);
   }
 
   function renderChips() {
@@ -377,6 +497,7 @@
       btn.className = 'cb-chip-btn';
       btn.innerText = chip.label;
       btn.addEventListener('click', () => {
+        stopSpeaking();
         addUserMessage(chip.query);
         processQuery(chip.query);
       });
@@ -393,9 +514,12 @@
     wrap.appendChild(div);
     msgContainer.appendChild(wrap);
     msgContainer.scrollTop = msgContainer.scrollHeight;
+
+    // Record to memory
+    conversationHistory.push({ role: 'user', content: text });
   }
 
-  function addBotMessage(html, textToSpeak = '', modelType = '') {
+  function addBotMessage(html, textToSpeak = '', modelType = '', shouldAutoSpeak = true) {
     const wrap = document.createElement('div');
     wrap.className = 'chatbot-msg-wrap bot';
 
@@ -428,6 +552,18 @@
     wrap.appendChild(footer);
     msgContainer.appendChild(wrap);
     msgContainer.scrollTop = msgContainer.scrollHeight;
+
+    // Record response to memory
+    if (plainText && modelType !== 'system') {
+      conversationHistory.push({ role: 'assistant', content: plainText });
+    }
+
+    // Auto-Speak if enabled
+    if (autoVoice && shouldAutoSpeak && plainText) {
+      setTimeout(() => {
+        toggleSpeak(plainText, speakBtn);
+      }, 150);
+    }
   }
 
   function showTyping() {
@@ -449,6 +585,8 @@
   }
 
   function handleSend() {
+    stopSpeaking();
+    stopListening();
     const query = inputEl.value.trim();
     if (!query) return;
 
@@ -472,13 +610,17 @@
   async function processQuery(query) {
     showTyping();
 
-    // 1. If Gemini mode is ON, attempt server call
+    // 1. If Gemini mode is ON, attempt server call with memory history
     if (geminiMode) {
       try {
         const res = await fetch('/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: query, lang: currentLang })
+          body: JSON.stringify({ 
+            message: query, 
+            lang: currentLang,
+            history: conversationHistory.slice(-6)
+          })
         });
 
         if (res.ok) {
@@ -487,7 +629,7 @@
             hideTyping();
             const cleanReply = cleanAiResponse(data.reply);
             const formattedHtml = parseMarkdown(cleanReply);
-            addBotMessage(formattedHtml, cleanReply, 'gemini');
+            addBotMessage(formattedHtml, cleanReply, 'gemini', true);
             return;
           }
         }
@@ -500,28 +642,40 @@
     setTimeout(() => {
       hideTyping();
       const reply = findAnswer(query);
-      addBotMessage(reply, '', 'offline');
+      addBotMessage(reply, '', 'offline', true);
     }, 350);
   }
 
   function parseMarkdown(md) {
+    if (!md) return '';
     let html = md
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
+      // Headers
+      .replace(/^### (.*$)/gim, '<div class="cb-heading h3">$1</div>')
+      .replace(/^## (.*$)/gim, '<div class="cb-heading h2">$1</div>')
+      .replace(/^# (.*$)/gim, '<div class="cb-heading h1">$1</div>')
+      // Bold & Italic
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      // Code blocks
       .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
       .replace(/`([^`]+)`/g, '<code>$1</code>')
-      .replace(/^\s*[-*]\s+(.*)$/gim, '• $1<br>')
-      .replace(/\n\n/g, '<br><br>')
+      // Bullet items with bold prefixes
+      .replace(/^\s*[-*]\s+\*\*(.*?)\*\*:?\s*(.*)$/gim, '<div class="cb-list-item"><strong>$1:</strong> $2</div>')
+      .replace(/^\s*[-*]\s+(.*)$/gim, '<div class="cb-list-item">• $1</div>')
+      .replace(/\n\n/g, '<br>')
       .replace(/\n/g, '<br>');
 
-    // Make URLs clickable
+    // Clean multiple <br> inside list items
+    html = html.replace(/(<\/div>)<br>/g, '$1');
+
+    // Make URLs clickable with buttons
     html = html.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> $1</a>');
 
     // Add WhatsApp & Call buttons if contact or hire query
-    if (/phone|call|email|contact|hire|വാട്ട്സ്ആപ്പ്|ഫോൺ|ഇമെയിൽ|संपर्क|फोन/i.test(html)) {
+    if (/phone|call|email|contact|hire|വാട്ട്സ്ആപ്പ്|ഫോൺ|ഇമെയിൽ|संपर्क|फोन/i.test(html) && !html.includes('whatsapp')) {
       html += `<div class="chatbot-action-links" style="margin-top:10px;">
         <a href="https://wa.me/917902207027?text=Hi%20Akhil,%20I%20saw%20your%20portfolio" target="_blank" class="chatbot-action-link whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         <a href="tel:+917902207027" class="chatbot-action-link"><i class="fas fa-phone"></i> +91 79022 07027</a>
@@ -554,13 +708,29 @@
 
     const dict = KB[lang].responses;
 
+    // Follow-up details request
+    if (text.includes('detail') || text.includes('more') || text.includes('വിശദ') || text.includes('കൂടുതൽ') || text.includes('വിവര') || text.includes('और') || text.includes('विवरण')) {
+      // Check last discussed subject from conversation history
+      const lastUser = conversationHistory.slice(-2)[0]?.content?.toLowerCase() || '';
+      if (lastUser.includes('project') || lastUser.includes('ak-mart') || lastUser.includes('challeng')) {
+        return dict.projects;
+      }
+      if (lastUser.includes('experience') || lastUser.includes('work')) {
+        return dict.experience;
+      }
+      if (lastUser.includes('skill') || lastUser.includes('tech')) {
+        return dict.skills;
+      }
+      return dict.projects;
+    }
+
     // Experience / Companies
     if (text.includes('experience') || text.includes('work') || text.includes('compan') || text.includes('pixelpo') || text.includes('stackcue') || text.includes('commerce9') || text.includes('പരിചയം') || text.includes('കമ്പനി') || text.includes('വർഷ') || text.includes('अनुभव') || text.includes('कंपनी') || text.includes('काम')) {
       return dict.experience;
     }
 
-    // Projects / Works
-    if (text.includes('project') || text.includes('ak-mart') || text.includes('minimart') || text.includes('mini mart') || text.includes('admin') || text.includes('dodelivery') || text.includes('store9') || text.includes('tekneka') || text.includes('പ്രൊജക്റ്റ്') || text.includes('ചെയ്തത്') || text.includes('വർക്ക്') || text.includes('प्रोजेक्ट') || text.includes('परियोजना')) {
+    // Projects / Works / Challenges
+    if (text.includes('project') || text.includes('challeng') || text.includes('ak-mart') || text.includes('minimart') || text.includes('mini mart') || text.includes('admin') || text.includes('dodelivery') || text.includes('store9') || text.includes('tekneka') || text.includes('പ്രൊജക്റ്റ്') || text.includes('ചെയ്തത്') || text.includes('വർക്ക്') || text.includes('प्रोजेक्ट') || text.includes('परियोजना')) {
       return dict.projects;
     }
 
@@ -587,10 +757,10 @@
     // Greetings
     if (/\b(hi|hello|hey)\b/i.test(text) || text.includes('നമസ്കാരം') || text.includes('ഹലോ') || text.includes('സുഖമാണോ') || text.includes('नमस्ते') || text.includes('प्रणाम')) {
       return lang === 'en' 
-        ? "Hello! How can I assist you with Akhil S's portfolio today?" 
+        ? "Hello! How can I assist you with Akhil S's portfolio today? Feel free to speak or type!" 
         : (lang === 'ml' 
-            ? "നമസ്കാരം! അഖിലിന്റെ പ്രൊഫഷണൽ വിവരങ്ങളെക്കുറിച്ച് എന്താണ് അറിയേണ്ടത്?" 
-            : "नमस्ते! मैं अखिल एस के पोर्टफोलियो के बारे में आपकी क्या मदद कर सकता हूँ?");
+            ? "നമസ്കാരം! അഖിലിന്റെ പ്രൊഫഷണൽ വിവരങ്ങളെക്കുറിച്ച് എന്താണ് അറിയേണ്ടത്? സംസാരിക്കുകയോ ടൈപ്പ് ചെയ്യുകയോ ചെയ്യാം!" 
+            : "नमस्ते! मैं अखिल एस के पोर्टफोलियो के बारे में आपकी क्या मदद कर सकता हूँ? आप बोल भी सकते हैं!");
     }
 
     return dict.default;
@@ -607,7 +777,7 @@
   function toggleSpeak(text, btn) {
     if (!('speechSynthesis' in window)) return;
 
-    if (btn.classList.contains('speaking')) {
+    if (btn && btn.classList.contains('speaking')) {
       stopSpeaking();
       return;
     }
@@ -637,9 +807,9 @@
       if (v) utter.voice = v;
     }
 
-    btn.classList.add('speaking');
+    if (btn) btn.classList.add('speaking');
     utter.onend = utter.onerror = () => {
-      btn.classList.remove('speaking');
+      if (btn) btn.classList.remove('speaking');
       currentSpeakingUtterance = null;
     };
 

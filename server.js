@@ -24,7 +24,7 @@ try {
 
 const PORT = process.env.PORT || 5000;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
-const MODELS = ['models/gemini-3.5-flash-lite', 'models/gemini-3.5-flash', 'models/gemini-flash-latest'];
+const MODELS = ['models/gemini-3.5-flash-lite', 'models/gemini-3.5-flash', 'models/gemini-3.8-flash'];
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=UTF-8',
@@ -85,13 +85,13 @@ CRITICAL TONE & OUTPUT GUIDELINES:
 7. If the user asks in English, reply in English!
 8. Format responses cleanly with readable markdown (bullet points, bold text).`;
 
-function callGemini(userPrompt, lang = 'en', userApiKey = '') {
+function callGemini(userPrompt, lang = 'en', userApiKey = '', history = []) {
   const activeKey = userApiKey || GEMINI_API_KEY;
   return new Promise(async (resolve, reject) => {
     let lastErr = null;
     for (const model of MODELS) {
       try {
-        const result = await makeGeminiRequest(model, userPrompt, lang, activeKey);
+        const result = await makeGeminiRequest(model, userPrompt, lang, activeKey, history);
         return resolve(result);
       } catch (err) {
         lastErr = err;
@@ -101,18 +101,32 @@ function callGemini(userPrompt, lang = 'en', userApiKey = '') {
   });
 }
 
-function makeGeminiRequest(model, userPrompt, lang, apiKey) {
+function makeGeminiRequest(model, userPrompt, lang, apiKey, history = []) {
   return new Promise((resolve, reject) => {
     const url = `https://generativelanguage.googleapis.com/v1beta/${model}:generateContent?key=${apiKey}`;
-    const bodyObj = {
-      contents: [
-        {
-          role: 'user',
-          parts: [{ text: `${SYSTEM_INSTRUCTION}\n\n[Active Language: ${lang}]\nUser Query: ${userPrompt}` }]
+
+    // Build contents with recent conversation history for multi-turn memory
+    const contents = [];
+    if (Array.isArray(history) && history.length > 0) {
+      history.slice(-6).forEach(h => {
+        if (h && h.content) {
+          contents.push({
+            role: h.role === 'assistant' || h.role === 'model' ? 'model' : 'user',
+            parts: [{ text: String(h.content) }]
+          });
         }
-      ],
+      });
+    }
+
+    contents.push({
+      role: 'user',
+      parts: [{ text: `${SYSTEM_INSTRUCTION}\n\n[Active Language: ${lang}]\nUser Query: ${userPrompt}` }]
+    });
+
+    const bodyObj = {
+      contents,
       generationConfig: {
-        maxOutputTokens: 600,
+        maxOutputTokens: 2048,
         temperature: 0.6
       }
     };
@@ -123,7 +137,7 @@ function makeGeminiRequest(model, userPrompt, lang, apiKey) {
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(data)
       },
-      timeout: 10000
+      timeout: 15000
     }, res => {
       let raw = '';
       res.on('data', c => raw += c);
@@ -133,7 +147,8 @@ function makeGeminiRequest(model, userPrompt, lang, apiKey) {
         }
         try {
           const json = JSON.parse(raw);
-          const text = json.candidates?.[0]?.content?.parts?.[0]?.text;
+          const parts = json.candidates?.[0]?.content?.parts || [];
+          const text = parts.map(p => p.text || '').join('').trim();
           if (!text) return reject(new Error('Empty response from model'));
           resolve(text);
         } catch (e) {
@@ -170,6 +185,7 @@ const server = http.createServer((req, res) => {
         const userPrompt = (payload.message || '').trim();
         const lang = payload.lang || 'en';
         const apiKey = (payload.apiKey || '').trim();
+        const history = Array.isArray(payload.history) ? payload.history : [];
 
         if (!userPrompt) {
           res.writeHead(400, { 'Content-Type': 'application/json' });
@@ -177,7 +193,7 @@ const server = http.createServer((req, res) => {
           return;
         }
 
-        const reply = await callGemini(userPrompt, lang, apiKey);
+        const reply = await callGemini(userPrompt, lang, apiKey, history);
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: true, reply }));
       } catch (err) {
