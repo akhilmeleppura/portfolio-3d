@@ -617,6 +617,16 @@
   box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
 }
 
+.chatbot-input.listening {
+  border-color: #ff0055 !important;
+  box-shadow: 0 0 12px rgba(255, 0, 85, 0.45) !important;
+  color: #ff99bb !important;
+}
+
+.chatbot-input.listening::placeholder {
+  color: #ff6699 !important;
+}
+
 .chatbot-input::placeholder {
   color: #64748b;
   font-size: 12px;

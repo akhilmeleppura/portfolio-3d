@@ -204,13 +204,40 @@
   let currentSpeakingUtterance = null;
   const conversationHistory = []; // Multi-turn memory
 
-  // Speech Recognition
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-  let recognition = null;
+  // Speech Recognition & Voice Synthesis State
+  let activeRecognition = null;
+  let recognitionTimeout = null;
   let isListening = false;
+  let speechKeepAliveInterval = null;
 
   // DOM Elements
   let triggerBtn, chatWindow, msgContainer, inputEl, sendBtn, micBtn, closeBtn, chipsContainer, geminiToggleBtn, voiceAutoBtn;
+
+  function prepareSpeechText(raw) {
+    if (!raw) return '';
+    return raw
+      .replace(/<[^>]*>/g, ' ')               // Strip HTML tags
+      .replace(/```[\s\S]*?```/g, ' ')        // Strip code blocks
+      .replace(/`([^`]+)`/g, '$1')            // Strip inline code backticks
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')// [Link text](url) -> Link text
+      .replace(/https?:\/\/[^\s]+/g, ' ')     // Strip raw URLs
+      .replace(/[#*_~>|]/g, ' ')              // Strip markdown symbols
+      .replace(/[-•]\s*/g, '. ')              // Bullets into natural pauses
+      .replace(/\s+/g, ' ')                  // Collapse whitespace
+      .trim();
+  }
+
+  function splitIntoSentences(text) {
+    if (!text) return [];
+    const matches = text.match(/[^.!?\n]+[.!?\n]+|[^.!?\n]+$/g);
+    return matches ? matches.map(s => s.trim()).filter(s => s.length > 0) : [text];
+  }
+
+  function unlockAudio() {
+    if ('speechSynthesis' in window) {
+      try { window.speechSynthesis.resume(); } catch(e) {}
+    }
+  }
 
   function initChatbot() {
     try {
@@ -222,85 +249,153 @@
       if (savedVoice !== null) autoVoice = savedVoice === 'true';
     } catch(e) {}
 
-    initSpeechRecognition();
+    // Prime voices on load
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        try { window.speechSynthesis.getVoices(); } catch(e) {}
+      };
+      try { window.speechSynthesis.getVoices(); } catch(e) {}
+    }
+
+    // Touch/click listener to unlock audio on mobile & modern browsers
+    window.addEventListener('click', unlockAudio, { once: true });
+    window.addEventListener('touchstart', unlockAudio, { once: true });
+
     renderDOM();
     bindEvents();
     renderChips();
     addBotMessage(KB[currentLang].greeting, KB[currentLang].greeting, 'system', false);
   }
 
-  function initSpeechRecognition() {
-    if (!SpeechRecognition) return;
-    try {
-      recognition = new SpeechRecognition();
-      recognition.continuous = false;
-      recognition.interimResults = true;
+  function startListening() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      addBotMessage(
+        "⚠️ <strong>Voice input is not supported in this browser.</strong><br>Please use Google Chrome, Microsoft Edge, or Safari for live voice chat.",
+        "",
+        'system',
+        false
+      );
+      return;
+    }
 
-      recognition.onstart = () => {
+    stopSpeaking();
+    stopListening();
+    unlockAudio();
+
+    try {
+      const rec = new SpeechRecognition();
+      activeRecognition = rec;
+      rec.continuous = false;
+      rec.interimResults = true;
+      rec.maxAlternatives = 1;
+
+      // Select language
+      if (currentLang === 'ml') {
+        rec.lang = 'ml-IN';
+      } else if (currentLang === 'hi') {
+        rec.lang = 'hi-IN';
+      } else {
+        rec.lang = 'en-IN';
+      }
+
+      rec.onstart = () => {
         isListening = true;
-        stopSpeaking();
-        if (micBtn) micBtn.classList.add('listening');
-        if (inputEl) inputEl.placeholder = KB[currentLang].listeningText || '🎙️ Listening...';
+        if (micBtn) {
+          micBtn.classList.add('listening');
+          micBtn.setAttribute('title', 'Listening... Speak now (tap again to cancel)');
+        }
+        if (inputEl) {
+          inputEl.classList.add('listening');
+          inputEl.placeholder = KB[currentLang].listeningText || '🎙️ Listening... Speak now';
+          inputEl.focus();
+        }
       };
 
-      recognition.onresult = (event) => {
-        let transcript = '';
-        for (let i = event.resultIndex; i < event.results.length; ++i) {
-          transcript += event.results[i][0].transcript;
-        }
-        if (inputEl) inputEl.value = transcript;
+      let accumulatedFinal = '';
 
-        // Auto send when finalized
-        if (event.results[0] && event.results[0].isFinal) {
-          stopListening();
+      rec.onresult = (event) => {
+        let interim = '';
+        accumulatedFinal = '';
+
+        for (let i = 0; i < event.results.length; i++) {
+          const res = event.results[i];
+          if (res.isFinal) {
+            accumulatedFinal += res[0].transcript;
+          } else {
+            interim += res[0].transcript;
+          }
+        }
+
+        const full = (accumulatedFinal || interim).trim();
+        if (inputEl && full) {
+          inputEl.value = full;
+        }
+
+        // Auto-finish after 1.8 seconds of natural silence
+        clearTimeout(recognitionTimeout);
+        recognitionTimeout = setTimeout(() => {
+          if (isListening && activeRecognition) {
+            try { activeRecognition.stop(); } catch(e) {}
+          }
+        }, 1800);
+      };
+
+      rec.onerror = (event) => {
+        console.warn('Speech recognition error:', event.error);
+        if (event.error === 'not-allowed' || event.error === 'service-not-allowed') {
+          addBotMessage(
+            "⚠️ <strong>Microphone Permission Blocked:</strong><br>Your browser blocked microphone access. Click the 🔒 lock or 🎙️ camera/microphone icon in your address bar, change Microphone to <strong>Allow</strong>, and tap the mic button again!",
+            "",
+            'system',
+            false
+          );
+        } else if (event.error === 'network') {
+          addBotMessage(
+            "⚠️ <strong>Voice Network Issue:</strong><br>Could not reach browser speech recognition service. Please check your internet connection.",
+            "",
+            'system',
+            false
+          );
+        }
+        stopListening();
+      };
+
+      rec.onend = () => {
+        clearTimeout(recognitionTimeout);
+        stopListening();
+        // If voice text was captured, automatically submit it!
+        if (inputEl && inputEl.value.trim()) {
           setTimeout(() => {
             if (inputEl && inputEl.value.trim()) {
               handleSend();
             }
-          }, 400);
+          }, 350);
         }
       };
 
-      recognition.onerror = (e) => {
-        console.warn('Speech recognition error:', e.error);
-        stopListening();
-      };
-
-      recognition.onend = () => {
-        stopListening();
-      };
-    } catch(e) {
-      console.warn('Could not initialize SpeechRecognition:', e);
-    }
-  }
-
-  function startListening() {
-    if (!recognition) {
-      alert("Voice input is not supported in this browser. Please use Google Chrome, Edge, or Safari!");
-      return;
-    }
-    stopSpeaking();
-    try {
-      // Set speech recognition language
-      if (currentLang === 'ml') {
-        recognition.lang = 'ml-IN';
-      } else if (currentLang === 'hi') {
-        recognition.lang = 'hi-IN';
-      } else {
-        recognition.lang = 'en-IN';
-      }
-      recognition.start();
+      rec.start();
     } catch(err) {
-      console.warn('Recognition start error:', err);
+      console.warn('Recognition start exception:', err);
+      stopListening();
     }
   }
 
   function stopListening() {
     isListening = false;
-    if (micBtn) micBtn.classList.remove('listening');
-    if (inputEl) inputEl.placeholder = KB[currentLang].placeholder;
-    if (recognition) {
-      try { recognition.stop(); } catch(e) {}
+    clearTimeout(recognitionTimeout);
+    if (micBtn) {
+      micBtn.classList.remove('listening');
+      micBtn.setAttribute('title', 'Voice Input (Click to speak)');
+    }
+    if (inputEl) {
+      inputEl.classList.remove('listening');
+      inputEl.placeholder = KB[currentLang].placeholder;
+    }
+    if (activeRecognition) {
+      const r = activeRecognition;
+      activeRecognition = null;
+      try { r.stop(); } catch(e) {}
     }
   }
 
@@ -768,10 +863,11 @@
 
   function stopSpeaking() {
     if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
+      try { window.speechSynthesis.cancel(); } catch(e) {}
     }
+    clearInterval(speechKeepAliveInterval);
+    speechKeepAliveInterval = null;
     document.querySelectorAll('.cb-speak-btn.speaking').forEach(b => b.classList.remove('speaking'));
-    currentSpeakingUtterance = null;
   }
 
   function toggleSpeak(text, btn) {
@@ -783,38 +879,83 @@
     }
 
     stopSpeaking();
+    unlockAudio();
 
-    // Clean html tags for clean speech
-    const cleanText = text.replace(/<[^>]*>/g, '').replace(/https?:\/\/[^\s]+/g, '').trim();
-    if (!cleanText) return;
+    const clean = prepareSpeechText(text);
+    if (!clean) return;
 
-    const utter = new SpeechSynthesisUtterance(cleanText);
-    utter.rate = 1.0;
-    utter.pitch = 1.0;
+    const sentences = splitIntoSentences(clean);
+    if (sentences.length === 0) return;
 
-    const voices = window.speechSynthesis.getVoices();
+    const voices = window.speechSynthesis.getVoices() || [];
+    let chosenVoice = null;
+
     if (currentLang === 'ml') {
-      utter.lang = 'ml-IN';
-      const v = voices.find(vo => vo.lang.includes('ml'));
-      if (v) utter.voice = v;
+      chosenVoice = voices.find(v => v.lang.includes('ml')) 
+                 || voices.find(v => v.lang.includes('hi')) 
+                 || voices.find(v => v.lang.includes('en-IN')) 
+                 || voices.find(v => v.lang.startsWith('en'));
     } else if (currentLang === 'hi') {
-      utter.lang = 'hi-IN';
-      const v = voices.find(vo => vo.lang.includes('hi'));
-      if (v) utter.voice = v;
+      chosenVoice = voices.find(v => v.lang.includes('hi')) 
+                 || voices.find(v => v.lang.includes('en-IN')) 
+                 || voices.find(v => v.lang.startsWith('en'));
     } else {
-      utter.lang = 'en-US';
-      const v = voices.find(vo => vo.lang.startsWith('en'));
-      if (v) utter.voice = v;
+      chosenVoice = voices.find(v => v.lang === 'en-IN') 
+                 || voices.find(v => v.lang.startsWith('en-US')) 
+                 || voices.find(v => v.lang.startsWith('en'));
     }
 
     if (btn) btn.classList.add('speaking');
-    utter.onend = utter.onerror = () => {
-      if (btn) btn.classList.remove('speaking');
-      currentSpeakingUtterance = null;
-    };
 
-    currentSpeakingUtterance = utter;
-    window.speechSynthesis.speak(utter);
+    // Keep Chrome speech synthesis alive for long texts
+    speechKeepAliveInterval = setInterval(() => {
+      if ('speechSynthesis' in window && window.speechSynthesis.speaking) {
+        window.speechSynthesis.pause();
+        window.speechSynthesis.resume();
+      } else {
+        clearInterval(speechKeepAliveInterval);
+      }
+    }, 10000);
+
+    let currentIndex = 0;
+
+    function speakNext() {
+      if (currentIndex >= sentences.length) {
+        stopSpeaking();
+        return;
+      }
+
+      const sentenceText = sentences[currentIndex++];
+      const utter = new SpeechSynthesisUtterance(sentenceText);
+      utter.rate = 1.02;
+      utter.pitch = 1.0;
+
+      if (chosenVoice) {
+        utter.voice = chosenVoice;
+        utter.lang = chosenVoice.lang;
+      } else {
+        utter.lang = currentLang === 'ml' ? 'ml-IN' : currentLang === 'hi' ? 'hi-IN' : 'en-IN';
+      }
+
+      utter.onend = () => {
+        speakNext();
+      };
+
+      utter.onerror = (e) => {
+        console.warn('Utterance error:', e);
+        speakNext();
+      };
+
+      window._activeUtterance = utter; // Keep reference to prevent GC bug in Chrome
+      try {
+        window.speechSynthesis.speak(utter);
+      } catch(err) {
+        console.warn('SpeechSynthesis error:', err);
+        stopSpeaking();
+      }
+    }
+
+    speakNext();
   }
 
   // Initialize
