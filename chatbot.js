@@ -324,7 +324,7 @@
       <div class="chatbot-header">
         <div class="chatbot-header-left">
           <div class="chatbot-avatar">
-            <i class="fas fa-brain"></i>
+            <i class="fas fa-robot"></i>
           </div>
           <div class="chatbot-title-group">
             <div class="chatbot-title" id="cb-header-title">${KB[currentLang].botName}</div>
