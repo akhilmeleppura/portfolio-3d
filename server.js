@@ -66,11 +66,16 @@ PROFESSIONAL CONTEXT:
   * Dev Tools & Cloud: Docker, Git, GitHub, Postman, Linux, CI/CD, PHPUnit.
   * Frontend Integrations: Next.js, React.js, JavaScript, Blade, HTML5, CSS3, Bootstrap.
 - Key Projects:
-  * AK-MART: High-scale multi-branch retail e-commerce platform with real-time stock sync across branches and POS systems.
-  * Mini Mart: Multi-vendor marketplace with vendor commissions, wallet payouts, and automated delivery dispatch.
+  * AK-MART: High-scale multi-branch retail e-commerce platform with real-time stock sync across branches and POS systems. (Live demo available: https://ak-mart.onrender.com | GitHub: https://github.com/akhilmeleppura/Ak-Mart)
+  * Mini Mart: Multi-vendor marketplace with vendor commissions, wallet payouts, and automated delivery dispatch. (Live demo: https://minimart-hqui.onrender.com)
   * Dodelivery: Real-time logistics tracking and delivery driver routing engine.
   * HC Admin: Centralized administrative control center with granular role-based permissions and activity audit logs.
   * Store9 & Tekneka: Scalable e-commerce and enterprise product management systems.
+  * PIXELPO Digital Agency Website: WordPress, Elementor, and custom PHP client agency platform. (Live site: https://pixelpo.in)
+  * Commerce 9 Technology: Creative agency WordPress website with OceanWP theme and floating WhatsApp integration. (Live site: https://commerce9.io)
+  * LegalGlow: Advocate and legal consulting WordPress platform with lead capture and case inquiries. (Live site: https://www.legalglow.com)
+  * Docib Clinic: Medical clinic healthcare website with online appointment booking and doctor profile management. (Live site: http://docibclinic.com)
+  * Smiling Coders: ERP services and technology solutions platform using custom post types and dynamic templates. (Live site: https://thesmilingcoders.com)
 - Education:
   * Bachelor of Science in Physics, Government Victoria College, Palakkad (University of Calicut).
   * Advanced Python/Django & Full-Stack Development Certification, Luminar Technolab, Kochi.

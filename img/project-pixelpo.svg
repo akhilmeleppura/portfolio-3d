@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg-px" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071524"/>
+      <stop offset="100%" stop-color="#020810"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-px)"/>
+  <!-- Agency Mockup Frame -->
+  <rect x="140" y="70" width="520" height="230" rx="12" fill="#0d2438" stroke="#1b4965" stroke-width="2"/>
+  <text x="170" y="110" fill="#00f0ff" font-family="'Space Grotesk', monospace" font-size="15" font-weight="bold">PIXELPO // DIGITAL AGENCY &amp; BRANDING PLATFORM</text>
+  <!-- Mockup blocks -->
+  <rect x="165" y="130" width="220" height="75" rx="8" fill="#13364f"/>
+  <text x="180" y="155" fill="#38bdf8" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="bold">WEB &amp; APP SOLUTIONS</text>
+  <text x="180" y="180" fill="#94a3b8" font-family="monospace" font-size="11">Custom WordPress Architecture</text>
+  <rect x="400" y="130" width="235" height="75" rx="8" fill="#13364f"/>
+  <text x="415" y="155" fill="#38bdf8" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="bold">PERFORMANCE &amp; SEO</text>
+  <text x="415" y="180" fill="#94a3b8" font-family="monospace" font-size="11">High-Speed Score &amp; SEO Ranked</text>
+  <rect x="165" y="215" width="470" height="65" rx="8" fill="#184363"/>
+  <text x="185" y="242" fill="#7dd3fc" font-family="monospace" font-size="12">CLIENT PORTAL · INTERACTIVE SERVICES · RESPONSIVE UI</text>
+  <text x="185" y="262" fill="#38bdf8" font-family="monospace" font-size="11">Live at: https://pixelpo.in</text>
+  <!-- UI Card Header -->
+  <rect x="140" y="325" width="520" height="95" rx="10" fill="#0a1926" stroke="#00f0ff" stroke-width="1.5"/>
+  <text x="170" y="360" fill="#00f0ff" font-family="'Space Grotesk', monospace" font-size="19" font-weight="bold">PIXELPO – DIGITAL AGENCY</text>
+  <text x="170" y="390" fill="#7dd3fc" font-family="'Space Grotesk', sans-serif" font-size="13">WordPress · Elementor · PHP · Custom Styles · SEO Best Practices</text>
+</svg>

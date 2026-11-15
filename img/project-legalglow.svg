@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg-lg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1e16"/>
+      <stop offset="100%" stop-color="#020a06"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-lg)"/>
+  <!-- Legal Mockup Frame -->
+  <rect x="140" y="70" width="520" height="230" rx="12" fill="#113325" stroke="#1f5f45" stroke-width="2"/>
+  <text x="170" y="110" fill="#00f5a0" font-family="'Space Grotesk', monospace" font-size="15" font-weight="bold">LEGALGLOW // ADVOCATE &amp; LEGAL CONSULTING</text>
+  <!-- Mockup blocks -->
+  <rect x="165" y="130" width="470" height="40" rx="6" fill="#1b4d38"/>
+  <text x="185" y="155" fill="#6ee7b7" font-family="'Space Grotesk', sans-serif" font-size="13">LEGAL EXPERTISE SHOWCASE &amp; PRACTICE CATEGORIES</text>
+  <rect x="165" y="180" width="470" height="40" rx="6" fill="#1b4d38"/>
+  <text x="185" y="205" fill="#a7f3d0" font-family="monospace" font-size="12">CLIENT TRUST ARCHITECTURE · CONFIDENTIAL CONSULTATIONS</text>
+  <rect x="165" y="230" width="470" height="50" rx="6" fill="#205c44"/>
+  <text x="185" y="252" fill="#00f5a0" font-family="monospace" font-size="12">STRUCTURED APPOINTMENT &amp; CASE EVALUATION FORMS</text>
+  <text x="185" y="270" fill="#6ee7b7" font-family="monospace" font-size="11">Live at: https://www.legalglow.com</text>
+  <!-- UI Card Header -->
+  <rect x="140" y="325" width="520" height="95" rx="10" fill="#0a1e16" stroke="#00f5a0" stroke-width="1.5"/>
+  <text x="170" y="360" fill="#00f5a0" font-family="'Space Grotesk', monospace" font-size="19" font-weight="bold">LEGALGLOW – LEGAL PLATFORM</text>
+  <text x="170" y="390" fill="#6ee7b7" font-family="'Space Grotesk', sans-serif" font-size="13">WordPress · Elementor · Responsive Layout · Inquiry &amp; Lead Systems</text>
+</svg>

@@ -28,6 +28,7 @@
 • <strong>Commerce9 Technologies</strong> (Dec 2023 – Jun 2024): Software Engineer Intern building Laravel & React applications.`,
 
         projects: `<strong>🚀 Featured Works & Projects:</strong><br><br>
+<strong>Enterprise Backend & Laravel:</strong><br>
 1. <strong>AK-MART</strong>: Multi-Branch Retail Platform & POS (Laravel 12, Livewire 3, MySQL, Redis, Sanctum, Spatie).<br>
    <a href="https://ak-mart.onrender.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> Live Demo</a> 
    <a href="https://github.com/akhilmeleppura/Ak-Mart" target="_blank" class="chatbot-action-link"><i class="fab fa-github"></i> GitHub</a><br><br>
@@ -36,8 +37,18 @@
 3. <strong>HC Admin System</strong>: Enterprise RBAC & Workflow Engine (Laravel, Spatie, Next.js).<br>
 4. <strong>Dodelivery</strong>: Real-Time Logistics & Dispatch Tracking Platform.<br>
 5. <strong>Store9</strong>: Scalable E-Commerce Backend & Payment Integration.<br>
-6. <strong>Tekneka</strong>: Secure File & Document Vault System with RBAC.<br>
-7. <strong>10+ Web & CMS Projects</strong>: Custom WordPress & WooCommerce business solutions.`,
+6. <strong>Tekneka</strong>: Secure File & Document Vault System with RBAC.<br><br>
+<strong>Live WordPress & CMS Client Websites:</strong><br>
+7. <strong>PIXELPO</strong>: Digital Agency & Branding Platform (WordPress, Elementor, PHP, SEO).<br>
+   <a href="https://pixelpo.in" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> Visit pixelpo.in</a><br><br>
+8. <strong>Commerce 9 Technology</strong>: Creative Web Agency (WordPress, OceanWP, WhatsApp API).<br>
+   <a href="https://commerce9.io" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> Visit commerce9.io</a><br><br>
+9. <strong>LegalGlow</strong>: Advocate & Legal Consulting Services (WordPress, Elementor, Lead Forms).<br>
+   <a href="https://www.legalglow.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> Visit legalglow.com</a><br><br>
+10. <strong>Docib Clinic</strong>: Healthcare & Online Doctor Appointment Booking System.<br>
+    <a href="http://docibclinic.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> Visit docibclinic.com</a><br><br>
+11. <strong>Smiling Coders</strong>: ERP Platform & Technology Solutions (WordPress, CPT, Caching).<br>
+    <a href="https://thesmilingcoders.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> Visit thesmilingcoders.com</a>`,
 
         skills: `<strong>🛠️ Technical Skills & Stack:</strong><br><br>
 • <strong>Backend:</strong> Laravel 11/12, PHP 8.x, RESTful APIs, OOP, MVC, Laravel Sanctum, Spatie Permissions, RBAC, Queues & Background Jobs.<br>
@@ -91,6 +102,7 @@
 • <strong>Commerce9 Technologies</strong> (ഡിസംബർ 2023 – ജൂൺ 2024): സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയർ ഇൻ്റേൺ. ലാരവെൽ & റിയാക്റ്റ് ഡെവലപ്‌മെൻ്റ്.`,
 
         projects: `<strong>🚀 പ്രധാന പ്രൊജക്ടുകൾ:</strong><br><br>
+<strong>എൻ്റർപ്രൈസ് ബാക്ക്-എൻഡ് & ലാരവെൽ:</strong><br>
 1. <strong>AK-MART</strong>: മൾട്ടി-ബ്രാഞ്ച് റീട്ടെയിൽ & POS പ്ലാറ്റ്‌ഫോം (Laravel 12, Livewire 3, MySQL, Redis, Sanctum, Spatie).<br>
    <a href="https://ak-mart.onrender.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> ലൈവ് ഡെമോ</a> 
    <a href="https://github.com/akhilmeleppura/Ak-Mart" target="_blank" class="chatbot-action-link"><i class="fab fa-github"></i> ഗിറ്റ്ഹബ്ബ്</a><br><br>
@@ -99,8 +111,18 @@
 3. <strong>HC Admin System</strong>: എൻ്റർപ്രൈസ് ആർബിഎസി & അഡ്മിൻ മാനേജ്‌മെൻ്റ് സിസ്റ്റം.<br>
 4. <strong>Dodelivery</strong>: തത്സമയ ഡെലിവറി & ഡിസ്പാച്ച് ട്രാക്കിംഗ് പ്ലാറ്റ്‌ഫോം.<br>
 5. <strong>Store9</strong>: ഇ-കൊമേഴ്‌സ് ബാക്ക്-എൻഡ് & പേയ്‌മെൻ്റ് ഇൻ്റഗ്രേഷൻ.<br>
-6. <strong>Tekneka</strong>: സുരക്ഷിതമായ ഡോക്യുമെൻ്റ് വോൾട്ട് സിസ്റ്റം.<br>
-7. <strong>10+ വെബ് & CMS പ്രൊജക്ടുകൾ</strong>: വേർഡ്പ്രസ്സ് & വൂകൊമേഴ്‌സ് ബിസിനസ് സൊല്യൂഷനുകൾ.`,
+6. <strong>Tekneka</strong>: സുരക്ഷിതമായ ഡോക്യുമെൻ്റ് വോൾട്ട് സിസ്റ്റം.<br><br>
+<strong>ലൈവ് വേർഡ്പ്രസ്സ് & സിഎംഎസ് ക്ലയൻ്റ് സൈറ്റുകൾ:</strong><br>
+7. <strong>PIXELPO</strong>: ഡിജിറ്റൽ ഏജൻസി പ്ലാറ്റ്‌ഫോം.<br>
+   <a href="https://pixelpo.in" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> pixelpo.in സന്ദർശിക്കുക</a><br><br>
+8. <strong>Commerce 9 Technology</strong>: ക്രിയേറ്റീവ് വെബ് ഏജൻസി വെബ്സൈറ്റ്.<br>
+   <a href="https://commerce9.io" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> commerce9.io സന്ദർശിക്കുക</a><br><br>
+9. <strong>LegalGlow</strong>: ലീഗൽ & അഡ്വക്കേറ്റ് സർവീസസ് പോർട്ടൽ.<br>
+   <a href="https://www.legalglow.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> legalglow.com സന്ദർശിക്കുക</a><br><br>
+10. <strong>Docib Clinic</strong>: ഹെൽത്ത്‌കെയർ & ഓൺലൈൻ ഡോക്ടർ അപ്പോയിന്റ്മെന്റ് ബുക്കിംഗ് സിസ്റ്റം.<br>
+    <a href="http://docibclinic.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> docibclinic.com സന്ദർശിക്കുക</a><br><br>
+11. <strong>Smiling Coders</strong>: ഇആർപി സർവീസസ് & ടെക് പ്ലാറ്റ്‌ഫോം.<br>
+    <a href="https://thesmilingcoders.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> thesmilingcoders.com സന്ദർശിക്കുക</a>`,
 
         skills: `<strong>🛠️ സാങ്കേതിക സ്കിൽസ്:</strong><br><br>
 • <strong>ബാക്ക്-എൻഡ്:</strong> Laravel 11/12, PHP 8.x, RESTful APIs, OOP, MVC, Laravel Sanctum, Spatie Permissions, RBAC, Queues & ബാക്ക്ഗ്രൗണ്ട് ജോലികൾ.<br>
@@ -154,6 +176,7 @@
 • <strong>Commerce9 Technologies</strong> (दिसंबर 2023 – जून 2024): सॉफ्टवेयर इंजीनियर इंटर्न। लारवेल और रिएक्ट डेवलपमेंट।`,
 
         projects: `<strong>🚀 प्रमुख प्रोजेक्ट्स और कार्य:</strong><br><br>
+<strong>एंटरप्राइज बैक-एंड और लारवेल:</strong><br>
 1. <strong>AK-MART</strong>: मल्टी-ब्रांच रिटेल प्लेटफ़ॉर्म और POS (Laravel 12, Livewire 3, MySQL, Redis, Sanctum, Spatie)।<br>
    <a href="https://ak-mart.onrender.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> लाइव डेमो</a> 
    <a href="https://github.com/akhilmeleppura/Ak-Mart" target="_blank" class="chatbot-action-link"><i class="fab fa-github"></i> गिटहब</a><br><br>
@@ -162,8 +185,18 @@
 3. <strong>HC Admin System</strong>: एंटरप्राइज RBAC और वर्कफ़्लो एडमिन इंजन।<br>
 4. <strong>Dodelivery</strong>: रीयल-टाइम लॉजिस्टिक्स और डिलीवरी ट्रैकिंग प्लेटफ़ॉर्म।<br>
 5. <strong>Store9</strong>: स्केलेबल ई-कॉमर्स बैक-एंड और पेमेंट इंटीग्रेशन।<br>
-6. <strong>Tekneka</strong>: सुरक्षित दस्तावेज़ वॉल्ट सिस्टम।<br>
-7. <strong>10+ वेब और CMS प्रोजेक्ट्स</strong>: वर्डप्रेस और वूकॉमर्स सॉल्यूशंस।`,
+6. <strong>Tekneka</strong>: सुरक्षित दस्तावेज़ वॉल्ट सिस्टम।<br><br>
+<strong>लाइव वर्डप्रेस और सीएमएस क्लाइंट वेबसाइट्स:</strong><br>
+7. <strong>PIXELPO</strong>: डिजिटल एजेंसी वेबसाइट।<br>
+   <a href="https://pixelpo.in" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> pixelpo.in देखें</a><br><br>
+8. <strong>Commerce 9 Technology</strong>: क्रिएटिव वेब एजेंसी वेबसाइट।<br>
+   <a href="https://commerce9.io" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> commerce9.io देखें</a><br><br>
+9. <strong>LegalGlow</strong>: कानूनी और अधिवक्ता परामर्श पोर्टल।<br>
+   <a href="https://www.legalglow.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> legalglow.com देखें</a><br><br>
+10. <strong>Docib Clinic</strong>: ऑनलाइन डॉक्टर अपॉइंटमेंट बुकिंग हेल्थकेयर साइट।<br>
+    <a href="http://docibclinic.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> docibclinic.com देखें</a><br><br>
+11. <strong>Smiling Coders</strong>: ईआरपी सेवाएं और सॉफ्टवेयर परामर्श प्लेटफॉर्म।<br>
+    <a href="https://thesmilingcoders.com" target="_blank" class="chatbot-action-link"><i class="fas fa-external-link-alt"></i> thesmilingcoders.com देखें</a>`,
 
         skills: `<strong>🛠️ तकनीकी कौशल और स्टैक:</strong><br><br>
 • <strong>बैक-एंड:</strong> Laravel 11/12, PHP 8.x, RESTful APIs, OOP, MVC, Laravel Sanctum, Spatie Permissions, RBAC, Queues & बैकग्राउंड जॉब्स।<br>

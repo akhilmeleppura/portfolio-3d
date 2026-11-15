@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg-sc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#241a08"/>
+      <stop offset="100%" stop-color="#0a0602"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-sc)"/>
+  <!-- ERP Platform Frame -->
+  <rect x="140" y="70" width="520" height="230" rx="12" fill="#3a2a0d" stroke="#71521a" stroke-width="2"/>
+  <text x="170" y="110" fill="#f59e0b" font-family="'Space Grotesk', monospace" font-size="15" font-weight="bold">SMILING CODERS // ERP SOLUTIONS &amp; TECH SERVICES</text>
+  <!-- Mockup blocks -->
+  <rect x="165" y="130" width="470" height="40" rx="6" fill="#543c13"/>
+  <text x="185" y="155" fill="#fde68a" font-family="'Space Grotesk', sans-serif" font-size="13">CUSTOM POST TYPES (CPT) FOR DYNAMIC ERP MODULES</text>
+  <rect x="165" y="180" width="470" height="40" rx="6" fill="#543c13"/>
+  <text x="185" y="205" fill="#fcd34d" font-family="monospace" font-size="12">ELEMENTOR THEME BUILDER · MODULAR REUSABLE TEMPLATES</text>
+  <rect x="165" y="230" width="470" height="50" rx="6" fill="#694a18"/>
+  <text x="185" y="252" fill="#fbbf24" font-family="monospace" font-size="12">HIGH-SPEED CACHING · MEDIA OPTIMIZATION · DEMO SUITE</text>
+  <text x="185" y="270" fill="#fde68a" font-family="monospace" font-size="11">Live at: https://thesmilingcoders.com</text>
+  <!-- UI Card Header -->
+  <rect x="140" y="325" width="520" height="95" rx="10" fill="#1e1406" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="170" y="360" fill="#f59e0b" font-family="'Space Grotesk', monospace" font-size="19" font-weight="bold">SMILING CODERS – ERP PORTAL</text>
+  <text x="170" y="390" fill="#fde68a" font-family="'Space Grotesk', sans-serif" font-size="13">WordPress · Elementor Theme Builder · CPT · Caching Engine · SEO</text>
+</svg>

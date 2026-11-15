@@ -472,6 +472,76 @@ window.PORTFOLIO_CONFIG = {
             "img": "./img/project-tekneka.svg",
             "link": "https://akhil-meleppura.42web.io",
             "color": "#38bdf8"
+          },
+          {
+            "title": "PIXELPO – Digital Agency Website",
+            "desc": "Modern and responsive digital agency platform designed and developed with custom styles, service showcase, interactive lead generation, and performance optimization.",
+            "tags": [
+              "WordPress",
+              "Elementor",
+              "PHP",
+              "SEO",
+              "Responsive UI"
+            ],
+            "img": "./img/project-pixelpo.svg",
+            "link": "https://pixelpo.in",
+            "color": "#00f0ff"
+          },
+          {
+            "title": "Commerce 9 Technology – Web Agency",
+            "desc": "Creative web agency website built with OceanWP theme and custom styles, lightweight performance tuning, and floating WhatsApp quick-contact integration.",
+            "tags": [
+              "WordPress",
+              "OceanWP",
+              "Elementor",
+              "PHP",
+              "WhatsApp API"
+            ],
+            "img": "./img/project-commerce9.svg",
+            "link": "https://commerce9.io",
+            "color": "#a855f7"
+          },
+          {
+            "title": "LegalGlow – Legal & Advocate Services",
+            "desc": "Professional legal consultancy platform with structured law practice areas, case evaluation inquiry forms, client trust architecture, and mobile-friendly UX.",
+            "tags": [
+              "WordPress",
+              "Elementor",
+              "PHP",
+              "Lead Generation",
+              "Forms"
+            ],
+            "img": "./img/project-legalglow.svg",
+            "link": "https://www.legalglow.com",
+            "color": "#00f5a0"
+          },
+          {
+            "title": "Docib Clinic – Healthcare & Doctor Portal",
+            "desc": "Comprehensive medical clinic website featuring online appointment scheduling, doctor profiles, patient inquiry forms, and search engine optimization.",
+            "tags": [
+              "WordPress",
+              "Booking Plugin",
+              "Medical CMS",
+              "PHP",
+              "SEO"
+            ],
+            "img": "./img/project-docib.svg",
+            "link": "http://docibclinic.com",
+            "color": "#38bdf8"
+          },
+          {
+            "title": "Smiling Coders – ERP Platform & Services",
+            "desc": "ERP services and tech consultancy platform built with custom post types (CPT), modular reusable templates, high-speed caching, and dynamic module demonstrations.",
+            "tags": [
+              "WordPress",
+              "Elementor Builder",
+              "CPT",
+              "ERP Showcase",
+              "Caching"
+            ],
+            "img": "./img/project-smilingcoders.svg",
+            "link": "https://thesmilingcoders.com",
+            "color": "#f59e0b"
           }
         ]
       }
@@ -924,6 +994,76 @@ window.PORTFOLIO_CONFIG = {
                 "RBAC",
                 "Secure Storage"
               ]
+            },
+            {
+              "title": "PIXELPO – ഡിജിറ്റൽ ഏജൻസി വെബ്സൈറ്റ്",
+              "desc": "കസ്റ്റം സ്റ്റൈലുകൾ, ഇൻ്ററാക്ടീവ് സർവീസ് സെക്ഷനുകൾ, ലീഡ് ജനറേഷൻ, മികച്ച വേഗത എന്നിവയുള്ള മോഡേൺ വേർഡ്പ്രസ്സ് ഏജൻസി പ്ലാറ്റ്‌ഫോം.",
+              "tags": [
+                "WordPress",
+                "Elementor",
+                "PHP",
+                "SEO",
+                "Responsive UI"
+              ],
+              "img": "./img/project-pixelpo.svg",
+              "link": "https://pixelpo.in",
+              "color": "#00f0ff"
+            },
+            {
+              "title": "Commerce 9 Technology – വെബ് ഏജൻസി",
+              "desc": "ഓഷ്യൻഡബ്ല്യുപി തീമും എലമെൻ്ററും ഉപയോഗിച്ച് നിർമ്മിച്ച ക്രിയേറ്റീവ് വെബ് ഏജൻസി വെബ്സൈറ്റ്. ഫ്ലോട്ടിംഗ് വാട്ട്സ്ആപ്പ് ചാറ്റ് ഇൻ്റഗ്രേഷനും ഹൈ-സ്പീഡ് ഒപ്റ്റിമൈസേഷനും ഉൾപ്പെടുന്നു.",
+              "tags": [
+                "WordPress",
+                "OceanWP",
+                "Elementor",
+                "PHP",
+                "WhatsApp API"
+              ],
+              "img": "./img/project-commerce9.svg",
+              "link": "https://commerce9.io",
+              "color": "#a855f7"
+            },
+            {
+              "title": "LegalGlow – ലീഗൽ & അഡ്വക്കേറ്റ് സർവീസസ്",
+              "desc": "വ്യവസ്ഥാപിത നിയമ സേവനങ്ങൾ, കൺസൾട്ടേഷൻ ബുക്കിംഗ് ഫോമുകൾ, സുരക്ഷിതമായ ക്ലയൻ്റ് എൻഗേജ്‌മെൻ്റ് എന്നിവ നൽകുന്ന പ്രൊഫഷണൽ ലീഗൽ പ്ലാറ്റ്‌ഫോം.",
+              "tags": [
+                "WordPress",
+                "Elementor",
+                "PHP",
+                "Lead Generation",
+                "Forms"
+              ],
+              "img": "./img/project-legalglow.svg",
+              "link": "https://www.legalglow.com",
+              "color": "#00f5a0"
+            },
+            {
+              "title": "Docib Clinic – ഹെൽത്ത്‌കെയർ & ഡോക്ടർ പോർട്ടൽ",
+              "desc": "ഓൺലൈൻ അപ്പോയിന്റ്മെന്റ് ബുക്കിംഗ്, ഡോക്ടർ പ്രൊഫൈലുകൾ, രോഗികളുടെ വിവര ശേഖരണ ഫോമുകൾ എന്നിവയുള്ള മെഡിക്കൽ ക്ലിനിക് വെബ്സൈറ്റ്.",
+              "tags": [
+                "WordPress",
+                "Booking Plugin",
+                "Medical CMS",
+                "PHP",
+                "SEO"
+              ],
+              "img": "./img/project-docib.svg",
+              "link": "http://docibclinic.com",
+              "color": "#38bdf8"
+            },
+            {
+              "title": "Smiling Coders – ഇആർപി & ടെക് സർവീസസ്",
+              "desc": "കസ്റ്റം പോസ്റ്റ് ടൈപ്പുകൾ (CPT), റീയൂസബിൾ ടെംപ്ലേറ്റുകൾ, ഹൈ-സ്പീഡ് കാഷിങ് എന്നിവയുള്ള ഇആർപി സർവീസ് ഡെമോൺസ്ട്രേഷൻ പ്ലാറ്റ്‌ഫോം.",
+              "tags": [
+                "WordPress",
+                "Elementor Builder",
+                "CPT",
+                "ERP Showcase",
+                "Caching"
+              ],
+              "img": "./img/project-smilingcoders.svg",
+              "link": "https://thesmilingcoders.com",
+              "color": "#f59e0b"
             }
           ]
         },
@@ -1077,6 +1217,76 @@ window.PORTFOLIO_CONFIG = {
                 "RBAC",
                 "Secure Storage"
               ]
+            },
+            {
+              "title": "PIXELPO – डिजिटल एजेंसी वेबसाइट",
+              "desc": "कस्टम स्टाइल, इंटरैक्टिव सर्विस शोकेस, लीड जनरेशन और स्पीड ऑप्टिमाइज़ेशन के साथ डिज़ाइन किया गया आधुनिक वर्डप्रेस एजेंसी प्लेटफॉर्म।",
+              "tags": [
+                "WordPress",
+                "Elementor",
+                "PHP",
+                "SEO",
+                "Responsive UI"
+              ],
+              "img": "./img/project-pixelpo.svg",
+              "link": "https://pixelpo.in",
+              "color": "#00f0ff"
+            },
+            {
+              "title": "Commerce 9 Technology – वेब एजेंसी",
+              "desc": "OceanWP थीम और एलिमेंटॉर के साथ निर्मित क्रिएटिव वेब एजेंसी वेबसाइट। इसमें फ्लोटिंग व्हाट्सएप चैट इंटीग्रेशन और फास्ट लोडिंग स्पीड शामिल है।",
+              "tags": [
+                "WordPress",
+                "OceanWP",
+                "Elementor",
+                "PHP",
+                "WhatsApp API"
+              ],
+              "img": "./img/project-commerce9.svg",
+              "link": "https://commerce9.io",
+              "color": "#a855f7"
+            },
+            {
+              "title": "LegalGlow – कानूनी और अधिवक्ता सेवाएं",
+              "desc": "विधिक परामर्श, प्रैक्टिस क्षेत्र, परामर्श बुकिंग फॉर्म और क्लाइंट ट्रस्ट के साथ तैयार पेशेवर कानूनी प्लेटफॉर्म।",
+              "tags": [
+                "WordPress",
+                "Elementor",
+                "PHP",
+                "Lead Generation",
+                "Forms"
+              ],
+              "img": "./img/project-legalglow.svg",
+              "link": "https://www.legalglow.com",
+              "color": "#00f5a0"
+            },
+            {
+              "title": "Docib Clinic – हेल्थकेयर और डॉक्टर पोर्टल",
+              "desc": "ऑनलाइन अपॉइंटमेंट बुकिंग, डॉक्टर प्रोफाइल और रोगी पूछताछ फॉर्म के साथ क्लिनिक-केंद्रित वर्डप्रेस स्वास्थ्य सेवा वेबसाइट।",
+              "tags": [
+                "WordPress",
+                "Booking Plugin",
+                "Medical CMS",
+                "PHP",
+                "SEO"
+              ],
+              "img": "./img/project-docib.svg",
+              "link": "http://docibclinic.com",
+              "color": "#38bdf8"
+            },
+            {
+              "title": "Smiling Coders – ईआरपी और टेक सर्विसेज",
+              "desc": "कस्टम पोस्ट प्रकार (CPT), पुन: प्रयोज्य टेम्पलेट्स और उच्च-गति कैशिंग के साथ निर्मित ईआरपी सेवा प्रदर्शन प्लेटफॉर्म।",
+              "tags": [
+                "WordPress",
+                "Elementor Builder",
+                "CPT",
+                "ERP Showcase",
+                "Caching"
+              ],
+              "img": "./img/project-smilingcoders.svg",
+              "link": "https://thesmilingcoders.com",
+              "color": "#f59e0b"
             }
           ]
         },
@@ -1232,6 +1442,76 @@ window.PORTFOLIO_CONFIG = {
                 "RBAC",
                 "Secure Storage"
               ]
+            },
+            {
+              "title": "PIXELPO – ഡിജിറ്റൽ ഏജൻസി വെബ്സൈറ്റ്",
+              "desc": "കസ്റ്റം സ്റ്റൈലുകൾ, ഇൻ്ററാക്ടീവ് സർവീസ് സെക്ഷനുകൾ, ലീഡ് ജനറേഷൻ, മികച്ച വേഗത എന്നിവയുള്ള മോഡേൺ വേർഡ്പ്രസ്സ് ഏജൻസി പ്ലാറ്റ്‌ഫോം.",
+              "tags": [
+                "WordPress",
+                "Elementor",
+                "PHP",
+                "SEO",
+                "Responsive UI"
+              ],
+              "img": "./img/project-pixelpo.svg",
+              "link": "https://pixelpo.in",
+              "color": "#00f0ff"
+            },
+            {
+              "title": "Commerce 9 Technology – വെബ് ഏജൻസി",
+              "desc": "ഓഷ്യൻഡബ്ല്യുപി തീമും എലമെൻ്ററും ഉപയോഗിച്ച് നിർമ്മിച്ച ക്രിയേറ്റീവ് വെബ് ഏജൻസി വെബ്സൈറ്റ്. ഫ്ലോട്ടിംഗ് വാട്ട്സ്ആപ്പ് ചാറ്റ് ഇൻ്റഗ്രേഷനും ഹൈ-സ്പീഡ് ഒപ്റ്റിമൈസേഷനും ഉൾപ്പെടുന്നു.",
+              "tags": [
+                "WordPress",
+                "OceanWP",
+                "Elementor",
+                "PHP",
+                "WhatsApp API"
+              ],
+              "img": "./img/project-commerce9.svg",
+              "link": "https://commerce9.io",
+              "color": "#a855f7"
+            },
+            {
+              "title": "LegalGlow – ലീഗൽ & അഡ്വക്കേറ്റ് സർവീസസ്",
+              "desc": "വ്യവസ്ഥാപിത നിയമ സേവനങ്ങൾ, കൺസൾട്ടേഷൻ ബുക്കിംഗ് ഫോമുകൾ, സുരക്ഷിതമായ ക്ലയൻ്റ് എൻഗേജ്‌മെൻ്റ് എന്നിവ നൽകുന്ന പ്രൊഫഷണൽ ലീഗൽ പ്ലാറ്റ്‌ഫോം.",
+              "tags": [
+                "WordPress",
+                "Elementor",
+                "PHP",
+                "Lead Generation",
+                "Forms"
+              ],
+              "img": "./img/project-legalglow.svg",
+              "link": "https://www.legalglow.com",
+              "color": "#00f5a0"
+            },
+            {
+              "title": "Docib Clinic – ഹെൽത്ത്‌കെയർ & ഡോക്ടർ പോർട്ടൽ",
+              "desc": "ഓൺലൈൻ അപ്പോയിന്റ്മെന്റ് ബുക്കിംഗ്, ഡോക്ടർ പ്രൊഫൈലുകൾ, രോഗികളുടെ വിവര ശേഖരണ ഫോമുകൾ എന്നിവയുള്ള മെഡിക്കൽ ക്ലിനിക് വെബ്സൈറ്റ്.",
+              "tags": [
+                "WordPress",
+                "Booking Plugin",
+                "Medical CMS",
+                "PHP",
+                "SEO"
+              ],
+              "img": "./img/project-docib.svg",
+              "link": "http://docibclinic.com",
+              "color": "#38bdf8"
+            },
+            {
+              "title": "Smiling Coders – ഇആർപി & ടെക് സർവീസസ്",
+              "desc": "കസ്റ്റം പോസ്റ്റ് ടൈപ്പുകൾ (CPT), റീയൂസബിൾ ടെംപ്ലേറ്റുകൾ, ഹൈ-സ്പീഡ് കാഷിങ് എന്നിവയുള്ള ഇആർപി സർവീസ് ഡെമോൺസ്ട്രേഷൻ പ്ലാറ്റ്‌ഫോം.",
+              "tags": [
+                "WordPress",
+                "Elementor Builder",
+                "CPT",
+                "ERP Showcase",
+                "Caching"
+              ],
+              "img": "./img/project-smilingcoders.svg",
+              "link": "https://thesmilingcoders.com",
+              "color": "#f59e0b"
             }
           ]
         },
@@ -1385,6 +1665,76 @@ window.PORTFOLIO_CONFIG = {
                 "RBAC",
                 "Secure Storage"
               ]
+            },
+            {
+              "title": "PIXELPO – डिजिटल एजेंसी वेबसाइट",
+              "desc": "कस्टम स्टाइल, इंटरैक्टिव सर्विस शोकेस, लीड जनरेशन और स्पीड ऑप्टिमाइज़ेशन के साथ डिज़ाइन किया गया आधुनिक वर्डप्रेस एजेंसी प्लेटफॉर्म।",
+              "tags": [
+                "WordPress",
+                "Elementor",
+                "PHP",
+                "SEO",
+                "Responsive UI"
+              ],
+              "img": "./img/project-pixelpo.svg",
+              "link": "https://pixelpo.in",
+              "color": "#00f0ff"
+            },
+            {
+              "title": "Commerce 9 Technology – वेब एजेंसी",
+              "desc": "OceanWP थीम और एलिमेंटॉर के साथ निर्मित क्रिएटिव वेब एजेंसी वेबसाइट। इसमें फ्लोटिंग व्हाट्सएप चैट इंटीग्रेशन और फास्ट लोडिंग स्पीड शामिल है।",
+              "tags": [
+                "WordPress",
+                "OceanWP",
+                "Elementor",
+                "PHP",
+                "WhatsApp API"
+              ],
+              "img": "./img/project-commerce9.svg",
+              "link": "https://commerce9.io",
+              "color": "#a855f7"
+            },
+            {
+              "title": "LegalGlow – कानूनी और अधिवक्ता सेवाएं",
+              "desc": "विधिक परामर्श, प्रैक्टिस क्षेत्र, परामर्श बुकिंग फॉर्म और क्लाइंट ट्रस्ट के साथ तैयार पेशेवर कानूनी प्लेटफॉर्म।",
+              "tags": [
+                "WordPress",
+                "Elementor",
+                "PHP",
+                "Lead Generation",
+                "Forms"
+              ],
+              "img": "./img/project-legalglow.svg",
+              "link": "https://www.legalglow.com",
+              "color": "#00f5a0"
+            },
+            {
+              "title": "Docib Clinic – हेल्थकेयर और डॉक्टर पोर्टल",
+              "desc": "ऑनलाइन अपॉइंटमेंट बुकिंग, डॉक्टर प्रोफाइल और रोगी पूछताछ फॉर्म के साथ क्लिनिक-केंद्रित वर्डप्रेस स्वास्थ्य सेवा वेबसाइट।",
+              "tags": [
+                "WordPress",
+                "Booking Plugin",
+                "Medical CMS",
+                "PHP",
+                "SEO"
+              ],
+              "img": "./img/project-docib.svg",
+              "link": "http://docibclinic.com",
+              "color": "#38bdf8"
+            },
+            {
+              "title": "Smiling Coders – ईआरपी और टेक सर्विसेज",
+              "desc": "कस्टम पोस्ट प्रकार (CPT), पुन: प्रयोज्य टेम्पलेट्स और उच्च-गति कैशिंग के साथ निर्मित ईआरपी सेवा प्रदर्शन प्लेटफॉर्म।",
+              "tags": [
+                "WordPress",
+                "Elementor Builder",
+                "CPT",
+                "ERP Showcase",
+                "Caching"
+              ],
+              "img": "./img/project-smilingcoders.svg",
+              "link": "https://thesmilingcoders.com",
+              "color": "#f59e0b"
             }
           ]
         },
