@@ -243,6 +243,7 @@
   let isListening = false;
   let speechKeepAliveInterval = null;
   let currentSpeechSessionId = 0;
+  let activeSpeechAudio = null;
 
   // DOM Elements
   let triggerBtn, chatWindow, msgContainer, inputEl, sendBtn, micBtn, closeBtn, chipsContainer, geminiToggleBtn, voiceAutoBtn;
@@ -950,6 +951,13 @@
 
   function stopSpeaking() {
     currentSpeechSessionId++; // Invalidate and abort active speech session immediately
+    if (activeSpeechAudio) {
+      try {
+        activeSpeechAudio.pause();
+        activeSpeechAudio.currentTime = 0;
+        activeSpeechAudio = null;
+      } catch(e) {}
+    }
     if ('speechSynthesis' in window) {
       try { 
         window.speechSynthesis.cancel(); 
@@ -961,8 +969,6 @@
   }
 
   function toggleSpeak(text, btn) {
-    if (!('speechSynthesis' in window)) return;
-
     if (btn && btn.classList.contains('speaking')) {
       stopSpeaking();
       return;
@@ -982,26 +988,72 @@
     const isMalayalam = /[\u0D00-\u0D7F]/.test(clean) || currentLang === 'ml';
     const isHindi = /[\u0900-\u097F]/.test(clean) || currentLang === 'hi';
 
-    const voices = window.speechSynthesis.getVoices() || [];
+    const voices = ('speechSynthesis' in window) ? (window.speechSynthesis.getVoices() || []) : [];
+    const nativeMlVoice = voices.find(v => v.lang && (v.lang.toLowerCase().startsWith('ml') || v.name.toLowerCase().includes('malayalam')));
+    const nativeHiVoice = voices.find(v => v.lang && (v.lang.toLowerCase().startsWith('hi') || v.name.toLowerCase().includes('hindi')));
+
+    // If Malayalam/Hindi has no native voice installed on OS (true on Windows), use Google Neural TTS API!
+    const useApiTts = (isMalayalam && !nativeMlVoice) || (isHindi && !nativeHiVoice);
+    const targetLangCode = isMalayalam ? 'ml' : (isHindi ? 'hi' : 'en');
+
+    if (btn) btn.classList.add('speaking');
+
+    const activeSessionId = currentSpeechSessionId;
+    let currentIndex = 0;
+
+    // High quality Neural TTS Stream for Malayalam & Hindi
+    if (useApiTts) {
+      function speakNextApiChunk() {
+        if (activeSessionId !== currentSpeechSessionId) return;
+        if (currentIndex >= sentences.length) {
+          stopSpeaking();
+          return;
+        }
+
+        const sentenceText = sentences[currentIndex++];
+        const ttsUrl = `/api/tts?text=${encodeURIComponent(sentenceText)}&lang=${targetLangCode}`;
+        const audio = new Audio(ttsUrl);
+        activeSpeechAudio = audio;
+
+        audio.onended = () => {
+          if (activeSessionId !== currentSpeechSessionId) return;
+          speakNextApiChunk();
+        };
+
+        audio.onerror = (e) => {
+          if (activeSessionId !== currentSpeechSessionId) return;
+          console.warn('API TTS audio error:', e);
+          speakNextApiChunk();
+        };
+
+        audio.play().catch(err => {
+          console.warn('API TTS play blocked:', err);
+          stopSpeaking();
+        });
+      }
+
+      speakNextApiChunk();
+      return;
+    }
+
+    // Otherwise use Web Speech API (for English or devices with native voice)
+    if (!('speechSynthesis' in window)) return;
+
     let chosenVoice = null;
     let targetLang = 'en-IN';
 
-    if (isMalayalam) {
+    if (isMalayalam && nativeMlVoice) {
       targetLang = 'ml-IN';
-      // Search strictly for Malayalam voice
-      chosenVoice = voices.find(v => v.lang && (v.lang.toLowerCase().startsWith('ml') || v.name.toLowerCase().includes('malayalam')));
-    } else if (isHindi) {
+      chosenVoice = nativeMlVoice;
+    } else if (isHindi && nativeHiVoice) {
       targetLang = 'hi-IN';
-      // Search strictly for Hindi voice
-      chosenVoice = voices.find(v => v.lang && (v.lang.toLowerCase().startsWith('hi') || v.name.toLowerCase().includes('hindi')));
+      chosenVoice = nativeHiVoice;
     } else {
       targetLang = 'en-IN';
       chosenVoice = voices.find(v => v.lang === 'en-IN') 
                  || voices.find(v => v.lang.startsWith('en-US')) 
                  || voices.find(v => v.lang.startsWith('en'));
     }
-
-    if (btn) btn.classList.add('speaking');
 
     // Keep Chrome speech synthesis alive for long texts
     speechKeepAliveInterval = setInterval(() => {
@@ -1012,9 +1064,6 @@
         clearInterval(speechKeepAliveInterval);
       }
     }, 10000);
-
-    const activeSessionId = currentSpeechSessionId;
-    let currentIndex = 0;
 
     function speakNext() {
       // Abort immediately if session was cancelled or closed
@@ -1034,19 +1083,15 @@
         utter.voice = chosenVoice;
         utter.lang = chosenVoice.lang;
       } else {
-        // If no offline Malayalam or Hindi voice exists, NEVER assign an English voice!
-        // Leaving utter.voice null and setting utter.lang lets Chrome/Edge use its native online language TTS
         utter.lang = targetLang;
       }
 
       utter.onend = () => {
-        // Abort if session ended or was cancelled
         if (activeSessionId !== currentSpeechSessionId) return;
         speakNext();
       };
 
       utter.onerror = (e) => {
-        // If error was caused by cancel or session aborted, DO NOT advance to next sentence!
         if (activeSessionId !== currentSpeechSessionId) return;
         if (e && (e.error === 'canceled' || e.error === 'interrupted')) return;
         console.warn('Utterance error:', e);

@@ -195,6 +195,12 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // Handle TTS API
+  if (req.url.startsWith('/api/tts')) {
+    const ttsHandler = require('./api/tts.js');
+    return ttsHandler(req, res);
+  }
+
   // Handle Gemini Chat API
   if (req.url === '/api/chat' && req.method === 'POST') {
     let body = '';
