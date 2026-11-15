@@ -242,6 +242,7 @@
   let recognitionTimeout = null;
   let isListening = false;
   let speechKeepAliveInterval = null;
+  let currentSpeechSessionId = 0;
 
   // DOM Elements
   let triggerBtn, chatWindow, msgContainer, inputEl, sendBtn, micBtn, closeBtn, chipsContainer, geminiToggleBtn, voiceAutoBtn;
@@ -574,6 +575,18 @@
         setLanguage(e.detail.lang);
       }
     });
+
+    // Stop speaking immediately if user toggles off main audio button
+    document.addEventListener('click', (e) => {
+      const musicBtn = e.target && e.target.closest && e.target.closest('#btn-music-toggle');
+      if (musicBtn) {
+        setTimeout(() => {
+          if (window.__audioOn === false) {
+            stopSpeaking();
+          }
+        }, 50);
+      }
+    });
   }
 
   function pauseBackgroundAudio() {
@@ -582,9 +595,15 @@
     if (typeof window.__setPlaying === 'function') {
       try { window.__setPlaying(false); } catch(e) {}
     }
+    if (typeof window.__stopSceneAudio === 'function') {
+      try { window.__stopSceneAudio(); } catch(e) {}
+    }
     // 2. Pause any background HTML audio elements
     document.querySelectorAll('audio').forEach(a => {
-      try { a.pause(); } catch(e) {}
+      try { 
+        a.pause(); 
+        a.currentTime = 0; 
+      } catch(e) {}
     });
     // 3. Cancel any 3D scene robot speech narration
     if ('speechSynthesis' in window) {
@@ -711,10 +730,12 @@
       conversationHistory.push({ role: 'assistant', content: plainText });
     }
 
-    // Auto-Speak if enabled
+    // Auto-Speak if enabled and chat is open
     if (autoVoice && shouldAutoSpeak && plainText) {
       setTimeout(() => {
-        toggleSpeak(plainText, speakBtn);
+        if (autoVoice && chatWindow && chatWindow.classList.contains('open')) {
+          toggleSpeak(plainText, speakBtn);
+        }
       }, 150);
     }
   }
@@ -928,8 +949,11 @@
   }
 
   function stopSpeaking() {
+    currentSpeechSessionId++; // Invalidate and abort active speech session immediately
     if ('speechSynthesis' in window) {
-      try { window.speechSynthesis.cancel(); } catch(e) {}
+      try { 
+        window.speechSynthesis.cancel(); 
+      } catch(e) {}
     }
     clearInterval(speechKeepAliveInterval);
     speechKeepAliveInterval = null;
@@ -989,9 +1013,13 @@
       }
     }, 10000);
 
+    const activeSessionId = currentSpeechSessionId;
     let currentIndex = 0;
 
     function speakNext() {
+      // Abort immediately if session was cancelled or closed
+      if (activeSessionId !== currentSpeechSessionId) return;
+
       if (currentIndex >= sentences.length) {
         stopSpeaking();
         return;
@@ -1012,10 +1040,15 @@
       }
 
       utter.onend = () => {
+        // Abort if session ended or was cancelled
+        if (activeSessionId !== currentSpeechSessionId) return;
         speakNext();
       };
 
       utter.onerror = (e) => {
+        // If error was caused by cancel or session aborted, DO NOT advance to next sentence!
+        if (activeSessionId !== currentSpeechSessionId) return;
+        if (e && (e.error === 'canceled' || e.error === 'interrupted')) return;
         console.warn('Utterance error:', e);
         speakNext();
       };
