@@ -315,6 +315,7 @@
     stopSpeaking();
     stopListening();
     unlockAudio();
+    pauseBackgroundAudio();
 
     try {
       const rec = new SpeechRecognition();
@@ -575,10 +576,33 @@
     });
   }
 
+  function pauseBackgroundAudio() {
+    // 1. Turn off 3D portfolio audio state
+    window.__audioOn = false;
+    if (typeof window.__setPlaying === 'function') {
+      try { window.__setPlaying(false); } catch(e) {}
+    }
+    // 2. Pause any background HTML audio elements
+    document.querySelectorAll('audio').forEach(a => {
+      try { a.pause(); } catch(e) {}
+    });
+    // 3. Cancel any 3D scene robot speech narration
+    if ('speechSynthesis' in window) {
+      try { window.speechSynthesis.cancel(); } catch(e) {}
+    }
+    // 4. Update music toggle button in UI to show AUDIO OFF
+    const musicBtn = document.getElementById('btn-music-toggle');
+    if (musicBtn) {
+      musicBtn.classList.remove('playing');
+      musicBtn.innerHTML = '<i class="fas fa-volume-xmark" style="margin-right:6px"></i>AUDIO OFF';
+    }
+  }
+
   function toggleChat() {
     chatWindow.classList.toggle('open');
     triggerBtn.classList.toggle('active');
     if (chatWindow.classList.contains('open')) {
+      pauseBackgroundAudio();
       inputEl.focus();
     } else {
       stopSpeaking();
@@ -604,6 +628,7 @@
     if (!KB[lang]) return;
     currentLang = lang;
     try { localStorage.setItem('lang', lang); } catch(e) {}
+    conversationHistory.length = 0; // Reset conversation memory so previous language doesn't bleed into new language
 
     document.getElementById('cb-header-title').innerText = KB[lang].botName;
     inputEl.placeholder = KB[lang].placeholder;
@@ -736,6 +761,7 @@
   }
 
   async function processQuery(query) {
+    pauseBackgroundAudio();
     showTyping();
 
     // 1. If Gemini mode is ON, attempt server call with memory history
@@ -920,6 +946,7 @@
 
     stopSpeaking();
     unlockAudio();
+    pauseBackgroundAudio();
 
     const clean = prepareSpeechText(text);
     if (!clean) return;
@@ -927,19 +954,24 @@
     const sentences = splitIntoSentences(clean);
     if (sentences.length === 0) return;
 
+    // Detect language strictly from text unicode or active currentLang
+    const isMalayalam = /[\u0D00-\u0D7F]/.test(clean) || currentLang === 'ml';
+    const isHindi = /[\u0900-\u097F]/.test(clean) || currentLang === 'hi';
+
     const voices = window.speechSynthesis.getVoices() || [];
     let chosenVoice = null;
+    let targetLang = 'en-IN';
 
-    if (currentLang === 'ml') {
-      chosenVoice = voices.find(v => v.lang.includes('ml')) 
-                 || voices.find(v => v.lang.includes('hi')) 
-                 || voices.find(v => v.lang.includes('en-IN')) 
-                 || voices.find(v => v.lang.startsWith('en'));
-    } else if (currentLang === 'hi') {
-      chosenVoice = voices.find(v => v.lang.includes('hi')) 
-                 || voices.find(v => v.lang.includes('en-IN')) 
-                 || voices.find(v => v.lang.startsWith('en'));
+    if (isMalayalam) {
+      targetLang = 'ml-IN';
+      // Search strictly for Malayalam voice
+      chosenVoice = voices.find(v => v.lang && (v.lang.toLowerCase().startsWith('ml') || v.name.toLowerCase().includes('malayalam')));
+    } else if (isHindi) {
+      targetLang = 'hi-IN';
+      // Search strictly for Hindi voice
+      chosenVoice = voices.find(v => v.lang && (v.lang.toLowerCase().startsWith('hi') || v.name.toLowerCase().includes('hindi')));
     } else {
+      targetLang = 'en-IN';
       chosenVoice = voices.find(v => v.lang === 'en-IN') 
                  || voices.find(v => v.lang.startsWith('en-US')) 
                  || voices.find(v => v.lang.startsWith('en'));
@@ -967,14 +999,16 @@
 
       const sentenceText = sentences[currentIndex++];
       const utter = new SpeechSynthesisUtterance(sentenceText);
-      utter.rate = 1.02;
+      utter.rate = isMalayalam ? 0.95 : (isHindi ? 0.98 : 1.02);
       utter.pitch = 1.0;
 
       if (chosenVoice) {
         utter.voice = chosenVoice;
         utter.lang = chosenVoice.lang;
       } else {
-        utter.lang = currentLang === 'ml' ? 'ml-IN' : currentLang === 'hi' ? 'hi-IN' : 'en-IN';
+        // If no offline Malayalam or Hindi voice exists, NEVER assign an English voice!
+        // Leaving utter.voice null and setting utter.lang lets Chrome/Edge use its native online language TTS
+        utter.lang = targetLang;
       }
 
       utter.onend = () => {

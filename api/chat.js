@@ -54,10 +54,8 @@ CRITICAL TONE & OUTPUT GUIDELINES:
 3. Keep conversational memory. If the user asks a follow-up (e.g. "show details", "tell me more", "how was that built"), understand they are referring to the project or topic from previous messages!
 4. NEVER include artificial sci-fi or robotic terminal prefixes such as "System initialized", "Connection established", "INITIALIZING AX-994", or "ACCESS GRANTED".
 5. NEVER comment on user typos or cutoffs. Answer their underlying question directly.
-6. If the user asks in Malayalam (മലയാളം), reply in fluent, respectful Malayalam!
-7. If the user asks in Hindi (हिन्दी), reply in fluent, respectful Hindi!
-8. If the user asks in English, reply in English!
-9. Format responses cleanly with readable markdown (use clear headings, bold labels, clean bullet points). Include project links when discussing projects.`;
+6. LANGUAGE RULE: Follow the [Active Language] mandate strictly. If Active Language is 'ml', respond ONLY in fluent Malayalam (മലയാളം). If Active Language is 'hi', respond ONLY in fluent Hindi (हिन्दी). If Active Language is 'en', respond in English. Do NOT default to English when the active language is Malayalam or Hindi!
+7. Format responses cleanly with readable markdown (use clear headings, bold labels, clean bullet points). Include project links when discussing projects.`;
 
 function callGemini(userPrompt, lang = 'en', userApiKey = '', history = []) {
   const activeKey = userApiKey || GEMINI_API_KEY;
@@ -92,9 +90,18 @@ function makeGeminiRequest(model, userPrompt, lang, apiKey, history = []) {
       });
     }
 
+    let langInstruction = '';
+    if (lang === 'ml') {
+      langInstruction = `\n\n🚨 STRICT LANGUAGE MANDATE: The user has selected MALAYALAM (മലയാളം). You MUST reply completely in natural, respectful Malayalam script (മലയാളത്തിൽ എഴുതുക). Do NOT reply in English even if the user query was written or spoken in English! Proper nouns and technical keywords (Laravel, PHP, MySQL, Redis, PIXELPO, AK-MART, Mini Mart) may remain in Latin script, but all surrounding sentences must be in Malayalam.`;
+    } else if (lang === 'hi') {
+      langInstruction = `\n\n🚨 STRICT LANGUAGE MANDATE: The user has selected HINDI (हिन्दी). You MUST reply completely in natural, respectful Hindi script (हिन्दी में उत्तर दें). Do NOT reply in English even if the user query was written or spoken in English! Proper nouns and technical keywords (Laravel, PHP, MySQL, Redis, PIXELPO, AK-MART, Mini Mart) may remain in Latin script, but all surrounding sentences must be in Hindi.`;
+    } else {
+      langInstruction = `\n\nActive Language: English. Reply in clear, professional English.`;
+    }
+
     contents.push({
       role: 'user',
-      parts: [{ text: `${SYSTEM_INSTRUCTION}\n\n[Active Language: ${lang}]\nUser Query: ${userPrompt}` }]
+      parts: [{ text: `${SYSTEM_INSTRUCTION}${langInstruction}\n\nUser Query: ${userPrompt}` }]
     });
 
     const bodyObj = {
