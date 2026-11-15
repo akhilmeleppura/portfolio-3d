@@ -21,37 +21,69 @@
     <link rel="alternate" hreflang="hi" href="https://akhil-meleppura.is-a.dev/?lang=hi" />
     <link rel="alternate" hreflang="x-default" href="https://akhil-meleppura.is-a.dev/" />
 
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./favicon.svg" />
+
     <!-- Open Graph / Facebook / LinkedIn Social Cards -->
     <meta property="og:type" content="profile" />
     <meta property="og:site_name" content="Akhil Meleppura — 3D Cyberpunk Portfolio" />
-    <meta property="og:title" content="Akhil Meleppura (Akhil S) | Backend Laravel &amp; PHP Developer (3+ Years Exp)" />
-    <meta property="og:description" content="Backend Laravel &amp; PHP Developer with 3+ years experience building scalable enterprise architectures, REST APIs, MySQL, and Redis. Immediate Joiner." />
+    <meta property="og:title" content="Akhil Meleppura (Akhil S) | Senior Backend Laravel &amp; PHP Developer" />
+    <meta property="og:description" content="Portfolio of Akhil Meleppura (Akhil S), Senior Backend Laravel &amp; PHP Developer with 3+ years experience building scalable enterprise architectures, REST APIs, MySQL, and Redis. Immediate Joiner." />
     <meta property="og:url" content="https://akhil-meleppura.is-a.dev/" />
-    <meta property="og:image" content="https://akhil-meleppura.is-a.dev/img/project-akmart.svg" />
+    <meta property="og:image" content="https://akhil-meleppura.is-a.dev/img/og-preview.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Akhil Meleppura - Senior Backend Laravel &amp; PHP Developer Portfolio" />
     <meta property="profile:first_name" content="Akhil" />
     <meta property="profile:last_name" content="Meleppura" />
     <meta property="profile:username" content="akhilmeleppura" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Akhil Meleppura (Akhil S) | Backend Laravel &amp; PHP Developer" />
-    <meta name="twitter:description" content="Backend Laravel &amp; PHP Developer with 3+ years experience building scalable enterprise architectures, REST APIs, MySQL, and Redis. Immediate Joiner." />
-    <meta name="twitter:image" content="https://akhil-meleppura.is-a.dev/img/project-akmart.svg" />
+    <meta name="twitter:title" content="Akhil Meleppura (Akhil S) | Senior Backend Laravel &amp; PHP Developer" />
+    <meta name="twitter:description" content="Portfolio of Akhil Meleppura (Akhil S), Backend Laravel &amp; PHP Developer with 3+ years experience building scalable enterprise architectures, REST APIs, MySQL, and Redis. Immediate Joiner." />
+    <meta name="twitter:image" content="https://akhil-meleppura.is-a.dev/img/og-preview.svg" />
 
-    <!-- Google Search Structured Data (JSON-LD Schema for Knowledge Panel) -->
+    <!-- Google Search Structured Data (JSON-LD Schema for Knowledge Panel & ProfilePage) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "ProfilePage",
+          "@id": "https://akhil-meleppura.is-a.dev/#profilepage",
+          "url": "https://akhil-meleppura.is-a.dev/",
+          "name": "Akhil Meleppura (Akhil S) | Senior Backend Laravel & PHP Developer",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://akhil-meleppura.is-a.dev/#website",
+            "url": "https://akhil-meleppura.is-a.dev/",
+            "name": "Akhil Meleppura Portfolio",
+            "inLanguage": ["en", "ml", "hi"]
+          },
+          "about": {
+            "@id": "https://akhil-meleppura.is-a.dev/#person"
+          },
+          "mainEntity": {
+            "@id": "https://akhil-meleppura.is-a.dev/#person"
+          }
+        },
+        {
           "@type": "Person",
           "@id": "https://akhil-meleppura.is-a.dev/#person",
           "name": "Akhil Meleppura",
           "alternateName": ["Akhil S", "Akhil", "akhilmeleppura"],
-          "jobTitle": "Backend Laravel & PHP Developer",
-          "description": "Backend Laravel & PHP Developer with 3+ years of professional experience building scalable web applications, RESTful APIs, enterprise retail platforms, and delivery systems. Immediate Joiner.",
+          "jobTitle": "Senior Backend Laravel & PHP Developer",
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Backend Laravel & PHP Developer",
+            "occupationalCategory": "15-1252.00",
+            "skills": "PHP 8, Laravel 11/12, MySQL Query Optimization, Redis Queues, RESTful APIs, Microservices, Docker, RBAC"
+          },
+          "description": "Backend Laravel & PHP Developer with 3+ years of professional experience building scalable web applications, RESTful APIs, enterprise retail platforms (AK-MART, Mini Mart), and delivery management systems across PIXELPO, StackCue, and Commerce9. Palakkad, Kerala, India. Available as an Immediate Joiner.",
           "url": "https://akhil-meleppura.is-a.dev/",
-          "image": "https://akhil-meleppura.is-a.dev/img/project-akmart.svg",
+          "image": "https://akhil-meleppura.is-a.dev/img/og-preview.svg",
           "telephone": "+91-7902207027",
           "email": "akhilmeleppura@gmail.com",
           "address": {
@@ -93,16 +125,6 @@
             "Next.js",
             "Microservices"
           ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://akhil-meleppura.is-a.dev/#website",
-          "url": "https://akhil-meleppura.is-a.dev/",
-          "name": "Akhil Meleppura Portfolio",
-          "publisher": {
-            "@id": "https://akhil-meleppura.is-a.dev/#person"
-          },
-          "inLanguage": ["en", "ml", "hi"]
         }
       ]
     }
