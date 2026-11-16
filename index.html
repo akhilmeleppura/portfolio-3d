@@ -21,6 +21,21 @@
     <link rel="alternate" hreflang="hi" href="https://akhil-meleppura.is-a.dev/?lang=hi" />
     <link rel="alternate" hreflang="x-default" href="https://akhil-meleppura.is-a.dev/" />
 
+    <script>
+      // Enforce English as default language on initial visit
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var qLang = params.get('lang');
+        if (qLang === 'ml' || qLang === 'hi' || qLang === 'en') {
+          sessionStorage.setItem('lang', qLang);
+          localStorage.setItem('lang', qLang);
+        } else if (!sessionStorage.getItem('lang')) {
+          sessionStorage.setItem('lang', 'en');
+          localStorage.setItem('lang', 'en');
+        }
+      } catch(e) {}
+    </script>
+
     <!-- Favicon & Icons -->
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="apple-touch-icon" href="./favicon.svg" />

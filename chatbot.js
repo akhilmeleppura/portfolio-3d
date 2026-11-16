@@ -276,8 +276,14 @@
 
   function initChatbot() {
     try {
-      const savedLang = localStorage.getItem('lang');
-      if (savedLang && KB[savedLang]) currentLang = savedLang;
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
+      const sessionLang = sessionStorage.getItem('lang');
+      const activeLang = (urlLang === 'ml' || urlLang === 'hi' || urlLang === 'en')
+        ? urlLang
+        : ((sessionLang === 'ml' || sessionLang === 'hi' || sessionLang === 'en') ? sessionLang : 'en');
+      currentLang = activeLang;
+      sessionStorage.setItem('lang', activeLang);
+      localStorage.setItem('lang', activeLang);
       const savedMode = localStorage.getItem('cb_gemini_mode');
       if (savedMode !== null) geminiMode = savedMode === 'true';
       const savedVoice = localStorage.getItem('cb_auto_voice');
@@ -647,7 +653,10 @@
   function setLanguage(lang) {
     if (!KB[lang]) return;
     currentLang = lang;
-    try { localStorage.setItem('lang', lang); } catch(e) {}
+    try { 
+      sessionStorage.setItem('lang', lang);
+      localStorage.setItem('lang', lang); 
+    } catch(e) {}
     conversationHistory.length = 0; // Reset conversation memory so previous language doesn't bleed into new language
 
     document.getElementById('cb-header-title').innerText = KB[lang].botName;
