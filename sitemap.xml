@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://akhil-meleppura.is-a.dev/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://akhil-meleppura.is-a.dev/img/og-preview.svg</image:loc>
+      <image:title>Akhil Meleppura - Senior Backend Laravel &amp; PHP Developer</image:title>
+      <image:caption>Portfolio of Akhil Meleppura (Akhil S), Laravel Developer in Palakkad, Kerala</image:caption>
+    </image:image>
     <xhtml:link rel="alternate" hreflang="en" href="https://akhil-meleppura.is-a.dev/?lang=en" />
     <xhtml:link rel="alternate" hreflang="ml" href="https://akhil-meleppura.is-a.dev/?lang=ml" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://akhil-meleppura.is-a.dev/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://akhil-meleppura.is-a.dev/" />
   </url>
 </urlset>
-
