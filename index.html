@@ -22,14 +22,14 @@
     <link rel="alternate" hreflang="x-default" href="https://akhil-meleppura.is-a.dev/" />
 
     <script>
-      // Enforce English as default language on initial visit
+      // Enforce English as default language on all visits unless ?lang= is passed
       try {
         var params = new URLSearchParams(window.location.search);
         var qLang = params.get('lang');
         if (qLang === 'ml' || qLang === 'hi' || qLang === 'en') {
           sessionStorage.setItem('lang', qLang);
           localStorage.setItem('lang', qLang);
-        } else if (!sessionStorage.getItem('lang')) {
+        } else {
           sessionStorage.setItem('lang', 'en');
           localStorage.setItem('lang', 'en');
         }
@@ -156,14 +156,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <!-- Centralized Portfolio Configuration (English, Malayalam, Hindi) -->
-    <script src="./portfolio-config.js"></script>
+    <script src="./portfolio-config.js?v=2.2"></script>
 
     <!-- 3D Application Bundle -->
-    <script type="module" crossorigin src="./assets/index-DcagGn9F.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DQPpKdS8.css">
+    <script type="module" crossorigin src="./assets/index-DcagGn9F.js?v=2.2"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DQPpKdS8.css?v=2.2">
 
     <!-- Cyberpunk AI Assistant Chatbot with Gemini Integration -->
-    <link rel="stylesheet" href="./chatbot.css">
+    <link rel="stylesheet" href="./chatbot.css?v=2.2">
   </head>
   <body>
     <!-- Semantic Crawlable Fallback for Search Engines & Robots -->
@@ -232,6 +232,6 @@
     <div id="root"></div>
 
     <!-- AI Assistant Chatbot Script -->
-    <script src="./chatbot.js"></script>
+    <script src="./chatbot.js?v=2.2"></script>
   </body>
 </html>

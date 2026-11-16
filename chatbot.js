@@ -277,10 +277,8 @@
   function initChatbot() {
     try {
       const urlLang = new URLSearchParams(window.location.search).get('lang');
-      const sessionLang = sessionStorage.getItem('lang');
-      const activeLang = (urlLang === 'ml' || urlLang === 'hi' || urlLang === 'en')
-        ? urlLang
-        : ((sessionLang === 'ml' || sessionLang === 'hi' || sessionLang === 'en') ? sessionLang : 'en');
+      // Always start fresh in English unless URL explicitly specifies ?lang=ml or ?lang=hi
+      const activeLang = (urlLang === 'ml' || urlLang === 'hi') ? urlLang : 'en';
       currentLang = activeLang;
       sessionStorage.setItem('lang', activeLang);
       localStorage.setItem('lang', activeLang);
@@ -1001,8 +999,8 @@
     const nativeMlVoice = voices.find(v => v.lang && (v.lang.toLowerCase().startsWith('ml') || v.name.toLowerCase().includes('malayalam')));
     const nativeHiVoice = voices.find(v => v.lang && (v.lang.toLowerCase().startsWith('hi') || v.name.toLowerCase().includes('hindi')));
 
-    // If Malayalam/Hindi has no native voice installed on OS (true on Windows), use Google Neural TTS API!
-    const useApiTts = (isMalayalam && !nativeMlVoice) || (isHindi && !nativeHiVoice);
+    // For Malayalam & Hindi, ALWAYS stream via Google Neural TTS API for 100% authentic pronunciation!
+    const useApiTts = isMalayalam || isHindi;
     const targetLangCode = isMalayalam ? 'ml' : (isHindi ? 'hi' : 'en');
 
     if (btn) btn.classList.add('speaking');
